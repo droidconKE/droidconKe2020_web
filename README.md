@@ -11,13 +11,6 @@
 > The Website is a PWA, with Tailwind CSS inspired UI
 
 
-### droidconKE Website
-
-Android app for the third Android Developer conference-droidcon in Nairobi 2020
-
-This project is the Android app for the conference. The app supports devices running Android 5.0+, and is optimized for phones and tablets of all shapes and sizes.
-
-
 ### Features
 
 The has the following features:
