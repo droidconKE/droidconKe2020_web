@@ -49,6 +49,22 @@ $ npm run generate
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
+
+## Development
+
+The Website is built with Nuxt JS
+
+### Dev Dependencies 
+
+* Nuxt
+* PWA
+* Tailwind CSS
+* SASS
+* Jest
+* eslint
+* axios
+
+
 ## Contributing
 
 We would love to have your help in making  **droidconKE Website** better.
