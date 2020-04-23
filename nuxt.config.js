@@ -5,11 +5,22 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'The Largest Android Developers\' Conference in Africa',
+    titleTemplate: 'droidconKe - %s',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'Droidcon is a global conference focused on the engineering of Android applications. Droidcon provides a forum for developers to network with other developers, share techniques, announce apps and products, and to learn and teach.' },
+      { hid: 'keywords', name: 'keywords', content: 'Android, Event,  Conference, Meetup, droidCon, Kenya, KE, droidConKE, droidconke, Android254, Kotlin, Flutter, iOS' },
+      { hid: 'og:description', name: 'description', content: 'Droidcon is a global conference focused on the engineering of Android applications. Droidcon provides a forum for developers to network with other developers, share techniques, announce apps and products, and to learn and teach.' },
+      { property: 'og:url', content: 'https://droidcon.co.ke' },
+      { name: 'twitter:url', content: 'https://droidcon.co.ke' },
+      { name: 'canonical', content: 'https://droidcon.co.ke' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@droidconke' },
+      { name: 'twitter:creator', content: '@droidconke' },
+      { name: 'og:image', content: '/icon.png' },
+      { hid: 'theme-color', name: 'theme-color', content: '#864F96' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -18,7 +29,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#864F96' },
   /*
   ** Global CSS
   */
