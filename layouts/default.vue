@@ -26,8 +26,10 @@
               <div class="flex flex-wrap items-top mb-6 text-left">
                 <div class="w-full md:w-4/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 ml-auto">
                   <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Venue</span><ul class="list-unstyled">
-                    <p>Nairobi
-                      View Map location</p>
+                    <p>
+                      Nairobi
+                      View Map location
+                    </p>
                   </ul>
                 </div>
                 <div class="w-full md:w-4/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 ml-auto">
@@ -48,7 +50,6 @@
         </div>
       </section>
       <div class="w-full items-center justify-center px-4 py-3">
-
         <div class="mt-0">
           <a href="https://www.twitter.com/creativetim" target="_blank">
             <i class="fa fa-twitter  bg-white text-blue-400 font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center" />

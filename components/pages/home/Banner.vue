@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <div class="lg:absolute  lg:bottom-0 lg:ml-40 lg:mb-4 p-3 bg-gray-800 text-white">
+      <div class="lg:absolute lg:bottom-0 right-0 lg:mr-40 lg:mb-4 p-3 bg-gray-800 text-white">
         Absolute child
       </div>
     </div>
