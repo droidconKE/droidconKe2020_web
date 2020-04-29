@@ -23,7 +23,10 @@ export default {
       { hid: 'theme-color', name: 'theme-color', content: '#864F96' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: '/css/layout.css' },
+      { rel: 'stylesheet', href: '/css/color/light.css', id: 'light-theme-css' },
+      { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', id: 'font-awesome-css' }
     ]
   },
   /*
