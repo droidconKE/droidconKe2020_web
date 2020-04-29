@@ -39,7 +39,7 @@
             <img src="/images/gallery/201910.jpg" alt="Memories Two" title="Memories Two">
           </div>  <!--Single photo-->
         </div>
-        <div class="w-full justify-center items-center">
+        <div class="w-full flex flex-wrap justify-center items-center">
           <a class="lgx-btn lgx-btn-orange" target="_blank" href="https://droidconke.pixieset.com/droidconke2019/">View More </a>
         </div>
       </div>
