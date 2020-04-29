@@ -4,7 +4,6 @@
   </a>
   </p>
 
-[![StyleCI](https://github.styleci.io/repos/240357818/shield?branch=master)](https://github.styleci.io/repos/240357818)
 # droidconke
 
 > [droidconKe](https://droidcon.co.ke) Official Website
