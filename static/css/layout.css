@@ -40,13 +40,15 @@
 }
 .nav-bg {
   /*background: #FFFFFF 0% 0% no-repeat padding-box;*/
-  opacity: 1;
   -webkit-backdrop-filter: blur(42px);
   backdrop-filter: blur(42px);
 }
 .title-large {
-  background: var(--purple-color) 0% 0% no-repeat padding-box;
-  opacity: 1;
+  /*background: var(--purple-color) 0% 0% no-repeat padding-box;*/
+  color: var(--purple-color);
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: bolder;
 }
 .title-px-52 {
   text-align: left;
@@ -56,7 +58,6 @@
   font-weight: bold;
   letter-spacing: 0px;
   text-transform: uppercase;
-  opacity: 1;
 }
 .title-px-47 {
   text-align: left;
@@ -66,9 +67,8 @@
   font-weight: bold;
   letter-spacing: 0px;
   text-transform: uppercase;
-  opacity: 1;
 }
-.title-purple-px-39{
+.title-px-39{
   text-align: left;
   font-size: 39px;
   line-height: 52px;
@@ -76,10 +76,9 @@
   font-weight: bold;
   letter-spacing: 0px;
   text-transform: uppercase;
-  opacity: 1;
 }
 
-.description-px-36 {
+.text-px-36 {
   text-align: left;
   font-size: 36px;
   line-height: 43px;
@@ -87,7 +86,6 @@
   font-weight: normal;
   letter-spacing: 0px;
   text-transform: uppercase;
-  opacity: 1;
 }
 
 .text-px-23 {
@@ -97,7 +95,6 @@
   font-family: var(--font-family);
   font-weight: normal;
   letter-spacing: 0px;
-  opacity: 1;
 }
 .text-px-21 {
   text-align: left;
@@ -107,7 +104,6 @@
   font-weight: bold;
   letter-spacing: 0px;
   text-transform: uppercase;
-  opacity: 1;
 }
 .text-px-16-b {
   text-align: left;
@@ -117,7 +113,6 @@
   font-weight: bold;
   letter-spacing: 0px;
   text-transform: uppercase;
-  opacity: 1;
 }
 .text-px-16 {
   text-align: left;
@@ -126,7 +121,6 @@
   font-family: var(--font-family);
   font-weight: normal;
   letter-spacing: 0px;
-  opacity: 1;
 }
 .text-px-14 {
   text-align: left;
@@ -136,7 +130,6 @@
   font-weight: normal;
   letter-spacing: 0px;
   color: var(--gray-color);
-  opacity: 1;
 }
 .p {
   text-align: left;
@@ -146,6 +139,15 @@
   font-weight: lighter;
   letter-spacing: 0px;
   color: var(--gray-color);
-  opacity: 1;
+}
+
+.button-yellow {
+  background: var(--yellow-color) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 2px var(--purple-light-color);
+  border-radius: 23px;
+  padding: 10px 20px;
+}
+.button-yellow:hover {
+  box-shadow: 0px 2px 3px var(--purple-light-color);
 }
 
