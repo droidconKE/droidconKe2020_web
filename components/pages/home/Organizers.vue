@@ -7,7 +7,9 @@
             <h3 class="title-px-52 black">
               droidconKe IS ORGANIZED BY;
             </h3>
-            <h6 class="text-px-23 gray">The ones that make it happen </h6>
+            <h6 class="text-px-23 gray">
+              The ones that make it happen
+            </h6>
           </div>
         </div>
         <div class="w-full  md:w-6/12 mr-auto  pt-0 sm:mt-10 md:pt-0 justify-end">

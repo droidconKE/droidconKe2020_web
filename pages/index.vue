@@ -9,12 +9,14 @@
               <h3 class="title-px-52 mb-4 md:mb-10 black">
                 WELCOME TO droidconKe 2020
               </h3>
-              <h6 class="text-px-23 green-dark">The Largest Android Focused Developer Conference in Africa </h6>
+              <h6 class="text-px-23 green-dark">
+                The Largest Android Focused Developer Conference in Africa
+              </h6>
               <p class="mt-4 p">
                 This 3rd edition of droidconKE will include several tech communities from the East African Region and continental members. It will give participants an excellent chance to learn about the local Android development ecosystem, opportunities and services as well as meet the engineers and companies who work on them.
               </p>
               <div class="mt-5">
-                <a class="text-px-16-slab black" href="/">More About DroidconKe <i class="fa fa-arrow-right"></i></a>
+                <a class="text-px-16-slab black" href="/">More About DroidconKe <i class="fa fa-arrow-right" /></a>
               </div>
             </div>
           </div>

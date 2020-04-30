@@ -10,37 +10,49 @@
         <div class="flex-1 w-4/12 sm:w-4/12 md:w-2/12">
           <img class="w-full bg-yellow-c py-3 px-5 md:px-16 md:py-8 panel-img" src="/images/events/community.svg" alt="Sunset in the mountains">
           <div class="text-left">
-            <h6 class="text-px-21 black">Community Day</h6>
+            <h6 class="text-px-21 black">
+              Community Day
+            </h6>
           </div>
         </div>
         <div class="flex-1 w-4/12 sm:w-4/12 md:w-2/12">
           <img class="w-full bg-dark-green-c py-3 px-5 md:px-16 md:py-8 panel-img" src="/images/events/work.svg" alt="Sunset in the mountains">
           <div class="text-left">
-            <h6 class="text-px-21 black">Workshops</h6>
+            <h6 class="text-px-21 black">
+              Workshops
+            </h6>
           </div>
         </div>
         <div class="flex-1 w-4/12 sm:w-4/12 md:w-2/12">
           <img class="w-full bg-purple-c py-3 px-5 md:px-16 md:py-8 panel-img" src="/images/events/interviews.svg" alt="Sunset in the mountains">
           <div class="text-left">
-            <h6 class="text-px-21 black">Interviews</h6>
+            <h6 class="text-px-21 black">
+              Interviews
+            </h6>
           </div>
         </div>
         <div class="flex-1 w-4/12 sm:w-4/12 md:w-2/12">
           <img class="w-full bg-yellow-c py-3 px-5 md:px-16 md:py-8 panel-img" src="/images/events/panels.svg" alt="Sunset in the mountains">
           <div class="text-left">
-            <h6 class="text-px-21 black">Panels</h6>
+            <h6 class="text-px-21 black">
+              Panels
+            </h6>
           </div>
         </div>
         <div class="flex-1 w-4/12 sm:w-4/12 md:w-2/12">
           <img class="w-full bg-dark-green-c py-3 px-5 md:px-16 md:py-8 panel-img" src="/images/events/bash.svg" alt="Sunset in the mountains">
           <div class="text-left">
-            <h6 class="text-px-21 black">Networking Bash</h6>
+            <h6 class="text-px-21 black">
+              Networking Bash
+            </h6>
           </div>
         </div>
         <div class="flex-1 w-4/12 sm:w-4/12 md:w-2/12">
           <img class="w-full bg-purple-c py-3 px-5 md:px-16 md:py-8 panel-img" src="/images/events/hack.svg" alt="Sunset in the mountains">
           <div class="text-left">
-            <h6 class="text-px-21 black">HackBounty</h6>
+            <h6 class="text-px-21 black">
+              HackBounty
+            </h6>
           </div>
         </div>
       </div>
