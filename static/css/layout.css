@@ -2,15 +2,19 @@
   --font-family: 'Roboto', sans-serif;
   --font-slab: "Roboto Slab", sans-serif;
 }
+
 .active {
   color: var(--purple-color);
 }
+
 .purple {
   color: var(--purple-color);
 }
+
 .black {
   color: var(--black-color);
 }
+
 .yellow {
   color: var(--yellow-color);
 }
@@ -18,9 +22,11 @@
 .green {
   color: var(--green-color);
 }
+
 .green-dark {
   color: var(--green-dark-color);
 }
+
 .gray-light {
   color: var(--gray-light-color);
 }
@@ -28,9 +34,11 @@
 .bg-purple-c {
   background-color: var(--purple-color);
 }
+
 .bg-black-c {
   background-color: var(--black-color);
 }
+
 .bg-yellow-c {
   background-color: var(--yellow-color);
 }
@@ -38,11 +46,13 @@
 .bg-green-c {
   background-color: var(--green-dark-color);
 }
+
 .nav-bg {
   /*background: #FFFFFF 0% 0% no-repeat padding-box;*/
   -webkit-backdrop-filter: blur(42px);
   backdrop-filter: blur(42px);
 }
+
 .title-large {
   /*background: var(--purple-color) 0% 0% no-repeat padding-box;*/
   color: var(--purple-color);
@@ -52,7 +62,8 @@
   line-height: 88px;
   font-weight: 700;
 }
-@media screen and (max-width: 760px){
+
+@media screen and (max-width: 760px) {
   .title-large {
     /*background: var(--purple-color) 0% 0% no-repeat padding-box;*/
     color: var(--purple-color);
@@ -65,6 +76,7 @@
     margin-top: 20px;
   }
 }
+
 .title-px-52 {
 
   font-size: 52px;
@@ -74,6 +86,7 @@
   letter-spacing: 0px;
   text-transform: uppercase;
 }
+
 .title-px-47 {
 
   font-size: 47px;
@@ -83,7 +96,8 @@
   letter-spacing: 0px;
   text-transform: uppercase;
 }
-.title-px-39{
+
+.title-px-39 {
 
   font-size: 39px;
   line-height: 52px;
@@ -111,6 +125,7 @@
   font-weight: normal;
   /*letter-spacing: 0px;*/
 }
+
 .text-px-21 {
 
   font-size: 21px;
@@ -120,6 +135,7 @@
   letter-spacing: 0px;
   text-transform: uppercase;
 }
+
 .text-px-16-b {
 
   font-size: 16px;
@@ -129,14 +145,23 @@
   letter-spacing: 0px;
   text-transform: uppercase;
 }
-.text-px-16 {
 
+.text-px-16 {
   font-size: 16px;
   line-height: 19px;
   font-family: var(--font-family);
   font-weight: normal;
   letter-spacing: 0px;
 }
+.text-px-16-slab {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: var(--font-slab);
+  font-weight: normal;
+  letter-spacing: 0px;
+}
+
 .text-px-14 {
 
   font-size: 14px;
@@ -146,6 +171,7 @@
   letter-spacing: 0px;
   color: var(--gray-color);
 }
+
 .p {
 
   font-size: 18px;
@@ -162,6 +188,7 @@
   border-radius: 23px;
   padding: 10px 20px;
 }
+
 .button-yellow:hover {
   box-shadow: 0px 2px 3px var(--purple-light-color);
 }
