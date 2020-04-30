@@ -72,9 +72,13 @@ The project is still very incomplete, but if there's an issue you'd like to see 
 For any concerns kindly:
 - [Open an issue](https://github.com/droidconKE/droidconKe2020_web/issues),
 
+[Contributing Guide](contributing.md)
+
     or JUST,
 
 - [Fork the project and send a pull request](https://github.com/droidconKE/droidconKe2020_web/pulls).
+
+[Pull Request Guide](pull_request_template.md)
 
 ## Contributors
 
