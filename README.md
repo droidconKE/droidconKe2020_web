@@ -4,7 +4,9 @@
   </a>
   </p>
 
-# droidconke
+
+![badge](https://github.com/droidconKE/droidconKe2020_web/workflows/Node.js%20CI/badge.svg)
+# droidconke Web
 
 > [droidconKe](https://droidcon.co.ke) Official Website
 > The Website is a PWA, with Tailwind CSS inspired UI
