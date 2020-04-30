@@ -47,23 +47,25 @@
             leave-class="translate-y-0 opacity-100"
             leave-to-class="-translate-y-3 opacity-0"
           >
-            <div v-if="isVisible" id="userMenu" class=" rounded shadow-md mt-2 absolute mt-12 top-0 lg:right-0 min-w-full z-30">
+            <div v-if="isVisible" id="userMenu" class=" rounded shadow-md mt-2 absolute mt-12 top-0 lg:right-0 min-w-full z-30" @mouseleave="isVisible = false">
               <div class="absolute top-0 lg:right-0 lg:mr-10 w-2 h-2 mt-1 origin-center transform rotate-45 translate-x-5 -translate-y-2 pinn border-t rounded-sm pointer-events-none" />
               <ul class="list-reset">
                 <li>
                   <div class="flex-wrap flex p-2 items-center">
                     <div class="w-1/2 flex-wrap flex border-r border-bg-black-1">
                       <p><small class="logg">Logged in as</small></p>
-                      <p class="name">John Mwendwa</p>
+                      <p class="name">
+                        John Mwendwa
+                      </p>
                     </div>
                     <div class="w-1/2 flex-wrap flex justify-center">
-                      <a href="#"><i class="fa fa-sign-out green-dark"></i> <span class="name">Logout</span></a>
+                      <a href="#"><i class="fa fa-sign-out green-dark" /> <span class="name">Logout</span></a>
                     </div>
                   </div>
                 </li>
                 <li><hr class="border-t mx-2 border-bg-black-1"></li>
                 <li>
-                  <a href="#" class="px-4 py-2 block session-link hover:bg-gray-800 no-underline hover:no-underline"><i class="fa fa-star"></i> My Sessions</a>
+                  <a href="#" class="px-4 py-2 block session-link hover:bg-gray-800 no-underline hover:no-underline"><i class="fa fa-star" /> My Sessions</a>
                 </li>
               </ul>
             </div>
@@ -137,7 +139,7 @@ export default {
       font-size: 14px;
       line-height: 17px;
       letter-spacing: 0px;
-      font-weight: lighter;
+      font-weight: normal;
       color: #FFFFFF;
       opacity: 1;
     }

@@ -1,6 +1,6 @@
 :root {
-  --font-family: 'Roboto';
-  --font-slab: "Roboto Slab"
+  --font-family: 'Roboto', sans-serif;
+  --font-slab: "Roboto Slab", sans-serif;
 }
 .active {
   color: var(--purple-color);
@@ -46,12 +46,27 @@
 .title-large {
   /*background: var(--purple-color) 0% 0% no-repeat padding-box;*/
   color: var(--purple-color);
+  font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
-  font-size: 60px;
-  font-weight: bolder;
+  font-size: 105px;
+  line-height: 88px;
+  font-weight: 700;
+}
+@media screen and (max-width: 760px){
+  .title-large {
+    /*background: var(--purple-color) 0% 0% no-repeat padding-box;*/
+    color: var(--purple-color);
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 60px;
+    line-height: 58px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
 }
 .title-px-52 {
-  text-align: left;
+
   font-size: 52px;
   line-height: 68px;
   font-family: var(--font-slab);
@@ -60,7 +75,7 @@
   text-transform: uppercase;
 }
 .title-px-47 {
-  text-align: left;
+
   font-size: 47px;
   line-height: 62px;
   font-family: var(--font-slab);
@@ -69,35 +84,35 @@
   text-transform: uppercase;
 }
 .title-px-39{
-  text-align: left;
+
   font-size: 39px;
   line-height: 52px;
   font-family: var(--font-slab);
   font-weight: bold;
-  letter-spacing: 0px;
+  /*letter-spacing: 0px;*/
   text-transform: uppercase;
 }
 
 .text-px-36 {
-  text-align: left;
+
   font-size: 36px;
   line-height: 43px;
   font-family: var(--font-family);
   font-weight: normal;
-  letter-spacing: 0px;
+  /*letter-spacing: 0px;*/
   text-transform: uppercase;
 }
 
 .text-px-23 {
-  text-align: left;
+
   font-size: 23px;
   line-height: 28px;
   font-family: var(--font-family);
   font-weight: normal;
-  letter-spacing: 0px;
+  /*letter-spacing: 0px;*/
 }
 .text-px-21 {
-  text-align: left;
+
   font-size: 21px;
   line-height: 28px;
   font-family: var(--font-slab);
@@ -106,7 +121,7 @@
   text-transform: uppercase;
 }
 .text-px-16-b {
-  text-align: left;
+
   font-size: 16px;
   line-height: 21px;
   font-family: var(--font-slab);
@@ -115,7 +130,7 @@
   text-transform: uppercase;
 }
 .text-px-16 {
-  text-align: left;
+
   font-size: 16px;
   line-height: 19px;
   font-family: var(--font-family);
@@ -123,7 +138,7 @@
   letter-spacing: 0px;
 }
 .text-px-14 {
-  text-align: left;
+
   font-size: 14px;
   line-height: 17px;
   font-family: var(--font-family);
@@ -132,7 +147,7 @@
   color: var(--gray-color);
 }
 .p {
-  text-align: left;
+
   font-size: 18px;
   line-height: 22px;
   font-family: var(--font-family);

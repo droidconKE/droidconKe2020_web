@@ -10,7 +10,7 @@ module.exports = {
       auto: 'auto',
       cover: 'cover',
       contain: 'contain',
-      '50%': '50%',
+      '50%': '47%',
       16: '4rem'
     }
   },
