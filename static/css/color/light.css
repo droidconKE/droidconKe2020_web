@@ -1,4 +1,10 @@
 :root {
   --background-color: #fff ;
-  --primary-color: #42b983;
+  --purple-color: #843D95;
+  --black-color: #191D1D;
+  --gray-color: #707070;
+  --yellow-color: #FFD54A;
+  --green-color: #68DEA44D;
+  --gray-light-color: #C3C3C3;
+  --green-dark-color: #68DEA4;
 }

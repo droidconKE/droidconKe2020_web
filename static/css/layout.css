@@ -1,4 +1,131 @@
 :root {
-  --font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-  Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family: 'Roboto';
+  --font-slab: "Roboto Slab"
+}
+.acitve {
+  color: var(--purple-color);
+}
+.purple {
+  color: var(--purple-color);
+}
+.black {
+  color: var(--black-color);
+}
+.yellow {
+  color: var(--yellow-color);
+}
+
+.green {
+  color: var(--gray-color);
+}
+.green-dark {
+  color: var(--green-dark-color);
+}
+.gray-light {
+  color: var(--gray-light-color);
+}
+
+.bg-purple-c {
+  background-color: var(--purple-color);
+}
+.bg-black-c {
+  background-color: var(--black-color);
+}
+.bg-yellow-c {
+  background-color: var(--yellow-color);
+}
+
+.bg-green-c {
+  background-color: var(--gray-color);
+}
+.nav-bg {
+  /*background: #FFFFFF 0% 0% no-repeat padding-box;*/
+  opacity: 1;
+  -webkit-backdrop-filter: blur(42px);
+  backdrop-filter: blur(42px);
+}
+.title-large {
+  background: var(--purple-color) 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+.title-px-52 {
+  text-align: left;
+  font: Bold 52px/68px Roboto Slab;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.title-px-47 {
+  text-align: left;
+  font: Bold 47px/62px Roboto Slab;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.title-purple-px-39{
+  text-align: left;
+  font: Bold 39px/52px Roboto Slab;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.description-px-36 {
+  text-align: left;
+  font: Regular 36px/43px Roboto;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.text-px-23 {
+  text-align: left;
+  font: Regular 23px/28px Roboto;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+.text-px-21 {
+  text-align: left;
+  font: Bold 21px/28px Roboto Slab;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.text-px-16-b {
+  text-align: left;
+  font: Bold 16px/21px Roboto Slab;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.text-px-16 {
+  text-align: left;
+  font: Regular 16px/19px Roboto;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+.text-px-14 {
+  text-align: left;
+  font: Regular 14px/17px Roboto;
+  letter-spacing: 0px;
+  color: var(--gray-color);
+  opacity: 1;
+}
+.p {
+  text-align: left;
+  font: Light 18px/22px Roboto;
+  letter-spacing: 0px;
+  color: var(--gray-color);
+  opacity: 1;
+}
+/*// icons*/
+.dr-maasai-male {
+  background: transparent url('svg/maasai_male.svg') 0% 0% no-repeat padding-box;
+  mix-blend-mode: normal;
+  opacity: 1;
+}
+.dr-star {
+  background: transparent url('svg/star.svg') 0% 0% no-repeat padding-box;
+  mix-blend-mode: normal;
+  opacity: 1;
 }

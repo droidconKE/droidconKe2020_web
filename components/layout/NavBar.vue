@@ -1,8 +1,8 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-3 md:px-5 fixed w-full z-10 top-0">
+  <nav class="flex items-center justify-between flex-wrap nav-bg p-3 md:px-5 fixed w-full z-10 top-0">
     <div class="flex items-center flex-shrink-0 text-white mr-6 lg:pl-24">
       <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
-        <span class="text-2xl pl-2"><i class="em em-grinning" /> Brand McBrandface</span>
+        <img height="36" src="/images/website.png" alt="logo">
       </a>
     </div>
 
@@ -14,21 +14,18 @@
 
     <div id="nav-content" class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0 lg:pr-24 md:px-5">
       <div class="w-8/12 flex-grow lg:flex">
-        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+        <ul class="list-reset lg:flex justify-end  flex-1 items-center">
           <li class="mr-3">
-            <a class="inline-block py-2 px-4 text-white no-underline" href="#">Active</a>
+            <a class="inline-block py-2 px-4 text-px-16 black active no-underline " href="#"> <i class="fa fa-home" /> Home</a>
           </li>
           <li class="mr-3">
-            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">link</a>
+            <a class="py-2 px-4 inline-block text-gray-600 text-px-16 black no-underline nav-link" href="#"><i class="fa fa-bell" /> Sessions</a>
           </li>
           <li class="mr-3">
-            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">link</a>
+            <a class="py-2 px-4 inline-block text-gray-600 no-underline text-px-16 nav-link " href="#"><i class="dr-star" /> About</a>
           </li>
           <li class="mr-3">
-            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">link</a>
-          </li>
-          <li class="mr-3">
-            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">link</a>
+            <a class="inline-block text-gray-600 no-underline  py-2 px-4 text-px-16 nav-link" href="#"> Sponsors</a>
           </li>
         </ul>
       </div>
@@ -104,5 +101,8 @@ export default {
     100% {
       opacity: 1;
     }
+  }
+  .nav-link:hover {
+    color: var(--purple-color);
   }
 </style>
