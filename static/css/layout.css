@@ -27,6 +27,9 @@
   color: var(--green-dark-color);
 }
 
+.gray {
+  color: var(--gray-color);
+}
 .gray-light {
   color: var(--gray-light-color);
 }
