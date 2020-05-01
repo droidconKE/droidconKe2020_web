@@ -5,6 +5,11 @@
       <nuxt />
     </div>
     <foot-bar />
+    <div class=" fixed bottom-0 right-0">
+      <button class="rounded-t-lg bg-purple-c px-4 p-1 text-px-16-slab-light white">
+        Feedback <i class="fa fa-share"></i>
+      </button>
+    </div>
   </div>
 </template>
 <script>
@@ -30,8 +35,7 @@ html {
 body {
   background-color: var(--background-color);
 }
-
-h1,h2,h3,h4,h5,h6,p {
-  color: var(--primary-color) ;
-}
+  .rounded-t-lg {
+    border-radius: 20px 20px 0px 0px;
+  }
 </style>

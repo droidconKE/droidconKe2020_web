@@ -1,5 +1,5 @@
 <template>
-  <div class="p-0 title-px-47 black">
+  <div class="p-0 title-px-47 black text-center">
     <client-only>
       <countdown :time="time" :interval="100" tag="div">
         <template slot-scope="props">

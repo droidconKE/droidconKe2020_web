@@ -188,6 +188,13 @@
   font-weight: normal;
   letter-spacing: 0px;
 }
+.text-px-16-slab-light {
+  font-size: 16px;
+  line-height: 21px;
+  font-family: var(--font-slab);
+  font-weight: lighter;
+  letter-spacing: 0px;
+}
 
 .text-px-14 {
 
