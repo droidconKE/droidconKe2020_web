@@ -21,7 +21,8 @@
             </div>
           </div>
           <div class="w-full md:w-4/12 mr-auto p-4 md:p-10 mt-10 md:mt-0 mb-10 md:mb-0 sm:pt-0 justify-end content-center items-center">
-            <img alt="oporo image" class="max-w-full" src="/images/oporo.svg">
+            <img v-if="!$store.getters.isDarkTheme" alt="oporo image" class="max-w-full" src="/images/oporo.svg">
+            <img v-else alt="oporo image" class="max-w-full" src="/images/oporo-dark.svg">
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-block p-4">
+  <div class="inline-block p-4 absolute top-0 right-0 mr-8 md:mr-10 lg:mr-0">
     <label
       for="toogleA"
       class="flex items-center cursor-pointer"
@@ -7,7 +7,7 @@
       <!-- toggle -->
       <div class="relative">
         <!-- input -->
-        <input id="toogleA" @click="darkThemeSwitch()" type="checkbox" class="hidden">
+        <input id="toogleA" :checked="this.$store.getters.isDarkTheme" type="checkbox" class="hidden" @click="darkThemeSwitch()">
         <!-- line -->
         <div
           class="toggle__line w-6 h-3 bg-gray-400 rounded-full shadow-inner"
@@ -46,14 +46,23 @@ export default {
       parentNode.removeChild(darkThemeLinkEl)
     },
     darkThemeSwitch () {
-      console.log('Test')
       const darkThemeLinkEl = document.querySelector('#dark-theme-style')
       if (!darkThemeLinkEl) {
         this._addDarkTheme()
+        this.$store.dispatch('activateDark')
       } else {
         this._removeDarkTheme()
+        this.$store.dispatch('deactivateDark')
       }
     }
+  },
+  head () {
+    return this.$store.getters.isDarkTheme ? {
+      link: [
+        { rel: 'stylesheet', href: '/css/color/darktheme.css', id: 'dark-theme-style' }
+      ]
+    }
+      : {}
   }
 }
 </script>

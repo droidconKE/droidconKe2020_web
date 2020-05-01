@@ -2,7 +2,8 @@
   <nav class="flex items-center justify-between flex-wrap nav-bg p-2 md:px-5 fixed w-full z-10 top-0">
     <div class="flex items-center flex-shrink-0 text-white mr-6 lg:pl-24">
       <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
-        <img class="w-32" src="/images/website.png" alt="logo">
+        <img v-if="!$store.getters.isDarkTheme" class="w-32" src="/images/website.png" alt="logo">
+        <img v-else class="w-32" src="/images/website-dark.png" alt="logo dark">
       </a>
     </div>
 
@@ -16,7 +17,7 @@
       <div class="w-8/12 flex-grow lg:flex">
         <ul class="list-reset lg:flex justify-end  flex-1 items-center">
           <li class="mr-3 black">
-            <a class="inline-block py-2 px-4 text-px-16 active no-underline " href="#"> <i class="fa fa-home" /> Home</a>
+            <a class="inline-block py-2 px-4 text-px-16 active no-underline " href="#"> <i class="fa fa-home" /> Home </a>
           </li>
           <li class="mr-3">
             <a class="py-2 px-4 inline-block text-px-16 black no-underline nav-link" href="#"><i class="fa fa-bell" /> Sessions</a>
