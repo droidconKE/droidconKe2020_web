@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <div class="w-full flex flex-wrap lg:w-5/12 mt-10 md:mt-20 lg:h-full">
+      <div class="w-full flex flex-wrap lg:w-5/12 mt-10 md:mt-20 lg:h-full pr-0 lg:pr-10 lg:justify-end">
         <div class="flex-none">
           <a class="button-border-g black-persist text-px-16-b mr-0 md:mr-6" href="#">Submit a talk</a>
           <a class="button-border-p purple text-px-16-b" href="#">Sponsor droidconKE</a>
