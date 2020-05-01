@@ -4,14 +4,14 @@
     <section class="w-full bg-green-c md:px-32 sm:px-10">
       <div class="md:mt-10 mx-auto px-4 md:py-12">
         <div class="items-center flex flex-wrap mb-10">
-          <div class="w-full md:w-7/12 ml-auto sm:px-6 md:px-12 md:px-4">
-            <div class="md:pr-12  text-left">
+          <div class="w-full md:w-7/12 ml-auto px-2 md:px-8">
+            <div class="text-center md:text-left">
               <h3 class="title-px-52 black">
                 EVENT INFO
               </h3>
             </div>
           </div>
-          <div class="w-full flex md:w-5/12 items-start mt-10 md:mt-0 md:justify-end">
+          <div class="w-full flex md:w-5/12 items-start mt-10 md:mt-0 justify-center md:justify-end">
             <div class="mt-0">
               <a class="button-yellow black-persist text-px-16-b" style="transition:all .15s ease" href="#">Get Your Ticket</a>
             </div>
@@ -26,10 +26,10 @@
                   <p class="text-px-16 gray">
                     Nairobi
                   </p>
-                  <br>
-                <p class="text-px-16 purple">
-                  <i class="fa fa-map-marker" /> View Map location
-                </p>
+
+                  <p class="text-px-16 purple">
+                    <i class="fa fa-map-marker" /> View Map location
+                  </p>
                 </ul>
               </div>
               <div class="w-full md:w-4/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 ml-auto">

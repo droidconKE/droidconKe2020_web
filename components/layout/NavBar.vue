@@ -1,8 +1,8 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap nav-bg p-3 md:px-5 fixed w-full z-10 top-0">
+  <nav class="flex items-center justify-between flex-wrap nav-bg p-2 md:px-5 fixed w-full z-10 top-0">
     <div class="flex items-center flex-shrink-0 text-white mr-6 lg:pl-24">
       <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
-        <img height="36" src="/images/website.png" alt="logo">
+        <img class="w-32" src="/images/website.png" alt="logo">
       </a>
     </div>
 
@@ -33,7 +33,7 @@
       <div class="w-4/12 flex-grow  lg:flex justify-end">
         <toggle-theme />
         <div class=" px-4 md:px-0 relative inine-block" @click="toggleDropDown" @keydown.enter="isVisible = !isVisible">
-          <span class="cursor-pointer inline-flex items-center justify-between p-1 transition-all duration-500 rounded-full h-10 w-10 border bg-dark-green-c">
+          <span class="cursor-pointer inline-flex items-center justify-between p-1 transition-all duration-500 rounded-full h-8 w-8 border bg-dark-green-c">
             <img src="/images/svg/maasai_male.svg" alt="icon">
 
             <!--            <svg fill="currentColor" viewBox="0 0 20 20" class="flex-shrink-0 w-5 h-5 ml-1">-->
@@ -53,20 +53,20 @@
               <ul class="list-reset">
                 <li>
                   <div class="flex-wrap flex p-2 items-center">
-                    <div class="w-1/2 flex-wrap flex border-r border-bg-black-1">
+                    <div class="w-7/12 flex-wrap flex border-r border-bg-black-1">
                       <p><small class="logg">Logged in as</small></p>
                       <p class="name">
                         John Mwendwa
                       </p>
                     </div>
-                    <div class="w-1/2 flex-wrap flex justify-center">
+                    <div class="w-5/12 flex-wrap flex justify-center">
                       <a href="#"><i class="fa fa-sign-out green-dark" /> <span class="name">Logout</span></a>
                     </div>
                   </div>
                 </li>
                 <li><hr class="border-t mx-2 border-bg-black-1"></li>
                 <li>
-                  <a href="#" class="px-4 py-2 block session-link hover:bg-gray-800 no-underline hover:no-underline"><i class="fa fa-star" /> My Sessions</a>
+                  <a href="#" class="px-4 py-3 block session-link hover:bg-gray-800 no-underline hover:no-underline"><i class="fa fa-star mr-2" />  My Sessions</a>
                 </li>
               </ul>
             </div>
@@ -128,16 +128,16 @@ export default {
     background-color: #191D1D;
     .session-link {
       text-align: left;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 19px;
       letter-spacing: 0px;
-      font-weight: lighter;
+      font-weight: normal;
       color: #FFFFFF;
       opacity: 1;
     }
     .name {
       text-align: left;
-      font-size: 14px;
+      font-size: 13px;
       line-height: 17px;
       letter-spacing: 0px;
       font-weight: normal;
@@ -146,9 +146,9 @@ export default {
     }
     .logg {
       text-align: left;
-      font-size: 10px;
+      font-size: 9px;
       line-height: 13px;
-      font-weight: lighter;
+      font-weight: normal;
       letter-spacing: 0px;
       color: #68DEA4;
       opacity: 1;

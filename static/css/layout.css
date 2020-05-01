@@ -72,22 +72,22 @@
 .title-large {
   /*background: var(--purple-color) 0% 0% no-repeat padding-box;*/
   color: var(--purple-color);
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
-  font-size: 85px;
-  line-height: 78px;
-  font-weight: 700;
+  font-size: 75px;
+  line-height: 70px;
+  font-weight: 900;
 }
 
 @media screen and (max-width: 760px) {
   .title-large {
     /*background: var(--purple-color) 0% 0% no-repeat padding-box;*/
     color: var(--purple-color);
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    font-size: 60px;
-    line-height: 58px;
-    font-weight: 700;
+    font-size: 50px;
+    line-height: 47px;
+    font-weight: 900;
     margin-bottom: 20px;
     margin-top: 20px;
   }
@@ -95,8 +95,8 @@
 
 .title-px-52 {
 
-  font-size: 52px;
-  line-height: 68px;
+  font-size: 36px;
+  line-height: 38px;
   font-family: var(--font-slab);
   font-weight: bold;
   letter-spacing: 0px;
@@ -104,8 +104,8 @@
 }
 
 .title-px-47 {
-  font-size: 47px;
-  line-height: 45px;
+  font-size: 32px;
+  line-height: 35px;
   font-family: var(--font-slab);
   font-weight: bold;
   letter-spacing: 0px;
@@ -121,9 +121,8 @@
 }
 
 .title-px-39 {
-
-  font-size: 39px;
-  line-height: 52px;
+  font-size: 26px;
+  /*line-height: 52px;*/
   font-family: var(--font-slab);
   font-weight: bold;
   /*letter-spacing: 0px;*/
@@ -131,8 +130,8 @@
 }
 
 .text-px-36 {
-  font-size: 36px;
-  line-height: 43px;
+  font-size: 21px;
+  line-height: 27px;
   font-family: var(--font-family);
   font-weight: normal;
   /*letter-spacing: 0px;*/
@@ -140,23 +139,37 @@
 }
 
 .text-px-23 {
-  font-size: 23px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: var(--font-family);
+  font-weight: normal;
+  /*letter-spacing: 0px;*/
+}
+.text-16 {
+  font-size: 16px;
+  line-height: 22px;
   font-family: var(--font-family);
   font-weight: normal;
   /*letter-spacing: 0px;*/
 }
 
 .text-px-21 {
-  font-size: 21px;
-  line-height: 25px;
+  font-size: 16px;
+  /*line-height: 25px;*/
+  font-family: var(--font-family);
+  font-weight: normal;
+  letter-spacing: 0px;
+}
+.text-px-21-b {
+  font-size: 16px;
+  /*line-height: 25px;*/
   font-family: var(--font-family);
   font-weight: bold;
   letter-spacing: 0px;
 }
 .text-px-21-slab {
-  font-size: 21px;
-  line-height: 28px;
+  font-size: 16px;
+  /*line-height: 28px;*/
   font-family: var(--font-slab);
   font-weight: bold;
   letter-spacing: 0px;
@@ -164,8 +177,7 @@
 }
 
 .text-px-16-b {
-
-  font-size: 16px;
+  font-size: 13px;
   line-height: 21px;
   font-family: var(--font-slab);
   font-weight: bold;
@@ -174,7 +186,7 @@
 }
 
 .text-px-16 {
-  font-size: 16px;
+  font-size: 13px;
   line-height: 19px;
   font-family: var(--font-family);
   font-weight: normal;
@@ -182,14 +194,14 @@
 }
 .text-px-16-slab {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 21px;
   font-family: var(--font-slab);
   font-weight: normal;
   letter-spacing: 0px;
 }
 .text-px-16-slab-light {
-  font-size: 16px;
+  font-size: 13px;
   line-height: 21px;
   font-family: var(--font-slab);
   font-weight: lighter;
@@ -207,11 +219,9 @@
 }
 
 .p {
-
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 14px;
   font-family: var(--font-family);
-  font-weight: lighter;
+  font-weight: normal;
   letter-spacing: 0px;
   color: var(--gray-color);
 }
@@ -220,19 +230,19 @@
   background: var(--yellow-color) 0% 0% no-repeat padding-box;
   box-shadow: 0px 1px 2px var(--purple-light-color);
   border-radius: 23px;
-  padding: 10px 20px;
+  padding: 5px 15px;
 }
 .button-border-p {
   background: var(--white-color) 0% 0% no-repeat padding-box;
   box-shadow: 0px 1px 2px var(--purple-light-color);
   border-radius: 23px;
-  padding: 10px 20px;
+  padding: 5px 15px;
 }
 .button-border-g {
   background: var(--white-color) 0% 0% no-repeat padding-box;
   box-shadow: 0px 1px 2px var(--green-dark-color);
   border-radius: 23px;
-  padding: 10px 20px;
+  padding: 5px 15px;
 }
 
 .button-yellow:hover {

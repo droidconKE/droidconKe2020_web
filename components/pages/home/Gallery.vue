@@ -39,7 +39,7 @@
             <img src="/images/gallery/201910.jpg" alt="Memories Two" title="Memories Two">
           </div>  <!--Single photo-->
         </div>
-        <div class="w-full flex flex-wrap justify-center items-center">
+        <div class="w-full flex flex-wrap mt-4 mb-10 md:mb-0 justify-center items-center">
           <a class="text-px-16-slab black" target="_blank" href="https://droidconke.pixieset.com/droidconke2019/">View More <i class="fa fa-arrow-right"></i></a>
         </div>
       </div>
@@ -68,7 +68,7 @@ export default {
   #images-wrapper img {
     width: 100% !important;
     height: auto !important;
-    padding: 4px;
+    padding: 2px;
   }
   #images-wrapper{
     display:inline-block;
