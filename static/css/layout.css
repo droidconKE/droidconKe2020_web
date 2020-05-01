@@ -1,4 +1,263 @@
 :root {
-  --font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-  Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family: 'Roboto', sans-serif;
+  --font-slab: "Roboto Slab", sans-serif;
+}
+
+.active {
+  color: var(--purple-color);
+}
+
+.purple {
+  color: var(--purple-color);
+}
+
+.black {
+  color: var(--black-color);
+}
+
+.black-persist {
+  color: var(--black-color-persists);
+}
+.white {
+  color: var(--white-color);
+}
+
+.yellow {
+  color: var(--yellow-color);
+}
+
+.green {
+  color: var(--green-color);
+}
+
+.green-dark {
+  color: var(--green-dark-color);
+}
+
+.gray {
+  color: var(--gray-color);
+}
+.gray-light {
+  color: var(--gray-light-color);
+}
+
+.bg-purple-c {
+  background-color: var(--purple-color);
+}
+
+.bg-black-c {
+  background-color: var(--black-bg-color);
+}
+
+.bg-yellow-c {
+  background-color: var(--yellow-color);
+}
+
+.bg-green-c {
+  background-color: var(--green-bg-color);
+}
+.bg-dark-green-c {
+  background-color: var(--green-dark-color);
+}
+.bg-white-c {
+  background-color: var(--bg-white-color);
+}
+
+.nav-bg {
+  background: var(--transparent);
+  -webkit-backdrop-filter: blur(42px);
+  backdrop-filter: blur(42px);
+}
+
+.title-large {
+  /*background: var(--purple-color) 0% 0% no-repeat padding-box;*/
+  color: var(--purple-color);
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: 75px;
+  line-height: 70px;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 760px) {
+  .title-large {
+    /*background: var(--purple-color) 0% 0% no-repeat padding-box;*/
+    color: var(--purple-color);
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 50px;
+    line-height: 47px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
+.title-px-52 {
+
+  font-size: 36px;
+  line-height: 38px;
+  font-family: var(--font-slab);
+  font-weight: bold;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+
+.title-px-47 {
+  font-size: 32px;
+  line-height: 35px;
+  font-family: var(--font-slab);
+  font-weight: bold;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+.title-px-10-slab {
+  font-size: 10px;
+  line-height: 13px;
+  font-family: var(--font-slab);
+  font-weight: bold;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+
+.title-px-39 {
+  font-size: 26px;
+  /*line-height: 52px;*/
+  font-family: var(--font-slab);
+  font-weight: bold;
+  /*letter-spacing: 0px;*/
+  text-transform: uppercase;
+}
+
+.text-px-36 {
+  font-size: 21px;
+  line-height: 27px;
+  font-family: var(--font-family);
+  font-weight: normal;
+  /*letter-spacing: 0px;*/
+  text-transform: uppercase;
+}
+
+.text-px-23 {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: var(--font-family);
+  font-weight: normal;
+  /*letter-spacing: 0px;*/
+}
+.text-16 {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: var(--font-family);
+  font-weight: normal;
+  /*letter-spacing: 0px;*/
+}
+
+.text-px-21 {
+  font-size: 16px;
+  /*line-height: 25px;*/
+  font-family: var(--font-family);
+  font-weight: normal;
+  letter-spacing: 0px;
+}
+.text-px-21-b {
+  font-size: 16px;
+  /*line-height: 25px;*/
+  font-family: var(--font-family);
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+.text-px-21-slab {
+  font-size: 16px;
+  /*line-height: 28px;*/
+  font-family: var(--font-slab);
+  font-weight: bold;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+
+.text-px-16-b {
+  font-size: 13px;
+  line-height: 21px;
+  font-family: var(--font-slab);
+  font-weight: bold;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+
+.text-px-16 {
+  font-size: 13px;
+  line-height: 19px;
+  font-family: var(--font-family);
+  font-weight: normal;
+  letter-spacing: 0px;
+}
+.text-px-16-slab {
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 21px;
+  font-family: var(--font-slab);
+  font-weight: normal;
+  letter-spacing: 0px;
+}
+.text-px-16-slab-light {
+  font-size: 13px;
+  line-height: 21px;
+  font-family: var(--font-slab);
+  font-weight: normal;
+  letter-spacing: 0px;
+}
+
+.text-px-14 {
+
+  font-size: 14px;
+  line-height: 17px;
+  font-family: var(--font-family);
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: var(--gray-color);
+}
+
+.p {
+  font-size: 14px;
+  font-family: var(--font-family);
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: var(--gray-color);
+}
+
+.button-yellow {
+  background: var(--yellow-color) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 2px var(--purple-light-color);
+  border-radius: 23px;
+  padding: 5px 15px;
+}
+.button-border-p {
+  background: var(--white-color) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 2px var(--purple-light-color);
+  border-radius: 23px;
+  padding: 5px 15px;
+}
+.button-border-g {
+  background: var(--white-color) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 2px var(--green-dark-color);
+  border-radius: 23px;
+  padding: 5px 15px;
+}
+
+.button-yellow:hover {
+  box-shadow: 0px 2px 3px var(--purple-light-color);
+}
+.button-border-p:hover {
+  box-shadow: 0px 2px 3px var(--purple-light-color);
+}
+.button-border-g:hover {
+  box-shadow: 0px 2px 3px var(--green-dark-color);
+}
+
+.fa-arrow-right {
+  transform: scale(3.0,0.7);
+  margin-left: 20px;
+  font-size: 7px;
+  font-weight: normal;
 }

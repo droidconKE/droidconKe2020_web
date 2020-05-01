@@ -2,26 +2,27 @@
   <div>
     <banner />
     <section class="w-full md:px-32 sm:px-10">
-      <div class="md:mt-10 md:mb-10 mx-auto px-4 ">
-        <div class="items-center flex flex-wrap">
-          <div class="w-full md:w-7/12 ml-auto sm:px-6 md:px-12 md:px-4">
-            <div class="md:pr-12 sm:p-10 text-left">
-              <h3 class="text-3xl font-semibold">
-                WELCOME TO droidconKe 2020
+      <div class="md-4 mb-4 md:mt-20 md:mb-10 mx-auto px-4 ">
+        <div class="items-center flex flex-wrap mt-4 md:mt-10">
+          <div class="w-full md:w-8/12 ml-auto sm:px-6 md:px-12 md:px-4">
+            <div class="md:pr-12 text-left">
+              <h3 class="title-px-52 mb-4 md:mb-10 black">
+                WELCOME TO <br> droidconKe 2020
               </h3>
-              <h6>The Largest Android Focused Developer Conference in Africa </h6>
-              <p class="mt-4 text-lg leading-relaxed text-gray-600">
-                Droidcon is a global conference focused on the engineering of Android applications. Droidcon provides a forum for developers to network with other developers, share techniques, announce apps and products, and to learn and teach.
-
-                This two-day developer focused gathering will be held in Nairobi Kenya on August 6th to 8th 2020 and will be the largest of its kind in Africa.
+              <h6 class="text-px-23 green-dark">
+                The Largest Android Focused Developer Conference in Africa
+              </h6>
+              <p class="mt-4 p">
+                This 3rd edition of droidconKE will include several tech communities from the East African Region and continental members. It will give participants an excellent chance to learn about the local Android development ecosystem, opportunities and services as well as meet the engineers and companies who work on them.
               </p>
               <div class="mt-5">
-                <a href="/">More About DroidconKe</a>
+                <a class="text-px-16-slab black" href="/">More About DroidconKe <i class="fa fa-arrow-right" /></a>
               </div>
             </div>
           </div>
-          <div class="w-full md:w-5/12 mr-auto px-4 lg:pt-24 md:pt-12 sm:pt-0 justify-end">
-            <img alt="..." class="max-w-full" src="https://demos.creative-tim.com/tailwindcss-starter-project/_next/static/images/documentation-014ebef5373d22e362447511dcb171a3.png">
+          <div class="w-full md:w-4/12 mr-auto p-4 md:p-10 mt-10 md:mt-0 mb-10 md:mb-0 sm:pt-0 justify-end content-center items-center">
+            <img v-if="!$store.getters.isDarkTheme" alt="oporo image" class="max-w-full" src="/images/oporo.svg">
+            <img v-else alt="oporo image" class="max-w-full" src="/images/oporo-dark.svg">
           </div>
         </div>
       </div>
@@ -51,40 +52,3 @@ export default {
   }
 }
 </script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  /*display: flex;*/
-  /*justify-content: center;*/
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
