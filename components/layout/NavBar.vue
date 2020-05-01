@@ -48,7 +48,7 @@
             leave-to-class="-translate-y-3 opacity-0"
           >
             <div v-if="isVisible" id="userMenu" class=" rounded shadow-md mt-2 absolute mt-12 top-0 lg:right-0 min-w-full z-30" @mouseleave="isVisible = false">
-              <div class="absolute top-0 lg:right-0 lg:mr-10 w-2 h-2 mt-1 origin-center transform rotate-45 translate-x-5 -translate-y-2 pinn border-t rounded-sm pointer-events-none" />
+              <div class="absolute top-0 lg:right-0 lg:mr-10 w-2 h-2 mt-1 origin-center transform rotate-45 translate-x-5 -translate-y-2 pinn pointer-events-none" />
               <ul class="list-reset">
                 <li>
                   <div class="flex-wrap flex p-2 items-center">
