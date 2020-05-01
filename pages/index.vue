@@ -2,7 +2,7 @@
   <div>
     <banner />
     <section class="w-full md:px-32 sm:px-10">
-      <div class="md:mt-10 md:mb-10 mx-auto px-4 ">
+      <div class="md-4 mb-4 md:mt-20 md:mb-10 mx-auto px-4 ">
         <div class="items-center flex flex-wrap mt-4 md:mt-10">
           <div class="w-full md:w-8/12 ml-auto sm:px-6 md:px-12 md:px-4">
             <div class="md:pr-12 text-left">
@@ -51,18 +51,3 @@ export default {
   }
 }
 </script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  /*display: flex;*/
-  /*justify-content: center;*/
-  align-items: center;
-  text-align: center;
-}
-</style>

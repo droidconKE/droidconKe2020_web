@@ -32,7 +32,7 @@
 
       <div class="w-4/12 flex-grow lg:flex justify-end">
         <div class="relative inline-block" @click="toggleDropDown" @keydown.enter="isVisible = !isVisible">
-          <span class="cursor-pointer inline-flex items-center justify-between p-1 transition-all duration-500 rounded-full h-10 w-10 border bg-green-c">
+          <span class="cursor-pointer inline-flex items-center justify-between p-1 transition-all duration-500 rounded-full h-10 w-10 border bg-dark-green-c">
             <img src="/images/svg/maasai_male.svg" alt="icon">
 
             <!--            <svg fill="currentColor" viewBox="0 0 20 20" class="flex-shrink-0 w-5 h-5 ml-1">-->

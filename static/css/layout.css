@@ -64,8 +64,8 @@
   color: var(--purple-color);
   font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
-  font-size: 105px;
-  line-height: 88px;
+  font-size: 85px;
+  line-height: 78px;
   font-weight: 700;
 }
 
@@ -198,8 +198,26 @@
   border-radius: 23px;
   padding: 10px 20px;
 }
+.button-border-p {
+  background: var(--white-color) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 2px var(--purple-light-color);
+  border-radius: 23px;
+  padding: 10px 20px;
+}
+.button-border-g {
+  background: var(--white-color) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 2px var(--green-dark-color);
+  border-radius: 23px;
+  padding: 10px 20px;
+}
 
 .button-yellow:hover {
   box-shadow: 0px 2px 3px var(--purple-light-color);
+}
+.button-border-p:hover {
+  box-shadow: 0px 2px 3px var(--purple-light-color);
+}
+.button-border-g:hover {
+  box-shadow: 0px 2px 3px var(--green-dark-color);
 }
 
