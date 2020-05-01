@@ -11,15 +11,15 @@
               </h3>
             </div>
           </div>
-          <div class="w-full flex md:w-5/12 items-start justify-end">
+          <div class="w-full flex md:w-5/12 items-start mt-10 md:mt-0 md:justify-end">
             <div class="mt-0">
-              <a class="button-yellow black text-px-16-b" style="transition:all .15s ease" href="#">Get Your Ticket</a>
+              <a class="button-yellow black-persist text-px-16-b" style="transition:all .15s ease" href="#">Get Your Ticket</a>
             </div>
           </div>
         </div>
         <div class="flex flex-wrap">
           <div class="w-full px-4">
-            <div class="flex flex-wrap items-top mb-6 text-left">
+            <div class="flex flex-wrap items-top mb-6 text-center md:text-left">
               <div class="w-full md:w-4/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 ml-auto">
                 <span class="text-px-21-slab purple">Venue</span>
                 <ul class="list-unstyled mt-3">

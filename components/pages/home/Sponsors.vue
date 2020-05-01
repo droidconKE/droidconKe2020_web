@@ -8,12 +8,12 @@
               SPONSOR DROIDCONKE
             </h3>
             <h6 class="text-px-21 gray-light">The Largest Android Focused Developer Conference in Africa </h6>
-            <div class="mt-5">
+            <div class="mt-10 md:mt-5 mb-10 md:mb-0">
               <a class="button-border-p purple text-px-16-b" href="/">More About DroidconKe</a>
             </div>
           </div>
         </div>
-        <div class="w-full md:w-6/12 md:p-8 md:mr-20 justify-end md:absolute md:right-0">
+        <div class="w-full md:w-6/12 md:p-8 md:mr-20 mb-10 md:mb-0 justify-end md:absolute md:right-0">
           <img alt="sponsors img" class=" w-full" src="/images/sponsor.png">
         </div>
       </div>

@@ -11,31 +11,7 @@
 import NavBar from '../components/layout/NavBar'
 import FootBar from '../components/layout/FootBar'
 export default {
-  components: { NavBar, FootBar },
-  methods: {
-    _addDarkTheme () {
-      const darkThemeLinkEl = document.createElement('link')
-      darkThemeLinkEl.setAttribute('rel', 'stylesheet')
-      darkThemeLinkEl.setAttribute('href', '/css/color/darktheme.css')
-      darkThemeLinkEl.setAttribute('id', 'dark-theme-style')
-
-      const docHead = document.querySelector('head')
-      docHead.append(darkThemeLinkEl)
-    },
-    _removeDarkTheme () {
-      const darkThemeLinkEl = document.querySelector('#dark-theme-style')
-      const parentNode = darkThemeLinkEl.parentNode
-      parentNode.removeChild(darkThemeLinkEl)
-    },
-    darkThemeSwitch () {
-      const darkThemeLinkEl = document.querySelector('#dark-theme-style')
-      if (!darkThemeLinkEl) {
-        this._addDarkTheme()
-      } else {
-        this._removeDarkTheme()
-      }
-    }
-  }
+  components: { NavBar, FootBar }
 }
 </script>
 <style>

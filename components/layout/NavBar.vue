@@ -15,23 +15,24 @@
     <div id="nav-content" class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0 lg:pr-24 md:px-5">
       <div class="w-8/12 flex-grow lg:flex">
         <ul class="list-reset lg:flex justify-end  flex-1 items-center">
-          <li class="mr-3">
-            <a class="inline-block py-2 px-4 text-px-16 black active no-underline " href="#"> <i class="fa fa-home" /> Home</a>
+          <li class="mr-3 black">
+            <a class="inline-block py-2 px-4 text-px-16 active no-underline " href="#"> <i class="fa fa-home" /> Home</a>
           </li>
           <li class="mr-3">
-            <a class="py-2 px-4 inline-block text-gray-600 text-px-16 black no-underline nav-link" href="#"><i class="fa fa-bell" /> Sessions</a>
+            <a class="py-2 px-4 inline-block text-px-16 black no-underline nav-link" href="#"><i class="fa fa-bell" /> Sessions</a>
           </li>
           <li class="mr-3">
-            <a class="py-2 px-4 inline-block text-gray-600 no-underline text-px-16 nav-link " href="#"><i class="fa fa-star" /> About</a>
+            <a class="py-2 px-4 inline-block no-underline black text-px-16 nav-link " href="#"><i class="fa fa-star" /> About</a>
           </li>
           <li class="mr-3">
-            <a class="inline-block text-gray-600 no-underline  py-2 px-4 text-px-16 nav-link" href="#"><i class="fa fa-star" /> Sponsors</a>
+            <a class="inline-block no-underline  py-2 px-4 black text-px-16 nav-link" href="#"><i class="fa fa-star" /> Sponsors</a>
           </li>
         </ul>
       </div>
 
-      <div class="w-4/12 flex-grow lg:flex justify-end">
-        <div class="relative inline-block" @click="toggleDropDown" @keydown.enter="isVisible = !isVisible">
+      <div class="w-4/12 flex-grow  lg:flex justify-end">
+        <toggle-theme />
+        <div class=" px-4 md:px-0 relative inine-block" @click="toggleDropDown" @keydown.enter="isVisible = !isVisible">
           <span class="cursor-pointer inline-flex items-center justify-between p-1 transition-all duration-500 rounded-full h-10 w-10 border bg-dark-green-c">
             <img src="/images/svg/maasai_male.svg" alt="icon">
 
@@ -77,8 +78,10 @@
 </template>
 
 <script>
+import ToggleTheme from './ToggleTheme'
 export default {
   name: 'NavBar',
+  components: { ToggleTheme },
   data () {
     return {
       isVisible: false,
@@ -87,13 +90,11 @@ export default {
   },
   mounted () {
     document.getElementById('nav-toggle').onclick = function () {
-      console.log('here')
       document.getElementById('nav-content').classList.toggle('hidden')
     }
   },
   methods: {
     toggleDropDown () {
-      console.log('ddsa')
       this.isVisible ? this.isVisible = false : this.isVisible = true
     }
   }

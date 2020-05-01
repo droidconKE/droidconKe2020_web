@@ -14,17 +14,17 @@
               LARGEST FOCUSED ANDROID <br> DEVELOPER CONFERENCE IN AFRICA
             </p>
             <div class="mt-4 md:mt-12">
-              <a class="button-yellow black text-px-16-b" href="#">Get Your Ticket</a>
+              <a class="button-yellow black-persist text-px-16-b" href="#">Get Your Ticket</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="w-full flex lg:w-5/12 mt-10 md:mt-24 lg:h-full">
+      <div class="w-full flex flex-wrap lg:w-5/12 mt-10 md:mt-24 lg:h-full">
         <div class="flex-none">
-          <a class="button-border-g black text-px-16-b mr-0 md:mr-6" href="#">Submit a talk</a>
+          <a class="button-border-g black-persist text-px-16-b mr-0 md:mr-6" href="#">Submit a talk</a>
           <a class="button-border-p purple text-px-16-b" href="#">Sponsor droidconKE</a>
         </div>
-        <div class="lg:absolute mt-0 sm:mt-10 lg:bottom-0 right-0 lg:mr-40 lg:mb-4 p-3 bg-gray-800 text-white">
+        <div class="lg:absolute mb-10 md:mb-0 flex mt-10 ld:mt-0 lg:bottom-0 lg:right-0 lg:mr-40 lg:mb-4 p-3 bg-gray-800 text-white">
           Absolute child
         </div>
       </div>
