@@ -104,9 +104,16 @@
 }
 
 .title-px-47 {
-
   font-size: 47px;
-  line-height: 62px;
+  line-height: 45px;
+  font-family: var(--font-slab);
+  font-weight: bold;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+.title-px-10-slab {
+  font-size: 10px;
+  line-height: 13px;
   font-family: var(--font-slab);
   font-weight: bold;
   letter-spacing: 0px;

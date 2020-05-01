@@ -24,8 +24,8 @@
           <a class="button-border-g black-persist text-px-16-b mr-0 md:mr-6" href="#">Submit a talk</a>
           <a class="button-border-p purple text-px-16-b" href="#">Sponsor droidconKE</a>
         </div>
-        <div class="lg:absolute mb-10 md:mb-0 flex mt-10 ld:mt-0 lg:bottom-0 lg:right-0 lg:mr-40 lg:mb-4 p-3 bg-gray-800 text-white">
-          Absolute child
+        <div class="lg:absolute mb-10 md:mb-0 flex mt-10 lg:mt-10 lg:bottom-0 lg:right-0 lg:mr-40">
+          <count-days />
         </div>
       </div>
     </div>
@@ -33,8 +33,10 @@
 </template>
 
 <script>
+import CountDays from '../shared/CountDays'
 export default {
-  name: 'Banner'
+  name: 'Banner',
+  components: { CountDays }
 }
 </script>
 
