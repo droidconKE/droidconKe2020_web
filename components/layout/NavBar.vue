@@ -20,13 +20,19 @@
             <a class="inline-block py-2 px-4 text-px-13 active no-underline " href="#"> <i class="fa fa-home" /> Home </a>
           </li>
           <li class="mr-3">
-            <n-link class="py-2 px-4 inline-block text-px-13 black no-underline nav-link" to="/sessions"><i class="fa fa-bell" /> Sessions</n-link>
+            <n-link class="py-2 px-4 inline-block text-px-13 black no-underline nav-link" to="/sessions">
+              <i class="fa fa-bell" /> Sessions
+            </n-link>
           </li>
           <li class="mr-3">
-            <n-link class="py-2 px-4 inline-block no-underline black text-px-13 nav-link " to="/about"><i class="fa fa-star" /> About</n-link>
+            <n-link class="py-2 px-4 inline-block no-underline black text-px-13 nav-link " to="/about">
+              <i class="fa fa-star" /> About
+            </n-link>
           </li>
           <li class="mr-3">
-            <n-link class="inline-block no-underline  py-2 px-4 black text-px-13 nav-link" to="/sponsors"><i class="fa fa-star" /> Sponsors</n-link>
+            <n-link class="inline-block no-underline  py-2 px-4 black text-px-13 nav-link" to="/sponsors">
+              <i class="fa fa-star" /> Sponsors
+            </n-link>
           </li>
         </ul>
       </div>
