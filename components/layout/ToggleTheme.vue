@@ -10,7 +10,7 @@
         <input id="toogleA" :checked="this.$store.getters.isDarkTheme" type="checkbox" class="hidden" @click="darkThemeSwitch()">
         <!-- line -->
         <div
-          class="toggle__line w-6 h-3 bg-gray-400 rounded-full shadow-inner"
+          class="toggle__line w-6 h-3 bg-purple-lighter-c rounded-full shadow-inner"
         />
         <!-- dot -->
         <div

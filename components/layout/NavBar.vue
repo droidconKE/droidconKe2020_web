@@ -1,10 +1,10 @@
 <template>
   <nav class="flex items-center justify-between flex-wrap nav-bg p-2 md:px-5 fixed w-full z-10 top-0">
     <div class="flex items-center flex-shrink-0 text-white mr-6 lg:pl-24">
-      <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
+      <n-link class="text-white no-underline hover:text-white hover:no-underline" to="/">
         <img v-if="!$store.getters.isDarkTheme" class="w-32" src="/images/website.png" alt="logo">
         <img v-else class="w-32" src="/images/website-dark.png" alt="logo dark">
-      </a>
+      </n-link>
     </div>
 
     <div class="block lg:hidden">
@@ -20,13 +20,19 @@
             <a class="inline-block py-2 px-4 text-px-13 active no-underline " href="#"> <i class="fa fa-home" /> Home </a>
           </li>
           <li class="mr-3">
-            <a class="py-2 px-4 inline-block text-px-13 black no-underline nav-link" href="#"><i class="fa fa-bell" /> Sessions</a>
+            <n-link class="py-2 px-4 inline-block text-px-13 black no-underline nav-link" to="/sessions">
+              <i class="fa fa-bell" /> Sessions
+            </n-link>
           </li>
           <li class="mr-3">
-            <a class="py-2 px-4 inline-block no-underline black text-px-13 nav-link " href="#"><i class="fa fa-star" /> About</a>
+            <n-link class="py-2 px-4 inline-block no-underline black text-px-13 nav-link " to="/about">
+              <i class="fa fa-star" /> About
+            </n-link>
           </li>
           <li class="mr-3">
-            <a class="inline-block no-underline  py-2 px-4 black text-px-13 nav-link" href="#"><i class="fa fa-star" /> Sponsors</a>
+            <n-link class="inline-block no-underline  py-2 px-4 black text-px-13 nav-link" to="/sponsors">
+              <i class="fa fa-star" /> Sponsors
+            </n-link>
           </li>
         </ul>
       </div>

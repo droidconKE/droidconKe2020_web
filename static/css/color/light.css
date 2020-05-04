@@ -3,8 +3,10 @@
   --background-color: #fff ;
   --white-color: #fff ;
   --bg-white-color: #fff;
+  --bg-white-color-2: #fff;
   --purple-color: #843D95;
   --purple-light-color: #843D95B3;
+  --purple-lighter-color: #E4D5E8;
   --black-bg-color: #191D1D;
   --black-color: #191D1D;
   --black-color-persists: #191D1D;
@@ -13,5 +15,6 @@
   --yellow-color: #FFD54A;
   --green-color: #68DEA44D;
   --green-bg-color: #68DEA44D;
-  --green-dark-color: #68DEA4;
+  --green-bg-color-2: #68DEA44D;
+  --green-dark-color: #68DEA4 ;
 }

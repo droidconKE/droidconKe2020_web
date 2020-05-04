@@ -44,6 +44,9 @@
 .bg-purple-c {
   background-color: var(--purple-color);
 }
+.bg-purple-lighter-c {
+  background-color: var(--purple-lighter-color);
+}
 
 .bg-black-c {
   background-color: var(--black-bg-color);
@@ -56,13 +59,24 @@
 .bg-green-c {
   background-color: var(--green-bg-color);
 }
+.bg-green-c-2 {
+  background-color: var(--green-bg-color-2);
+}
 .bg-dark-green-c {
   background-color: var(--green-dark-color);
 }
 .bg-white-c {
   background-color: var(--bg-white-color);
 }
-
+.bg-white-c-2 {
+  background-color: var(--bg-white-color-2);
+}
+.underline-green {
+  border-bottom: 5px solid var(--green-dark-color);
+}
+.underline-green-light {
+  border-bottom: 5px solid var(--green-color);
+}
 .nav-bg {
   background: var(--transparent);
   -webkit-backdrop-filter: blur(42px);
@@ -153,21 +167,14 @@
   /*letter-spacing: 0px;*/
 }
 
-.text-px-13 {
-  font-size: 16px;
-  /*line-height: 25px;*/
-  font-family: var(--font-family);
-  font-weight: normal;
-  letter-spacing: 0px;
-}
-.text-px-13-b {
+.text-px-16-b {
   font-size: 16px;
   /*line-height: 25px;*/
   font-family: var(--font-family);
   font-weight: bold;
   letter-spacing: 0px;
 }
-.text-px-13-slab {
+.text-px-16-slab {
   font-size: 16px;
   /*line-height: 28px;*/
   font-family: var(--font-slab);
@@ -200,6 +207,13 @@
   font-weight: normal;
   letter-spacing: 0px;
 }
+.text-px-13-slab-b {
+  font-size: 13px;
+  line-height: 21px;
+  font-family: var(--font-slab);
+  font-weight: bold;
+  letter-spacing: 0px;
+}
 .text-px-13-slab-light {
   font-size: 13px;
   line-height: 21px;
@@ -208,6 +222,13 @@
   letter-spacing: 0px;
 }
 
+.text-px-14-b {
+  font-size: 14px;
+  line-height: 17px;
+  font-family: var(--font-family);
+  font-weight: normal;
+  letter-spacing: 0px;
+}
 .text-px-14 {
 
   font-size: 14px;
