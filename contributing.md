@@ -11,6 +11,9 @@ To ensure you that your pull request is accepted:
 3. Make commits of logical units
 4. Write descriptive commit messages and not 2 worded commits.
 5. Run lint checks `npm run lint` and fix all warnings and errors
-6. For all colors and fonts, use provided color classes in `static/css/layout.css`. Incase of addition, add the colors to `lights.css` and `darktheme.css` as provided in the design 
+6. For all colors and fonts, use provided color classes in `static/css/layout.css`. In case of addition, add the colors to `lights.css` and `darktheme.css` as provided in the design 
+7. Page responsiveness in a priority, *Tailwind CSS* is used in the design 
+
+N/B All the designs will be provide
 
 
