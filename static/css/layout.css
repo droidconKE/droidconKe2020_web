@@ -44,6 +44,9 @@
 .bg-purple-c {
   background-color: var(--purple-color);
 }
+.bg-purple-lighter-c {
+  background-color: var(--purple-lighter-color);
+}
 
 .bg-black-c {
   background-color: var(--black-bg-color);
@@ -153,21 +156,14 @@
   /*letter-spacing: 0px;*/
 }
 
-.text-px-13 {
-  font-size: 16px;
-  /*line-height: 25px;*/
-  font-family: var(--font-family);
-  font-weight: normal;
-  letter-spacing: 0px;
-}
-.text-px-13-b {
+.text-px-16-b {
   font-size: 16px;
   /*line-height: 25px;*/
   font-family: var(--font-family);
   font-weight: bold;
   letter-spacing: 0px;
 }
-.text-px-13-slab {
+.text-px-16-slab {
   font-size: 16px;
   /*line-height: 28px;*/
   font-family: var(--font-slab);
