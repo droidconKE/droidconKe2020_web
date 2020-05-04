@@ -6,14 +6,14 @@
         <div class="items-center flex flex-wrap mb-10">
           <div class="w-full md:w-7/12 ml-auto px-2 md:px-8">
             <div class="text-center md:text-left">
-              <h3 class="title-px-52 black">
+              <h3 class="title-px-36 black">
                 EVENT INFO
               </h3>
             </div>
           </div>
           <div class="w-full flex md:w-5/12 items-start mt-10 md:mt-0 justify-center md:justify-end">
             <div class="mt-0">
-              <a class="button-yellow black-persist text-px-16-b" style="transition:all .15s ease" href="#">Get Your Ticket</a>
+              <a class="button-yellow black-persist text-px-13-b" style="transition:all .15s ease" href="#">Get Your Ticket</a>
             </div>
           </div>
         </div>
@@ -21,29 +21,29 @@
           <div class="w-full px-4">
             <div class="flex flex-wrap items-top mb-6 text-center md:text-left">
               <div class="w-full md:w-4/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 ml-auto">
-                <span class="text-px-21-slab purple">Venue</span>
+                <span class="text-px-13-slab purple">Venue</span>
                 <ul class="list-unstyled mt-3">
-                  <p class="text-px-16 gray">
+                  <p class="text-px-13 gray">
                     Nairobi
                   </p>
 
-                  <p class="text-px-16 purple">
+                  <p class="text-px-13 purple">
                     <i class="fa fa-map-marker" /> View Map location
                   </p>
                 </ul>
               </div>
               <div class="w-full md:w-4/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 ml-auto">
-                <span class="text-px-21-slab purple">Transport</span>
+                <span class="text-px-13-slab purple">Transport</span>
                 <ul class="list-unstyled mt-3">
-                  <p class="text-px-16 gray">
+                  <p class="text-px-13 gray">
                     Public transit do not go directly to iHub. You can share ride on famous using famous taxi services
                   </p>
                 </ul>
               </div>
               <div class="w-full md:w-4/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 ml-auto">
-                <span class="text-px-21-slab purple">Parking</span>
+                <span class="text-px-13-slab purple">Parking</span>
                 <ul class="list-unstyled mt-3">
-                  <p class="text-px-16 gray">
+                  <p class="text-px-13 gray">
                     Parking is very limited and available only in iHub designated slots located in Santeu Plaza
                   </p>
                 </ul>

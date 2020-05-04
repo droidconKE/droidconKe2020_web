@@ -93,7 +93,7 @@
   }
 }
 
-.title-px-52 {
+.title-px-36 {
 
   font-size: 36px;
   line-height: 38px;
@@ -103,7 +103,7 @@
   text-transform: uppercase;
 }
 
-.title-px-47 {
+.title-px-32 {
   font-size: 32px;
   line-height: 35px;
   font-family: var(--font-slab);
@@ -120,7 +120,7 @@
   text-transform: uppercase;
 }
 
-.title-px-39 {
+.title-px-26 {
   font-size: 26px;
   /*line-height: 52px;*/
   font-family: var(--font-slab);
@@ -129,7 +129,7 @@
   text-transform: uppercase;
 }
 
-.text-px-36 {
+.title-px-21 {
   font-size: 21px;
   line-height: 27px;
   font-family: var(--font-family);
@@ -138,7 +138,7 @@
   text-transform: uppercase;
 }
 
-.text-px-23 {
+.text-px-18 {
   font-size: 18px;
   line-height: 22px;
   font-family: var(--font-family);
@@ -153,21 +153,21 @@
   /*letter-spacing: 0px;*/
 }
 
-.text-px-21 {
+.text-px-13 {
   font-size: 16px;
   /*line-height: 25px;*/
   font-family: var(--font-family);
   font-weight: normal;
   letter-spacing: 0px;
 }
-.text-px-21-b {
+.text-px-13-b {
   font-size: 16px;
   /*line-height: 25px;*/
   font-family: var(--font-family);
   font-weight: bold;
   letter-spacing: 0px;
 }
-.text-px-21-slab {
+.text-px-13-slab {
   font-size: 16px;
   /*line-height: 28px;*/
   font-family: var(--font-slab);
@@ -176,7 +176,7 @@
   text-transform: uppercase;
 }
 
-.text-px-16-b {
+.text-px-13-b {
   font-size: 13px;
   line-height: 21px;
   font-family: var(--font-slab);
@@ -185,14 +185,14 @@
   text-transform: uppercase;
 }
 
-.text-px-16 {
+.text-px-13 {
   font-size: 13px;
   line-height: 19px;
   font-family: var(--font-family);
   font-weight: normal;
   letter-spacing: 0px;
 }
-.text-px-16-slab {
+.text-px-13-slab {
   text-transform: uppercase;
   font-size: 13px;
   line-height: 21px;
@@ -200,7 +200,7 @@
   font-weight: normal;
   letter-spacing: 0px;
 }
-.text-px-16-slab-light {
+.text-px-13-slab-light {
   font-size: 13px;
   line-height: 21px;
   font-family: var(--font-slab);

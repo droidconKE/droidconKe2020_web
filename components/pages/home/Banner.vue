@@ -7,22 +7,22 @@
             <h1 class="title-large">
               droidconKe 2021
             </h1>
-            <h4 class="title-px-39 purple">
+            <h4 class="title-px-26 purple">
               6TH TO 8TH AUGUST
             </h4>
-            <p class="mt-0 md:mt-12 text-px-36 black ">
+            <p class="mt-0 md:mt-12 title-px-21 black ">
               LARGEST FOCUSED ANDROID <br> DEVELOPER CONFERENCE IN AFRICA
             </p>
             <div class="mt-4 md:mt-12">
-              <a class="button-yellow black-persist text-px-16-b" href="#">Get Your Ticket</a>
+              <a class="button-yellow black-persist text-px-13-b" href="#">Get Your Ticket</a>
             </div>
           </div>
         </div>
       </div>
       <div class="w-full flex flex-wrap lg:w-5/12 mt-10 md:mt-20 lg:h-full pr-0 lg:pr-10 lg:justify-end">
         <div class="flex-none">
-          <a class="button-border-g black-persist text-px-16-b mr-0 md:mr-6" href="#">Submit a talk</a>
-          <a class="button-border-p purple text-px-16-b" href="#">Sponsor droidconKE</a>
+          <a class="button-border-g black-persist text-px-13-b mr-0 md:mr-6" href="#">Submit a talk</a>
+          <a class="button-border-p purple text-px-13-b" href="#">Sponsor droidconKE</a>
         </div>
         <div class="lg:absolute mb-10 md:mb-3 flex mt-10 lg:mt-0 lg:bottom-0 lg:right-0 lg:mr-40">
           <count-days />

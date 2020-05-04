@@ -6,7 +6,7 @@
     </div>
     <foot-bar />
     <div class=" fixed bottom-0 right-0">
-      <button class="rounded-t-lg bg-purple-c px-6 p-1 text-px-16-slab-light white">
+      <button class="rounded-t-lg bg-purple-c px-6 p-1 text-px-13-slab-light white">
         Feedback <i class="fa fa-share" />
       </button>
     </div>
