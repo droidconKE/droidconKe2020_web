@@ -17,16 +17,16 @@
       <div class="w-8/12 flex-grow lg:flex">
         <ul class="list-reset lg:flex justify-end  flex-1 items-center">
           <li class="mr-3 black">
-            <a class="inline-block py-2 px-4 text-px-16 active no-underline " href="#"> <i class="fa fa-home" /> Home </a>
+            <a class="inline-block py-2 px-4 text-px-13 active no-underline " href="#"> <i class="fa fa-home" /> Home </a>
           </li>
           <li class="mr-3">
-            <a class="py-2 px-4 inline-block text-px-16 black no-underline nav-link" href="#"><i class="fa fa-bell" /> Sessions</a>
+            <a class="py-2 px-4 inline-block text-px-13 black no-underline nav-link" href="#"><i class="fa fa-bell" /> Sessions</a>
           </li>
           <li class="mr-3">
-            <a class="py-2 px-4 inline-block no-underline black text-px-16 nav-link " href="#"><i class="fa fa-star" /> About</a>
+            <a class="py-2 px-4 inline-block no-underline black text-px-13 nav-link " href="#"><i class="fa fa-star" /> About</a>
           </li>
           <li class="mr-3">
-            <a class="inline-block no-underline  py-2 px-4 black text-px-16 nav-link" href="#"><i class="fa fa-star" /> Sponsors</a>
+            <a class="inline-block no-underline  py-2 px-4 black text-px-13 nav-link" href="#"><i class="fa fa-star" /> Sponsors</a>
           </li>
         </ul>
       </div>

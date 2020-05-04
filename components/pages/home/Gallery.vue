@@ -2,7 +2,7 @@
   <section class="w-full h-auto">
     <div class="flex flex-wrap md:py-12">
       <div class="w-full text-center p-6 items-center justify-center">
-        <h3 class="title-px-52 black">
+        <h3 class="title-px-36 black">
           Photos From DroidconKe 2019
         </h3>
       </div>
@@ -40,7 +40,7 @@
           </div>  <!--Single photo-->
         </div>
         <div class="w-full flex flex-wrap mt-4 mb-10 md:mb-0 justify-center items-center">
-          <a class="text-px-16-slab black" target="_blank" href="https://droidconke.pixieset.com/droidconke2019/">View More <i class="fa fa-arrow-right" /></a>
+          <a class="text-px-13-slab black" target="_blank" href="https://droidconke.pixieset.com/droidconke2019/">View More <i class="fa fa-arrow-right" /></a>
         </div>
       </div>
     </div>
