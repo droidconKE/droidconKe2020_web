@@ -6,12 +6,17 @@
 */
 module.exports = {
   theme: {
-    backgroundSize: {
-      auto: 'auto',
-      cover: 'cover',
-      contain: 'contain',
-      '50%': '54%',
-      16: '4rem'
+    extend: {
+      backgroundSize: {
+        auto: 'auto',
+        cover: 'cover',
+        contain: 'contain',
+        '50%': '54%',
+        16: '4rem'
+      },
+      margin: {
+        14: '3.2rem'
+      }
     }
   },
   variants: {},

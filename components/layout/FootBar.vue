@@ -53,7 +53,7 @@
         </div>
       </div>
     </section>
-    <div class="w-full container items-center px-4 py-5">
+    <div class="w-full  items-center px-4 py-5">
       <div class="flex flex-wrap items-center md:justify-between justify-center">
         <div class="w-full md:w-4/12 px-4 mx-auto text-center">
           <div class="mt-0 w-full">
