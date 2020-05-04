@@ -59,6 +59,9 @@
 .bg-green-c {
   background-color: var(--green-bg-color);
 }
+.bg-green-c-2 {
+  background-color: var(--green-bg-color-2);
+}
 .bg-dark-green-c {
   background-color: var(--green-dark-color);
 }
@@ -68,7 +71,12 @@
 .bg-white-c-2 {
   background-color: var(--bg-white-color-2);
 }
-
+.underline-green {
+  border-bottom: 5px solid var(--green-dark-color);
+}
+.underline-green-light {
+  border-bottom: 5px solid var(--green-color);
+}
 .nav-bg {
   background: var(--transparent);
   -webkit-backdrop-filter: blur(42px);
@@ -214,6 +222,13 @@
   letter-spacing: 0px;
 }
 
+.text-px-14-b {
+  font-size: 14px;
+  line-height: 17px;
+  font-family: var(--font-family);
+  font-weight: normal;
+  letter-spacing: 0px;
+}
 .text-px-14 {
 
   font-size: 14px;

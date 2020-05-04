@@ -4,7 +4,7 @@
     <section class="w-full bg-green-c md:px-32 sm:px-10">
       <div class="md:mt-10 mx-auto px-4 md:py-12">
         <div class="items-center flex flex-wrap mb-10">
-          <div class="w-full md:w-7/12 ml-auto px-2 md:px-8">
+          <div class="w-full md:w-7/12 ml-auto px-2 md:px-8 mt-4 md:mt-0">
             <div class="text-center md:text-left">
               <h3 class="title-px-36 black">
                 EVENT INFO
