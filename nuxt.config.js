@@ -81,5 +81,20 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  router: {
+    linkExactActiveClass: 'active',
+    extendRoutes (routes, resolve) {
+      routes.push({
+        name: 'not-found',
+        path: '*',
+        component: resolve(__dirname, 'pages/errors/404.vue')
+      },
+      {
+        name: 'error-500',
+        path: '/error',
+        component: resolve(__dirname, 'pages/errors/500.vue')
+      })
+    }
   }
 }
