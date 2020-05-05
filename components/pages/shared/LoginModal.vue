@@ -1,6 +1,7 @@
 <template>
   <div>
     <div
+      id="modal-login"
       class="modal opacity-0 pointer-events-none fixed w-full h-full overflow-hidden bottom-0 top-0 left-0 flex items-center justify-center z-40"
     >
       <div
@@ -20,7 +21,7 @@
             <div class="w-full w-1/2 img-log">
               <img src="/images/login.png" alt="login">
             </div>
-            <div class="w-full m-1/2 bg-white-c mb-24 lg:mb-0 justify-center">
+            <div class="w-full m-1/2 bg-ash-c mb-24 lg:mb-0 justify-center">
               <div class="modal-close w-full content-start cursor-pointer p-2 flex justify-end z-50">
                 <p class="text-px-10 uppercase gray">
                   Cancel
@@ -48,8 +49,10 @@ export default {
   mounted () {
     const vm = this
 
-    const overlay = document.querySelector('.modal-overlay')
-    overlay.addEventListener('click', this.toggleModal)
+    const overlay = document.querySelectorAll('.modal-overlay')
+    for (let i = 0; i < overlay.length; i++) {
+      overlay[i].addEventListener('click', this.toggleModal)
+    }
 
     const closemodal = document.querySelectorAll('.modal-close')
     for (let i = 0; i < closemodal.length; i++) {
@@ -78,23 +81,18 @@ export default {
   methods: {
     toggleModal () {
       const body = document.querySelector('body')
-      const modal = document.querySelector('.modal')
-      modal.classList.toggle('opacity-0')
-      modal.classList.toggle('pointer-events-none')
-      body.classList.toggle('modal-active')
+      const modals = document.querySelectorAll('.modal')
+      for (let i = 0; i < modals.length; i++) {
+        modals[i].classList.add('opacity-0')
+        modals[i].classList.add('pointer-events-none')
+      }
+      body.classList.remove('modal-active')
     }
   }
 }
 </script>
 
-<style lang="scss">
-  .modal {
-    transition: opacity 0.25s ease;
-  }
-  body.modal-active {
-    overflow-x: hidden;
-    overflow-y: hidden !important;
-  }
+<style lang="scss" scoped>
   .img-log {
     width: 500px;
   }

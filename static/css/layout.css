@@ -74,6 +74,9 @@
 .bg-white-c-2 {
   background-color: var(--bg-white-color-2);
 }
+.bg-ash-c {
+  background-color: var(--bg-ash-color);
+}
 .underline-green {
   border-bottom: 5px solid var(--green-dark-color);
 }

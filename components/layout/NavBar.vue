@@ -109,7 +109,7 @@ export default {
     },
     toggleModal () {
       const body = document.querySelector('body')
-      const modal = document.querySelector('.modal')
+      const modal = document.querySelector('#modal-login')
       modal.classList.toggle('opacity-0')
       modal.classList.toggle('pointer-events-none')
       body.classList.toggle('modal-active')
