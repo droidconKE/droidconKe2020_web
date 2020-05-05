@@ -10,13 +10,15 @@
         Feedback <i class="fa fa-share" />
       </button>
     </div>
+    <login-modal />
   </div>
 </template>
 <script>
 import NavBar from '../components/layout/NavBar'
 import FootBar from '../components/layout/FootBar'
+import LoginModal from '../components/pages/shared/LoginModal'
 export default {
-  components: { NavBar, FootBar }
+  components: { LoginModal, NavBar, FootBar }
 }
 </script>
 <style>

@@ -87,7 +87,6 @@
 }
 
 .title-large {
-  /*background: var(--purple-color) 0% 0% no-repeat padding-box;*/
   color: var(--purple-color);
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
@@ -98,7 +97,6 @@
 
 @media screen and (max-width: 760px) {
   .title-large {
-    /*background: var(--purple-color) 0% 0% no-repeat padding-box;*/
     color: var(--purple-color);
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
@@ -308,4 +306,10 @@
   margin-left: 20px;
   font-size: 7px;
   font-weight: normal;
+}
+
+.modal-bg {
+  background-color: rgba(25, 29, 29, .8);
+  -webkit-backdrop-filter: var(--modal-blur);
+  backdrop-filter: var(--modal-blur);
 }
