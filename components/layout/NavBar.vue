@@ -8,12 +8,20 @@
     </div>
 
     <div class="block lg:hidden">
-      <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
-        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
+      <button
+        id="nav-toggle"
+        class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white"
+      >
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
       </button>
     </div>
 
-    <div id="nav-content" class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0 lg:pr-24 md:px-5">
+    <div
+      id="nav-content"
+      class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0 lg:pr-24 md:px-5"
+    >
       <div class="w-8/12 flex-grow lg:flex">
         <ul class="list-reset lg:flex justify-end  flex-1 items-center">
           <li class="mr-3 black">
@@ -41,13 +49,27 @@
 
       <div class="w-4/12 flex-grow  lg:flex justify-end">
         <toggle-theme />
-        <div id="login-modal" @click="toggleModal()" v-if="!$store.getters.isLoggedIn" class="px-4 md:px-0 relative inine-block">
-          <span class="cursor-pointer inline-flex items-center justify-between p-1 transition-all duration-500 rounded-full h-8 w-8 p-2 border bg-dark-green-c">
+        <div
+          v-if="!$store.getters.isLoggedIn"
+          id="login-modal"
+          class="px-4 md:px-0 relative inine-block"
+          @click="toggleModal()"
+        >
+          <span
+            class="cursor-pointer inline-flex items-center justify-between p-1 transition-all duration-500 rounded-full h-8 w-8 p-2 border bg-dark-green-c"
+          >
             <img src="/images/svg/lock.svg" alt="icon">
           </span>
         </div>
-        <div v-else class="px-4 md:px-0 relative inine-block" @click="toggleDropDown" @keydown.enter="isVisible = !isVisible">
-          <span class="cursor-pointer inline-flex items-center justify-between p-1 transition-all duration-500 rounded-full h-8 w-8 border bg-dark-green-c">
+        <div
+          v-else
+          class="px-4 md:px-0 relative inine-block"
+          @click="toggleDropDown"
+          @keydown.enter="isVisible = !isVisible"
+        >
+          <span
+            class="cursor-pointer inline-flex items-center justify-between p-1 transition-all duration-500 rounded-full h-8 w-8 border bg-dark-green-c"
+          >
             <img src="/images/svg/maasai_male.svg" alt="icon">
           </span>
           <transition
@@ -58,8 +80,15 @@
             leave-class="translate-y-0 opacity-100"
             leave-to-class="-translate-y-3 opacity-0"
           >
-            <div v-if="isVisible" id="userMenu" class=" rounded shadow-md mt-2 absolute mt-12 top-0 lg:right-0 min-w-full z-30" @mouseleave="isVisible = false">
-              <div class="absolute top-0 lg:right-0 lg:mr-10 w-2 h-2 mt-1 origin-center transform rotate-45 translate-x-5 -translate-y-2 pinn pointer-events-none" />
+            <div
+              v-if="isVisible"
+              id="userMenu"
+              class=" rounded shadow-md mt-2 absolute mt-12 top-0 lg:right-0 min-w-full z-30"
+              @mouseleave="isVisible = false"
+            >
+              <div
+                class="absolute top-0 lg:right-0 lg:mr-10 w-2 h-2 mt-1 origin-center transform rotate-45 translate-x-5 -translate-y-2 pinn pointer-events-none"
+              />
               <ul class="list-reset">
                 <li>
                   <div class="flex-wrap flex p-2 items-center">
@@ -74,9 +103,13 @@
                     </div>
                   </div>
                 </li>
-                <li><hr class="border-t mx-2 border-bg-black-1"></li>
                 <li>
-                  <a href="#" class="px-4 py-3 block session-link hover:bg-gray-800 no-underline hover:no-underline"><i class="fa fa-star mr-2" />  My Sessions</a>
+                  <hr class="border-t mx-2 border-bg-black-1">
+                </li>
+                <li>
+                  <a href="#" class="px-4 py-3 block session-link hover:bg-gray-800 no-underline hover:no-underline"><i
+                    class="fa fa-star mr-2"
+                  /> My Sessions</a>
                 </li>
               </ul>
             </div>
@@ -89,6 +122,7 @@
 
 <script>
 import ToggleTheme from './ToggleTheme'
+
 export default {
   name: 'NavBar',
   components: { ToggleTheme },
@@ -132,17 +166,22 @@ export default {
       opacity: 1;
     }
   }
+
   .nav-link:hover {
     color: var(--purple-color);
   }
+
   .active {
     color: var(--purple-color);
   }
+
   .pinn {
     background-color: #191D1D;
   }
+
   #userMenu, {
     background-color: #191D1D;
+
     .session-link {
       text-align: left;
       font-size: 14px;
@@ -152,6 +191,7 @@ export default {
       color: #FFFFFF;
       opacity: 1;
     }
+
     .name {
       text-align: left;
       font-size: 13px;
@@ -161,6 +201,7 @@ export default {
       color: #FFFFFF;
       opacity: 1;
     }
+
     .logg {
       text-align: left;
       font-size: 9px;
@@ -170,10 +211,12 @@ export default {
       color: #68DEA4;
       opacity: 1;
     }
+
     .border-bg-black-1 {
       border-color: #000;
     }
   }
+
   .list-reset {
     width: 230px;
   }
