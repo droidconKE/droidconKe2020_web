@@ -5,7 +5,7 @@
         <div class="w-full flex flex-wrap md:px-32 sm:px-10">
           <div class="w-1/2 px-4 md:px-12 py-4">
             <h2 class="text-px-16-slab purple">
-              Sessions
+              Session details
             </h2>
           </div>
           <div class="w-1/2 px-2 md:px-0 flex-wrap flex justify-center items-center">
@@ -57,7 +57,7 @@
             <p class="p gray mt-2">Been in the tech industry for over 20 years. Am passionate about developer communities, motivating people and building successful</p>
 
             <div class="w-full justify-center md:justify-start flex mt-4 md:mt-10">
-              <a class="button-border-g text-px-13-b black mr-4 lg:mr-6" href="#">share <i class="fa fa-share"></i></a>
+              <a class="button-border-g text-px-13-b black-persist mr-4 lg:mr-6" href="#">share <i class="fa fa-share"></i></a>
               <a class="button-purple text-px-13 white" href="#">Session Feedback <i class="fa fa-share"></i></a>
             </div>
           </div>
@@ -77,7 +77,7 @@
               />
               <!-- dot -->
               <div
-                class="toggle__dot absolute w-4 h-4 bg-black-c rounded-full shadow inset-y-0 left-0"
+                class="toggle__dot absolute w-4 h-4 bg-black-c-inverse rounded-full shadow inset-y-0 left-0"
               />
             </div>
             <!-- label -->

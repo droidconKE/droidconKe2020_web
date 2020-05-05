@@ -22,7 +22,7 @@
               />
               <!-- dot -->
               <div
-                class="toggle__dot absolute w-4 h-4 bg-black-c rounded-full shadow inset-y-0 left-0"
+                class="toggle__dot absolute w-4 h-4 bg-black-c-inverse rounded-full shadow inset-y-0 left-0"
               />
             </div>
             <!-- label -->
@@ -61,7 +61,7 @@
                 8:00 <br>AM
               </h3>
             </div>
-            <div class="w-full lg:w-10/12 flex">
+            <div class="w-full lg:w-10/12 flex bg-white-c rounded-tr-lg rounded-br-lg">
               <div class="h-20 w-32  lg:h-20 lg:w-32 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/arrive.png')" title="Woman holding a mug" />
               <div class="h-auto w-full lg:h-20 shadow-sm rounded-lg px-4 py-1 flex flex-col justify-between">
                 <div class="flex flex-wrap items-center">
@@ -86,7 +86,7 @@
                 9:00 <br>AM
               </h3>
             </div>
-            <div class="w-full lg:w-10/12 flex">
+            <div class="w-full lg:w-10/12 flex bg-white-c rounded-tr-lg rounded-br-lg">
               <nuxt-link to="/sessions/mine" class="h-32 w-32  lg:h-32 lg:w-32 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/AlexKoller.png')" title="Woman holding a mug" />
               <div class="h-auto w-full lg:h-32 shadow-sm rounded-lg px-4 py-1 flex flex-col justify-between">
                 <div class="flex flex-wrap items-center">
@@ -117,7 +117,7 @@
                 10:00 <br>AM
               </h3>
             </div>
-            <div class="w-full lg:w-10/12 flex">
+            <div class="w-full lg:w-10/12 flex bg-white-c rounded-tr-lg rounded-br-lg">
               <nuxt-link to="/sessions/mine" class="h-32 w-32  lg:h-32 lg:w-32 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/MichaelBukachi.png')" title="Woman holding a mug" />
               <div class="h-auto w-full lg:h-32 shadow-sm rounded-lg px-4 py-1 flex flex-col justify-between">
                 <div class="flex flex-wrap items-center">
@@ -148,7 +148,7 @@
                 11:00 <br>AM
               </h3>
             </div>
-            <div class="w-full lg:w-10/12 flex">
+            <div class="w-full lg:w-10/12 flex bg-white-c rounded-tr-lg rounded-br-l ">
               <nuxt-link to="/sessions/mine" class="h-32 w-32  lg:h-32 lg:w-32 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/CarolWarugongo.png')" title="Woman holding a mug" />
               <div class="h-auto w-full lg:h-32 shadow-sm rounded-lg px-4 py-1 flex flex-col justify-between">
                 <div class="flex flex-wrap items-center">

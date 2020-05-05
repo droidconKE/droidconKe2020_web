@@ -51,6 +51,9 @@
 .bg-black-c {
   background-color: var(--black-bg-color);
 }
+.bg-black-c-inverse {
+  background-color: var(--black-color);
+}
 
 .bg-yellow-c {
   background-color: var(--yellow-color);
