@@ -8,8 +8,7 @@
               Session details
             </h2>
           </div>
-          <div class="w-1/2 px-2 md:px-0 flex-wrap flex justify-center items-center">
-          </div>
+          <div class="w-1/2 px-2 md:px-0 flex-wrap flex justify-center items-center" />
         </div>
       </div>
     </section>
@@ -17,7 +16,9 @@
       <div class="w-full flex flex-wrap px-4 md:px-12 py-0 md:py-3">
         <div class="w-full flex-wrap lg:w-5/12 flex border-r-0 lg:border-r-2 border-green-200 pr-0 lg:pr-4">
           <div class="w-full py-4">
-            <h4 class="text-px-16-slab purple">Speaker</h4>
+            <h4 class="text-px-16-slab purple">
+              Speaker
+            </h4>
           </div>
           <div class="w-full flex items-start flex text-center">
             <div class="w-24 h-24 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
@@ -36,29 +37,43 @@
             </div>
           </div>
           <div class="w-full">
-            <h4 class="black text-px-13-slab-b mt-2 md:mt-4">Bio:</h4>
-            <p class="p gray mt-2 md:mt-4 mb-4 lg:mb-10">Been in the tech industry for over 20 years. Am passionate about developer communities, motivating people and building successful organizations. Proven track record in product development, business development, and nurturing mission critical strategic partner relationships. Have lived and worked in Germany for 10 years. Fluent in German and English.</p>
+            <h4 class="black text-px-13-slab-b mt-2 md:mt-4">
+              Bio:
+            </h4>
+            <p class="p gray mt-2 md:mt-4 mb-4 lg:mb-10">
+              Been in the tech industry for over 20 years. Am passionate about developer communities, motivating people and building successful organizations. Proven track record in product development, business development, and nurturing mission critical strategic partner relationships. Have lived and worked in Germany for 10 years. Fluent in German and English.
+            </p>
           </div>
         </div>
         <div class="w-full flex-wrap content-start items-start lg:w-5/12 px-0 lg:px-3 flex">
           <div class="w-full flex py-4">
-            <h4 class="text-px-16-slab purple mr-0 md:mr-10">Session</h4>
-            <p class="text-px-14 gray"><span class="mr-2">Level:</span> <span class="uppercase white text-px-10 button-black">Beginner</span></p>
+            <h4 class="text-px-16-slab purple mr-0 md:mr-10">
+              Session
+            </h4>
+            <p class="text-px-14 gray">
+              <span class="mr-2">Level:</span> <span class="uppercase white text-px-10 button-black">Beginner</span>
+            </p>
           </div>
           <div class="w-full flex items-start flex-col">
-            <h4 class="black text-px-13-slab-b">Keynote</h4>
+            <h4 class="black text-px-13-slab-b">
+              Keynote
+            </h4>
             <p class="text-px-14 gray mt-2">
               Community on a Global Scale
             </p>
             <p class="text-px-13-slab-light gray ">
               9:00AM - 9:30AM | <span class="green-dark">ROOM 1</span>
             </p>
-            <h6 class="text-px-10-slab font-bold black mt-4 md:mt-10">Session Description</h6>
-            <p class="p gray mt-2">Been in the tech industry for over 20 years. Am passionate about developer communities, motivating people and building successful</p>
+            <h6 class="text-px-10-slab font-bold black mt-4 md:mt-10">
+              Session Description
+            </h6>
+            <p class="p gray mt-2">
+              Been in the tech industry for over 20 years. Am passionate about developer communities, motivating people and building successful
+            </p>
 
             <div class="w-full justify-center md:justify-start flex mt-4 md:mt-10">
-              <a class="button-border-g text-px-13-b black-persist mr-4 lg:mr-6" href="#">share <i class="fa fa-share"></i></a>
-              <a class="button-purple text-px-13 white" href="#">Session Feedback <i class="fa fa-share"></i></a>
+              <a class="button-border-g text-px-13-b black-persist mr-4 lg:mr-6" href="#">share <i class="fa fa-share" /></a>
+              <a class="button-purple text-px-13 white" href="#">Session Feedback <i class="fa fa-share" /></a>
             </div>
           </div>
         </div>
