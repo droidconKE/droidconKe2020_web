@@ -45,4 +45,7 @@ export default {
     color: var(--black-color-persists);
     text-transform: uppercase;
   }
+  .black {
+    color: #000 !important;
+  }
 </style>
