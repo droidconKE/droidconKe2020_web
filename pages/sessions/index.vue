@@ -2,12 +2,12 @@
   <section class="w-full mt-14">
     <div class="bg-green-c w-full">
       <div class="w-full flex flex-wrap md:px-32 sm:px-10">
-        <div class="w-1/2 px-2 md:px-12 py-4">
+        <div class="w-1/2 px-4 md:px-12 py-4">
           <h2 class="text-px-16-slab purple">
             Sessions
           </h2>
         </div>
-        <div class="w-1/2 px-2 md:px-0 flex-wrap flex justify-center items-center">
+        <div class="w-1/2 px-4 md:px-0 flex-wrap flex justify-center items-center">
           <label
             for="toogleAA"
             class="flex items-center cursor-pointer pr-6"
@@ -36,7 +36,7 @@
       </div>
     </div>
     <div class="w-full flex flex-wrap md:px-32 sm:px-10 mt-2 md:mt-4">
-      <div class="w-full flex flex-wrap px-2 md:px-12 py-4">
+      <div class="w-full flex flex-wrap px-4 md:px-12 py-4">
         <div class="flex flex-row lg:flex-col w-full lg:w-1/12 h-auto lg:h-64 border-r-0 lg:border-r-2 border-green-200 space-y-0 lg:space-y-6 space-x-6 lg:space-x-0 items-center lg:items-start justify-center lg:justify-start pb-4 lg:pb-0 sticky " style="top: 50px">
           <div class="w-4/12 px-3 py-1 lg:w-full bg-yellow-c rounded-tl-lg rounded-bl-lg border border-green-200 cursor-pointer">
             <h4 class="text-px-16-slab purple">
@@ -54,7 +54,7 @@
             </h4>
           </div>
         </div>
-        <div class="w-full flex-wrap flex lg:w-11/12 space-y-6">
+        <div class="w-full flex-wrap flex lg:w-11/12 space-y-6 mb-2 lg:mb-10">
           <div class="flex w-full px-0 lg:px-2">
             <div class="w-2/12 h-20 flex items-center justify-center text-right hidden lg:grid">
               <h3 class="text-px-16-slab purple">
@@ -87,10 +87,10 @@
               </h3>
             </div>
             <div class="w-full lg:w-10/12 flex">
-              <div class="h-32 w-32  lg:h-32 lg:w-32 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/AlexKoller.png')" title="Woman holding a mug" />
+              <nuxt-link to="/sessions/mine" class="h-32 w-32  lg:h-32 lg:w-32 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/AlexKoller.png')" title="Woman holding a mug" />
               <div class="h-auto w-full lg:h-32 shadow-sm rounded-lg px-4 py-1 flex flex-col justify-between">
                 <div class="flex flex-wrap items-center">
-                  <div class="w-10/12">
+                  <nuxt-link to="/sessions/mine" class="w-10/12">
                     <div class="text-px-13-slab-b black">
                       Can coffee make you a better developer?
                     </div>
@@ -103,9 +103,9 @@
                     <p class="text-px-13 green-dark pt-1">
                       <i class="fa fa-android" /> Greg Fawson
                     </p>
-                  </div>
+                  </nuxt-link>
                   <div class="w-2/12 flex items-center justify-center">
-                    <div><i class="fa fa-star gray" /></div>
+                    <div><i class="fa fa-star gray cursor-pointer" /></div>
                   </div>
                 </div>
               </div>
@@ -118,10 +118,10 @@
               </h3>
             </div>
             <div class="w-full lg:w-10/12 flex">
-              <div class="h-32 w-32  lg:h-32 lg:w-32 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/MichaelBukachi.png')" title="Woman holding a mug" />
+              <nuxt-link to="/sessions/mine" class="h-32 w-32  lg:h-32 lg:w-32 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/MichaelBukachi.png')" title="Woman holding a mug" />
               <div class="h-auto w-full lg:h-32 shadow-sm rounded-lg px-4 py-1 flex flex-col justify-between">
                 <div class="flex flex-wrap items-center">
-                  <div class="w-10/12">
+                  <nuxt-link to="/sessions/mine" class="w-10/12">
                     <div class="text-px-13-slab-b black">
                       Can coffee make you a better developer?
                     </div>
@@ -134,9 +134,9 @@
                     <p class="text-px-13 green-dark pt-1">
                       <i class="fa fa-android" /> Greg Fawson
                     </p>
-                  </div>
+                  </nuxt-link>
                   <div class="w-2/12 flex items-center justify-center">
-                    <div><i class="fa fa-star-o gray" /></div>
+                    <div><i class="fa fa-star-o gray cursor-pointer" /></div>
                   </div>
                 </div>
               </div>
@@ -149,10 +149,10 @@
               </h3>
             </div>
             <div class="w-full lg:w-10/12 flex">
-              <div class="h-32 w-32  lg:h-32 lg:w-32 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/CarolWarugongo.png')" title="Woman holding a mug" />
+              <nuxt-link to="/sessions/mine" class="h-32 w-32  lg:h-32 lg:w-32 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/CarolWarugongo.png')" title="Woman holding a mug" />
               <div class="h-auto w-full lg:h-32 shadow-sm rounded-lg px-4 py-1 flex flex-col justify-between">
                 <div class="flex flex-wrap items-center">
-                  <div class="w-10/12">
+                  <nuxt-link to="/sessions/mine" class="w-10/12">
                     <div class="text-px-13-slab-b black">
                       Can coffee make you a better developer?
                     </div>
@@ -165,9 +165,9 @@
                     <p class="text-px-13 green-dark pt-1">
                       <i class="fa fa-android" /> Greg Fawson
                     </p>
-                  </div>
+                  </nuxt-link>
                   <div class="w-2/12 flex items-center justify-center">
-                    <div><i class="fa fa-star-o gray" /></div>
+                    <div><i class="fa fa-star-o gray cursor-pointer" /></div>
                   </div>
                 </div>
               </div>

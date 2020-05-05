@@ -17,7 +17,9 @@
       <div class="w-8/12 flex-grow lg:flex">
         <ul class="list-reset lg:flex justify-end  flex-1 items-center">
           <li class="mr-3 black">
-            <a class="inline-block py-2 px-4 text-px-13 active no-underline " href="#"> <i class="fa fa-home" /> Home </a>
+            <nuxt-link class="inline-block py-2 px-4 text-px-13 active no-underline " to="/">
+              <i class="fa fa-home" /> Home
+            </nuxt-link>
           </li>
           <li class="mr-3">
             <n-link class="py-2 px-4 inline-block text-px-13 black no-underline nav-link" to="/sessions">

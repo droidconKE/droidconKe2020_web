@@ -68,7 +68,7 @@
       <div class="w-full px-0 md:px-24 mr-auto mb-4 md:mb-0">
         <div class="w-full flex flex-wrap items-center grid md:grid-cols-6 grid-cols-3 gap-8">
           <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded border border-green-200">
+            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
               <img class="w-full p-0 rounded-full border-2 border-green-500" src="/icon.png" alt="Sunset in the mountains">
             </div>
             <p class="text-px-14-b capitalize font-bold black mt-2">
@@ -79,7 +79,7 @@
             </p>
           </div>
           <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded border border-green-200">
+            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
               <img class="w-full p-0 rounded-full border-2 border-green-500" src="/images/speakers/MichaelBukachi.png" alt="Sunset in the mountains">
             </div>
             <p class="text-px-14-b capitalize font-bold black mt-2">
@@ -90,7 +90,7 @@
             </p>
           </div>
           <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded border border-green-200">
+            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
               <img class="w-full p-0 rounded-full border-2 border-green-500" src="/icon.png" alt="Sunset in the mountains">
             </div>
             <p class="text-px-14-b capitalize font-bold black mt-2">
@@ -101,7 +101,7 @@
             </p>
           </div>
           <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded border border-green-200">
+            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
               <img class="w-full p-0 rounded-full border-2 border-green-500" src="/icon.png" alt="Sunset in the mountains">
             </div>
             <p class="text-px-14-b capitalize font-bold black mt-2">
@@ -112,7 +112,7 @@
             </p>
           </div>
           <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded border border-green-200">
+            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
               <img class="w-full p-0 rounded-full border-2 border-green-500" src="/icon.png" alt="Sunset in the mountains">
             </div>
             <p class="text-px-14-b capitalize font-bold black mt-2">
@@ -123,7 +123,7 @@
             </p>
           </div>
           <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded border border-green-200">
+            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
               <img class="w-full p-0 rounded-full border-2 border-green-500" src="/images/speakers/MichaelBukachi.png" alt="Sunset in the mountains">
             </div>
             <p class="text-px-14-b capitalize font-bold black mt-2">
@@ -134,7 +134,7 @@
             </p>
           </div>
           <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded border border-green-200">
+            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
               <img class="w-full p-0 rounded-full border-2 border-green-500" src="/icon.png" alt="Sunset in the mountains">
             </div>
             <p class="text-px-14-b capitalize font-bold black mt-2">
@@ -145,7 +145,7 @@
             </p>
           </div>
           <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded border border-green-200">
+            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
               <img class="w-full p-0 rounded-full border-2 border-green-500" src="/icon.png" alt="Sunset in the mountains">
             </div>
             <p class="text-px-14-b capitalize font-bold black mt-2">
@@ -156,7 +156,7 @@
             </p>
           </div>
           <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded border border-green-200">
+            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
               <img class="w-full p-0 rounded-full border-2 border-green-500" src="/images/speakers/CarolWarugongo.png" alt="Sunset in the mountains">
             </div>
             <p class="text-px-14-b capitalize font-bold black mt-2">
@@ -167,7 +167,7 @@
             </p>
           </div>
           <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded border border-green-200">
+            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
               <img class="w-full p-0 rounded-full border-2 border-green-500" src="/icon.png" alt="Sunset in the mountains">
             </div>
             <p class="text-px-14-b capitalize font-bold black mt-2">
@@ -178,7 +178,7 @@
             </p>
           </div>
           <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded border border-green-200">
+            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
               <img class="w-full p-0 rounded-full border-2 border-green-500" src="/icon.png" alt="Sunset in the mountains">
             </div>
             <p class="text-px-14-b capitalize font-bold black mt-2">
@@ -189,7 +189,7 @@
             </p>
           </div>
           <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded border border-green-200">
+            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
               <img class="w-full p-0 rounded-full border-2 border-green-500" src="/images/speakers/CarolWarugongo.png" alt="Sunset in the mountains">
             </div>
             <p class="text-px-14-b capitalize font-bold black mt-2">
@@ -200,7 +200,7 @@
             </p>
           </div>
           <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded border border-green-200">
+            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
               <img class="w-full p-0 rounded-full border-2 border-green-500" src="/images/speakers/MichaelBukachi.png" alt="Sunset in the mountains">
             </div>
             <p class="text-px-14-b capitalize font-bold black mt-2">

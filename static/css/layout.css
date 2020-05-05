@@ -236,6 +236,13 @@
   font-weight: normal;
   letter-spacing: 0px;
 }
+.text-px-10-slab {
+  font-size: 10px;
+  line-height: 13px;
+  font-family: var(--font-slab);
+  font-weight: normal;
+  letter-spacing: 0px;
+}
 .text-px-14 {
   font-size: 14px;
   line-height: 17px;
@@ -259,6 +266,17 @@
   border-radius: 23px;
   padding: 5px 15px;
 }
+.button-purple {
+  background: var(--purple-color) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 2px var(--purple-light-color);
+  border-radius: 23px;
+  padding: 5px 15px;
+}
+.button-black {
+  background: var(--black-color-persists) 0% 0% no-repeat padding-box;
+  border-radius: 23px;
+  padding: 5px 15px;
+}
 .button-border-p {
   background: var(--white-color) 0% 0% no-repeat padding-box;
   box-shadow: 0px 1px 2px var(--purple-light-color);
@@ -275,7 +293,7 @@
 .button-yellow:hover {
   box-shadow: 0px 2px 3px var(--purple-light-color);
 }
-.button-border-p:hover {
+.button-border-p:hover, .button-purple:hover  {
   box-shadow: 0px 2px 3px var(--purple-light-color);
 }
 .button-border-g:hover {
