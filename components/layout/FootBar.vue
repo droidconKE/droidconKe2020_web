@@ -1,6 +1,6 @@
 <template>
   <!--  class="container mx-auto px-12"-->
-  <div>
+  <div class="-mt-10" style="">
     <section class="w-full bg-green-c md:px-32 sm:px-10">
       <div class="md:mt-10 mx-auto px-4 md:py-12">
         <div class="items-center flex flex-wrap mb-10">
