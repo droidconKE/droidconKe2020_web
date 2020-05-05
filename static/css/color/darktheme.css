@@ -3,8 +3,11 @@
   --background-color: #0A0A0A ;
   --white-color: #ffffff ;
   --bg-white-color: #000;
+  --bg-white-color-2: #68DEA44D;
+  --bg-ash-color: #000000;
   --purple-color: #843D95;
   --purple-light-color: #843D95B3;
+  --purple-lighter-color: #E4D5E8;
   --black-bg-color: #000000;
   --black-color: #ffffff;
   --black-color-persists: #191D1D;
@@ -13,5 +16,7 @@
   --yellow-color: #FFD54A;
   --green-color: #68DEA44D;
   --green-bg-color: #101010;
+  --green-bg-color-2: #68DEA44D;
   --green-dark-color: #68DEA4;
+  --modal-blur: blur(20px);
 }
