@@ -2,7 +2,7 @@
   <!--  class="container mx-auto px-12"-->
   <div class="-mt-10" style="">
     <section class="w-full bg-green-c md:px-32 sm:px-10">
-      <div class="md:mt-10 mx-auto px-4 md:py-12">
+      <div class="md:mt-10 container mx-auto px-4 md:py-12">
         <div class="items-center flex flex-wrap mb-10">
           <div class="w-full md:w-7/12 ml-auto px-2 md:px-8 mt-4 md:mt-0">
             <div class="text-center md:text-left">
@@ -68,7 +68,7 @@
             </a>
           </div>
           <div class="py-4">
-            <p class="text-px-14 gray">
+            <p class="text-px-12 gray">
               Copyright © 2020. All rights reserved
             </p>
           </div>

@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap nav-bg p-2 md:px-5 fixed w-full z-10 top-0">
+  <nav class="flex  items-center justify-between flex-wrap nav-bg p-2 md:px-5 fixed w-full z-10 top-0">
     <div class="flex items-center flex-shrink-0 text-white mr-6 lg:pl-24">
       <n-link class="text-white no-underline hover:text-white hover:no-underline" to="/">
         <img v-if="!$store.getters.isDarkTheme" class="w-32" src="/images/website.png" alt="logo">

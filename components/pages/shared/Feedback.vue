@@ -22,13 +22,11 @@
               <img src="/images/feedback.png" alt="login">
             </div>
             <div class="w-full m-1/2 bg-ash-c mb-24 lg:mb-0 justify-start">
-              <div class="modal-close right-auto w-12 h-0 float-right content-start cursor-pointer p-2 flex justify-end z-50">
-                <p class="text-px-10  uppercase gray">
-                  Cancel
-                </p>
-              </div>
-              <div class="w-full content-start  flex flex-col px-4 lg:px-8 py-2">
+              <div class="w-full content-start flex flex-col px-4 lg:px-8 py-3 md:py-5">
                 <div class="w-full">
+                  <p class="text-px-10 modal-close float-right cursor-pointer uppercase gray">
+                    Cancel
+                  </p>
                   <p class="text-px-14-b green-dark">
                     Feedback
                   </p>

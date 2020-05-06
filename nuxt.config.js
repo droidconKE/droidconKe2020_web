@@ -39,6 +39,7 @@ export default {
   ** Global CSS
   */
   css: [
+    'normalize.css/normalize.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -84,7 +85,7 @@ export default {
   },
   router: {
     linkExactActiveClass: 'active',
-    linkActiveClass: 'active',
+    // linkActiveClass: 'active',
     extendRoutes (routes, resolve) {
       routes.push({
         name: 'not-found',

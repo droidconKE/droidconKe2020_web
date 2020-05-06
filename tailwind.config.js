@@ -16,6 +16,9 @@ module.exports = {
       },
       margin: {
         14: '3.2rem'
+      },
+      spacing: {
+        36: '9rem'
       }
     }
   },

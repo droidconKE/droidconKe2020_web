@@ -1,7 +1,7 @@
 <template>
   <div class="w-full mt-14 mb-0">
     <section class="w-full bg-black-c md:px-32 sm:px-10">
-      <div class="md:mt-10 mx-auto px-4 md:py-16">
+      <div class="md:mt-10 container mx-auto px-4 md:py-16">
         <div class="items-start flex flex-wrap mb-0">
           <div class="w-full md:w-7/12 ml-auto px-2 md:px-8 mt-4 md:mt-0">
             <div class="text-center md:text-left">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </section>
-    <section class="w-full md:px-32 sm:px-10">
+    <section class="w-full container mx-auto md:px-32 sm:px-10">
       <div class="flex flex-wrap md:pt-16">
         <div class="w-full text-center mb-2 md:mb-0 mt-4 md:mt-0 items-center justify-center">
           <h3 class="title-px-36 black">
@@ -107,8 +107,8 @@
           </p>
         </div>
       </div>
-      <div class="mx-auto px-4 md:py-10">
-        <div class="items-center flex flex-wrap mb-4">
+      <div class="mx-auto container px-4 md:py-10">
+        <div class="items-center flex flex-wrap mb-0">
           <div class="w-full px-2 md:px-8 mt-4 mb-4 lg:mb-0 md:mt-0">
             <img v-if="!$store.getters.isDarkTheme" src="/images/sponsor-graph.svg" alt="sponsor-graph">
             <img v-else src="/images/sponsor-dark.svg" alt="sponsor-graph dark">
@@ -116,8 +116,8 @@
         </div>
       </div>
     </section>
-    <section class="w-full bg-black-c mb-0 md:px-32 sm:px-10">
-      <div class="mx-auto px-4 md:py-16">
+    <section class="w-full bg-black-c mb-10 md:px-32 sm:px-10">
+      <div class="mx-auto container px-4 md:py-16">
         <div class="flex flex-wrap">
           <div class="w-full text-center mb-2 md:mb-0 mt-4 md:mt-0 items-center justify-center">
             <h3 class="text-px-18 white">

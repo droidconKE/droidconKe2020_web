@@ -1,6 +1,6 @@
 <template>
   <section class="w-full mt-14 all-page bg-no-repeat bg-cover bg-center lg:bg-center bg-local" style="background-image: url(/images/cookies.png)">
-    <div class="md:px-32 sm:px-10 all-page flex">
+    <div class="md:px-32 container mx-auto sm:px-10 all-page flex">
       <div class="w-full flex flex-wrap px-4 md:px-12 py-0 md:py-3 items-center justify-end">
         <div class="content-center w-full lg:w-1/2 flex">
           <div class=" text-center">
