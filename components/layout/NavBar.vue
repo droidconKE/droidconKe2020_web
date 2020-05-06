@@ -136,9 +136,7 @@ export default {
   },
   watch: {
     $route () {
-      console.log(this.navVisible)
-      console.log(this.isVisible)
-      console.log('route changed', this.$route)
+      // console.log('route changed', this.$route)
       if (this.isVisible) {
         this.isVisible = false
       }

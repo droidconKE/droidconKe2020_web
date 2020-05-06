@@ -84,6 +84,7 @@ export default {
   },
   router: {
     linkExactActiveClass: 'active',
+    linkActiveClass: 'active',
     extendRoutes (routes, resolve) {
       routes.push({
         name: 'not-found',

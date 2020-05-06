@@ -13,7 +13,7 @@
           </div>
           <div class="w-full flex md:w-5/12 items-start mt-10 md:mt-0 justify-center md:justify-end px-2 md:px-8">
             <div class="mt-0">
-              <a class="button-yellow black-persist text-px-13-b" style="transition:all .15s ease" href="#">Get Your Ticket</a>
+              <a class="button-yellow black-persist text-px-13-b" style="transition:all .15s ease" href="http://bit.ly/droidconKE20" target="_blank">Get Your Ticket</a>
             </div>
           </div>
         </div>
@@ -27,9 +27,9 @@
                     Nairobi
                   </p>
 
-                  <p class="text-px-13 purple">
+                  <a href="https://goo.gl/maps/n6dsyEkx4CRCujaB6" target="_blank" class="text-px-13 purple">
                     <i class="fa fa-map-marker" /> View Map location
-                  </p>
+                  </a>
                 </ul>
               </div>
               <div class="w-full md:w-4/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 ml-auto">

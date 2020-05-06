@@ -15,7 +15,7 @@
           </div>
           <div class="w-full flex md:w-5/12 mt-10 md:mt-0 justify-center md:justify-end px-2 md:px-8">
             <div class="mt-0 mb-4 md:mb-0">
-              <a class="button-border-p purple text-px-13-b" style="transition:all .15s ease" href="#">Get Your Ticket</a>
+              <a class="button-border-p purple text-px-13-b" style="transition:all .15s ease" href="mailto:frank@droidcon.co.ke?Subject=Sponsor droidconKe" target="_blank">sponsor droidconke</a>
             </div>
           </div>
         </div>
@@ -135,7 +135,7 @@
             </div>
           </div>
           <div class="w-8/12 flex md:w-4/12 mb-4 md:mb-0 justify-center px-2">
-            <a class="button-border-p purple text-px-13-b" style="transition:all .15s ease" href="#">Sponsor droidconKE</a>
+            <a class="button-border-p purple text-px-13-b" style="transition:all .15s ease" href="mailto:frank@droidcon.co.ke?Subject=Sponsor droidconKe" target="_blank">Sponsor droidconKE</a>
           </div>
           <div class="w-2/12 md:w-4/12 ml-auto px-2 md:px-8 mb-4 md:mb-0">
             <div class="text-left">

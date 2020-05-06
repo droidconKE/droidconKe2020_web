@@ -16,7 +16,7 @@
                 This 3rd edition of droidconKE will include several tech communities from the East African Region and continental members. It will give participants an excellent chance to learn about the local Android development ecosystem, opportunities and services as well as meet the engineers and companies who work on them.
               </p>
               <div class="mt-5">
-                <a class="text-px-13-slab black" href="/">More About DroidconKe <i class="fa fa-arrow-right" /></a>
+                <nuxt-link class="text-px-13-slab black" to="/about">More About DroidconKe <i class="fa fa-arrow-right" /></nuxt-link>
               </div>
             </div>
           </div>
