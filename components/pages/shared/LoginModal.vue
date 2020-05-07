@@ -22,12 +22,10 @@
               <img src="/images/login.png" alt="login">
             </div>
             <div class="w-full m-1/2 bg-ash-c mb-24 lg:mb-0 justify-center">
-              <div class="modal-close w-full content-start cursor-pointer p-2 flex justify-end z-50">
-                <p class="text-px-10 uppercase gray">
-                  Cancel
-                </p>
-              </div>
-              <div class="w-full h-32 items-center flex flex-col px-4 lg:px-8 py-10">
+              <p class="text-px-10 p-4 modal-close float-right cursor-pointer uppercase gray">
+                Cancel
+              </p>
+              <div class="w-full h-32 items-center flex flex-col px-4 lg:px-8 py-6">
                 <p class="text-px-13 green-dark">
                   <i class="fa fa-lock mb-4" /> Sign In
                 </p>

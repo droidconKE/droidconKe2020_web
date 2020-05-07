@@ -11,11 +11,13 @@ module.exports = {
         auto: 'auto',
         cover: 'cover',
         contain: 'contain',
-        '50%': '54%',
-        16: '4rem'
+        '50%': '54%'
       },
       margin: {
         14: '3.2rem'
+      },
+      spacing: {
+        36: '9rem'
       }
     }
   },

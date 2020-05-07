@@ -1,6 +1,6 @@
 <template>
   <section class="w-full bg-black-c">
-    <div class="mt-20 md:mt-24 mb-20 mx-auto md:px-32 px-4 md:py-20 py-4">
+    <div class="container mt-20 md:mt-24 mb-20 mx-auto md:px-32 px-4 md:py-20 py-4">
       <div class="items-center flex flex-wrap">
         <div class="w-full md:w-6/12 justify-start sm:pr-6">
           <div class="md:pr-12 text-left">
@@ -11,7 +11,9 @@
               PROMOTE YOUR BRAND | DEMONSTRATE THOUGHT LEADERSHIP | MEET & ENGAGE WITH DEVELOPERS.
             </h6>
             <div class="mt-5 md:mt-12 mb-10 md:mb-0">
-              <a class="button-border-p purple text-px-13-b" href="/">More About DroidconKe</a>
+              <nuxt-link class="button-border-p purple text-px-13-b" to="/sponsors">
+                sponsor droidconke
+              </nuxt-link>
             </div>
           </div>
         </div>

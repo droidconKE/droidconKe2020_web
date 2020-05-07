@@ -1,6 +1,6 @@
 <template>
   <section class="w-full h-auto bg-green-c md:px-32 px-4">
-    <div class="flex flex-wrap md:py-16">
+    <div class="flex flex-wrap md:py-16 container mx-auto">
       <div class="w-full text-center mb-0 md:mb-10 items-center justify-center">
         <h3 class="title-px-36 black">
           Event Types

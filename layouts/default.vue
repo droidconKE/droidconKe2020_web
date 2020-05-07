@@ -12,6 +12,7 @@
     </div>
     <login-modal />
     <feedback />
+    <filter-modal />
   </div>
 </template>
 <script>
@@ -19,8 +20,9 @@ import NavBar from '../components/layout/NavBar'
 import FootBar from '../components/layout/FootBar'
 import LoginModal from '../components/pages/shared/LoginModal'
 import Feedback from '../components/pages/shared/Feedback'
+import FilterModal from '../components/pages/session/Filter'
 export default {
-  components: { Feedback, LoginModal, NavBar, FootBar },
+  components: { FilterModal, Feedback, LoginModal, NavBar, FootBar },
   methods: {
     toggleModal () {
       const body = document.querySelector('body')

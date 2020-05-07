@@ -2,7 +2,7 @@
   <div>
     <banner />
     <section class="w-full md:px-32 sm:px-10">
-      <div class="md-4 mb-4 md:mt-20 md:mb-10 mx-auto px-4 ">
+      <div class="md-4 container mx-auto mb-4 md:mt-20 md:mb-10 mx-auto px-4 ">
         <div class="items-center flex flex-wrap mt-4 md:mt-10">
           <div class="w-full md:w-8/12 ml-auto sm:px-6 md:px-12 md:px-4">
             <div class="md:pr-12 text-left">
@@ -16,7 +16,9 @@
                 This 3rd edition of droidconKE will include several tech communities from the East African Region and continental members. It will give participants an excellent chance to learn about the local Android development ecosystem, opportunities and services as well as meet the engineers and companies who work on them.
               </p>
               <div class="mt-5">
-                <a class="text-px-13-slab black" href="/">More About DroidconKe <i class="fa fa-arrow-right" /></a>
+                <nuxt-link class="text-px-13-slab black" to="/about">
+                  More About DroidconKe <i class="fa fa-arrow-right" />
+                </nuxt-link>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap nav-bg p-2 md:px-5 fixed w-full z-10 top-0">
+  <nav class="flex  items-center justify-between flex-wrap nav-bg p-2 md:px-5 fixed w-full z-10 top-0">
     <div class="flex items-center flex-shrink-0 text-white mr-6 lg:pl-24">
       <n-link class="text-white no-underline hover:text-white hover:no-underline" to="/">
         <img v-if="!$store.getters.isDarkTheme" class="w-32" src="/images/website.png" alt="logo">
@@ -11,23 +11,25 @@
       <button
         id="nav-toggle"
         class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white"
+        @click="toggleNav()"
       >
         <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title>
           <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
         </svg>
       </button>
     </div>
+    <toggle-theme />
 
     <div
       id="nav-content"
-      class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0 lg:pr-24 md:px-5"
+      :class="['w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block pt-6 lg:pt-0 lg:pr-24 md:px-5 ', navVisible ? '' : 'hidden']"
     >
       <div class="w-8/12 flex-grow lg:flex">
         <ul class="list-reset lg:flex justify-end  flex-1 items-center">
           <li class="mr-3 black">
-            <nuxt-link class="inline-block py-2 px-4 text-px-13 active no-underline " to="/">
+            <n-link class="inline-block py-2 px-4 text-px-13 no-underline black nav-link" to="/">
               <i class="fa fa-home" /> Home
-            </nuxt-link>
+            </n-link>
           </li>
           <li class="mr-3">
             <n-link class="py-2 px-4 inline-block text-px-13 black no-underline nav-link" to="/sessions">
@@ -48,7 +50,7 @@
       </div>
 
       <div class="w-4/12 flex-grow  lg:flex justify-end">
-        <toggle-theme />
+        <!--        theme-->
         <div
           v-if="!$store.getters.isLoggedIn"
           id="login-modal"
@@ -132,12 +134,26 @@ export default {
       navVisible: false
     }
   },
-  mounted () {
-    document.getElementById('nav-toggle').onclick = function () {
-      document.getElementById('nav-content').classList.toggle('hidden')
+  watch: {
+    $route () {
+      // console.log('route changed', this.$route)
+      if (this.isVisible) {
+        this.isVisible = false
+      }
+      if (this.navVisible) {
+        this.toggleNav()
+      }
     }
   },
+  // mounted () {
+  //   document.getElementById('nav-toggle').onclick = function () {
+  //     document.getElementById('nav-content').classList.toggle('hidden')
+  //   }
+  // },
   methods: {
+    toggleNav () {
+      this.navVisible ? this.navVisible = false : this.navVisible = true
+    },
     toggleDropDown () {
       this.isVisible ? this.isVisible = false : this.isVisible = true
     },
