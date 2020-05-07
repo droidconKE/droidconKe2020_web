@@ -15,5 +15,5 @@ jobs:
           permission: admin
           issue-type: pull-request
           named-args: true
-          token: ${{ secrets.CHAT_OPS_TOKEN }}
-          reaction-token: ${{ github.token }}
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          reaction-token: ${{ github.GITHUB_TOKEN }}
