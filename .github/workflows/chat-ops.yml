@@ -6,7 +6,7 @@ on:
 jobs:
   command-dispatch:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.comment.body, '/lint') | startsWith(github.event.comment.body, '/stage')
+    if: startsWith(github.event.comment.body, '/lint') || startsWith(github.event.comment.body, '/stage')
     steps:
       - name: Slash Command Dispatch
         uses: peter-evans/slash-command-dispatch@v1.1.3
