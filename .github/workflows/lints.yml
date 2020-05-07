@@ -30,7 +30,7 @@ jobs:
     - run: npm run lint
 
     - name: Comment on success
-      if: success()
+      if: success() && github.event_name == 'repository_dispatch'
       uses: peter-evans/create-or-update-comment@v1.4.1
       with:
         comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
@@ -39,7 +39,7 @@ jobs:
           Successfully checked lints [PR-${{ github.event.client_payload.pull_request.number }}](See https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id }})
 
     - name: Comment on failure
-      if: failure()
+      if: failure() && github.event_name == 'repository_dispatch'
       uses: peter-evans/create-or-update-comment@v1.4.1
       with:
         comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
