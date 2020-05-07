@@ -55,7 +55,7 @@ jobs:
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
           reaction: hooray
           body: |
-            Successfully deployed [PR-${{ github.event.client_payload.pull_request.number }}](See https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id }}) to [staging](https://droidcon2020.web.app)
+            Successfully deployed [PR-${{ github.event.client_payload.pull_request.number }}](See https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id }}) to [staging](droidcon2020.web.app)
 
       - name: Update deployment status (failure)
         if: failure()
