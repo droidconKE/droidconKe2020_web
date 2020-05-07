@@ -336,20 +336,21 @@
   backdrop-filter: var(--modal-blur);
 }
 
-/*@media (min-width: 85.375em) {*/
-/*  .container {*/
-/*    max-width: 85.375em!important;*/
-/*  }*/
-/*  img{*/
-/*  }*/
-/*}*/
-/*@media (min-width: 120em) {*/
-/*  .container {*/
-/*    max-width: 120em!important;*/
-/*  }*/
-/*}*/
-/*@media (min-width: 160em) {*/
-/*  .container {*/
-/*    max-width: 160em!important;*/
-/*  }*/
-/*}*/
+@media (min-width: 85.375em) {
+  .container {
+    max-width: 85.375em!important;
+  }
+  .sponsor-img {
+    width: 600px!important;
+  }
+}
+@media (min-width: 120em) {
+  .container {
+    max-width: 120em!important;
+  }
+}
+@media (min-width: 160em) {
+  .container {
+    max-width: 160em!important;
+  }
+}

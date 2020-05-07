@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="w-full md:w-6/12 md:p-20 md:mr-12 mb-10 md:mb-0 justify-end md:absolute md:right-0">
-          <img alt="sponsors img" class=" w-full" src="/images/sponsor.png">
+          <img alt="sponsors img" class="w-full sponsor-img" src="/images/sponsor.png">
         </div>
       </div>
     </div>
