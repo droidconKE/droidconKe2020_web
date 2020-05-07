@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "stage": "firebase deploy --only hosting:droidcon2020"
   },
   "dependencies": {
     "@chenfengyuan/vue-countdown": "^1.1.5",
