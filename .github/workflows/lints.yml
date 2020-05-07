@@ -30,20 +30,20 @@ jobs:
     - run: npm run lint
 
     - name: Comment on success
-        if: success()
-        uses: peter-evans/create-or-update-comment@v1.4.1
-        with:
-          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
-          reaction: hooray
-          body: |
-            Successfully checked lints [PR-${{ github.event.client_payload.pull_request.number }}](See https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id }})
+      if: success()
+      uses: peter-evans/create-or-update-comment@v1.4.1
+      with:
+        comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
+        reaction: hooray
+        body: |
+          Successfully checked lints [PR-${{ github.event.client_payload.pull_request.number }}](See https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id }})
 
     - name: Comment on failure
-        if: failure()
-        uses: peter-evans/create-or-update-comment@v1.4.1
-        with:
-          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
-          reaction: eyes, confused
-          body: |
-            FLints checks failed on #${{ github.event.client_payload.pull_request.number }}
-            See https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id }}
+      if: failure()
+      uses: peter-evans/create-or-update-comment@v1.4.1
+      with:
+        comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
+        reaction: eyes, confused
+        body: |
+          FLints checks failed on #${{ github.event.client_payload.pull_request.number }}
+          See https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id }}
