@@ -16,4 +16,4 @@ jobs:
           issue-type: pull-request
           named-args: true
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          reaction-token: ${{ github.GITHUB_TOKEN }}
+          reaction-token: ${{ secrets.GITHUB_TOKEN }}
