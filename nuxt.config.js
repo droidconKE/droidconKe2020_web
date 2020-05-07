@@ -28,7 +28,7 @@ export default {
       { rel: 'stylesheet', href: '/css/color/light.css', id: 'light-theme-css' },
       { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', id: 'font-awesome-css' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,400,300,700,900', id: 'roboto-font' },
-      { rel: 'stylesheet', href: 'http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,latin-ext', id: 'roboto-slab-font' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,latin-ext', id: 'roboto-slab-font' }
     ]
   },
   /*
@@ -64,7 +64,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
+    ['@nuxtjs/dotenv', { filename: '.env.' + process.env.NODE_ENV }],
     'cookie-universal-nuxt'
   ],
   /*

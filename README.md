@@ -5,7 +5,7 @@
   </p>
 
 
-![badge](https://github.com/droidconKE/droidconKe2020_web/workflows/Node.js%20CI/badge.svg)
+![badge](https://github.com/droidconKE/droidconKe2020_web/workflows/Lint%20CI/badge.svg)
 # droidconke Web
 
 > [droidconKe](https://droidcon.co.ke) Official Website

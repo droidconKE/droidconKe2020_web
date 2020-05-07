@@ -1,0 +1,49 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Lint CI
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+  repository_dispatch:
+    types: [lint-command]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run lint
+
+    - name: Comment on success
+        if: success()
+        uses: peter-evans/create-or-update-comment@v1.4.1
+        with:
+          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
+          reaction: hooray
+          body: |
+            Successfully checked lints [PR-${{ github.event.client_payload.pull_request.number }}](See https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id }})
+
+    - name: Comment on failure
+        if: failure()
+        uses: peter-evans/create-or-update-comment@v1.4.1
+        with:
+          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
+          reaction: eyes, confused
+          body: |
+            FLints checks failed on #${{ github.event.client_payload.pull_request.number }}
+            See https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id }}
