@@ -52,7 +52,7 @@
       <div class="w-4/12 flex-grow  lg:flex justify-end">
         <!--        theme-->
         <div
-          v-if="!$store.getters.isLoggedIn"
+          v-if="!isAuthenticated"
           id="login-modal"
           class="px-4 md:px-0 relative inine-block"
           @click="toggleModal()"
@@ -70,9 +70,16 @@
           @keydown.enter="isVisible = !isVisible"
         >
           <span
+            v-if="user.avatar === null"
             class="cursor-pointer inline-flex items-center justify-between p-1 transition-all duration-500 rounded-full h-8 w-8 border bg-dark-green-c"
           >
             <img src="/images/svg/maasai_male.svg" alt="icon">
+          </span>
+          <span
+            v-else
+            class="cursor-pointer inline-flex items-center justify-between transition-all duration-500 rounded-full h-8 w-8 border bg-dark-green-c"
+          >
+            <img class="rounded-full" :src="user.avatar" alt="avatar icon">
           </span>
           <transition
             enter-active-class="transition duration-300 ease-out transform"
@@ -97,11 +104,11 @@
                     <div class="w-7/12 flex-wrap flex border-r border-bg-black-1">
                       <p><small class="logg">Logged in as</small></p>
                       <p class="name">
-                        John Mwendwa
+                        {{ user.name }}
                       </p>
                     </div>
                     <div class="w-5/12 flex-wrap flex justify-center">
-                      <a href="#"><i class="fa fa-sign-out green-dark" /> <span class="name">Logout</span></a>
+                      <logout />
                     </div>
                   </div>
                 </li>
@@ -123,15 +130,25 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+import Logout from '../pages/auth/Logout'
 import ToggleTheme from './ToggleTheme'
 
 export default {
   name: 'NavBar',
-  components: { ToggleTheme },
+  components: { Logout, ToggleTheme },
   data () {
     return {
       isVisible: false,
       navVisible: false
+    }
+  },
+  computed: {
+    ...mapGetters('user', [
+      'isAuthenticated'
+    ]),
+    user () {
+      return this.$store.state.user.currentUser
     }
   },
   watch: {
