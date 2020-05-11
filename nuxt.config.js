@@ -34,7 +34,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#864F96' },
+  loading: { color: '#68DEA4' },
   /*
   ** Global CSS
   */
@@ -45,6 +45,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/axios',
     { src: '~/plugins/vue-countdown', mode: 'client' }
   ],
   /*
