@@ -22,6 +22,8 @@
     "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0",
     "vue": "^2.6.11",
+    "vue-authenticate": "^1.4.1",
+    "vue-axios": "^2.1.5",
     "vue-star-rating": "^1.6.1"
   },
   "devDependencies": {

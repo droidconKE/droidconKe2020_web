@@ -46,7 +46,8 @@ export default {
   */
   plugins: [
     '~/plugins/axios',
-    { src: '~/plugins/vue-countdown', mode: 'client' }
+    { src: '~/plugins/vue-countdown', mode: 'client' },
+    '~/plugins/vue-authenticate.client.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -96,7 +97,7 @@ export default {
       {
         name: 'error-500',
         path: '/error',
-        component: resolve(__dirname, 'pages/errors/500.vue')
+        component: resolve(__dirname, 'layouts/error.vue')
       })
     }
   }

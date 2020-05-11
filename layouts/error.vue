@@ -8,7 +8,7 @@
               ERROR
             </p>
             <h1 class="error-font">
-              500
+              {{ error.statusCode }}
             </h1>
             <h5 class="title-px-21 black px-2 md:px-5 mt-4 md:mt-10 mb-4 md:mb-10">
               it's not you, seems we have an issue, you may come back later
@@ -27,10 +27,16 @@
 </template>
 
 <script>
-import CountDays from '../../components/pages/shared/CountDays'
+import CountDays from '../components/pages/shared/CountDays'
 export default {
-  name: '500',
-  components: { CountDays }
+  name: 'Error',
+  components: { CountDays },
+  props: {
+    error: {
+      type: Number,
+      default: 500
+    }
+  }
 }
 </script>
 

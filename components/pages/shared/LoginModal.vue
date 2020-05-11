@@ -72,8 +72,18 @@ export default {
   },
   created () {
     const vm = this
-    this.$root.$on('logged', function () {
+    this.$root.$on('loggedIn', function () {
       vm.toggleModal()
+    })
+
+    this.$axios.interceptors.response.use(null, function (err) {
+      if (err.response) {
+        if (err.response.status === 401) {
+          vm.$store.dispatch('user/logOut')
+          vm.toggleModal()
+        }
+      }
+      return Promise.reject(err)
     })
   },
   methods: {
