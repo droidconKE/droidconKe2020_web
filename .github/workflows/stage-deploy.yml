@@ -21,7 +21,6 @@ jobs:
          sed -ri 's~^API_BASE_URL=~API_BASE_URL=${{ secrets.API_BASE_URL }}~' .env.production
          sed -ri 's~^API_KEY=~API_KEY=${{ secrets.API_KEY }}~' .env.production
          sed -ri 's~^GOOGLE_CLIENT_ID=~GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}~' .env.production
-         cat .env.production
    
          
       - name: Build
@@ -40,7 +39,7 @@ jobs:
         uses: peter-evans/create-or-update-comment@v1.4.1
         with:
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
-          reactions: hooray, heart, '+1'
+          reactions: hooray, heart, +1
           body: |
             Successfully deployed [PR-${{ github.event.client_payload.pull_request.number }}](See https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id }}) to [staging](https://droidcon2020.web.app)
 
@@ -49,7 +48,7 @@ jobs:
         uses: peter-evans/create-or-update-comment@v1.4.1
         with:
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
-          reactions: eyes, confused, '-1'
+          reactions: eyes, confused, -1
           body: |
             Failed to deploy #${{ github.event.client_payload.pull_request.number }} to staging
             See https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id }}
