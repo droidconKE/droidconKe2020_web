@@ -60,6 +60,9 @@ export default {
     return this.$store.getters.isDarkTheme ? {
       link: [
         { rel: 'stylesheet', href: '/css/color/darktheme.css', id: 'dark-theme-style' }
+      ],
+      meta: [
+        { hid: 'theme-color', name: 'theme-color', content: '#000000' }
       ]
     }
       : {}
