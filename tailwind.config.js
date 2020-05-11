@@ -11,7 +11,7 @@ module.exports = {
         auto: 'auto',
         cover: 'cover',
         contain: 'contain',
-        '50%': '54%'
+        50: '54%'
       },
       margin: {
         14: '3.2rem'

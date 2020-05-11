@@ -17,7 +17,7 @@
           <!--          X-->
         </div>
         <div class="modal-content w-full">
-          <div class="flex flex-wrap lg:flex-no-wrap justify-center">
+          <div class="flex flex-wrap lg:flex-no-wrap bg-ash-c justify-center">
             <div class="w-full w-1/2 img-log">
               <img src="/images/login.png" alt="login">
             </div>
@@ -72,8 +72,18 @@ export default {
   },
   created () {
     const vm = this
-    this.$root.$on('logged', function () {
+    this.$root.$on('loggedIn', function () {
       vm.toggleModal()
+    })
+
+    this.$axios.interceptors.response.use(null, function (err) {
+      if (err.response) {
+        if (err.response.status === 401) {
+          vm.$store.dispatch('user/logOut')
+          vm.toggleModal()
+        }
+      }
+      return Promise.reject(err)
     })
   },
   methods: {

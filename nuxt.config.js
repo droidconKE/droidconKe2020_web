@@ -34,7 +34,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#864F96' },
+  loading: { color: '#68DEA4' },
   /*
   ** Global CSS
   */
@@ -45,7 +45,9 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/vue-countdown', mode: 'client' }
+    '~/plugins/axios',
+    { src: '~/plugins/vue-countdown', mode: 'client' },
+    '~/plugins/vue-authenticate.client.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -95,7 +97,7 @@ export default {
       {
         name: 'error-500',
         path: '/error',
-        component: resolve(__dirname, 'pages/errors/500.vue')
+        component: resolve(__dirname, 'layouts/error.vue')
       })
     }
   }

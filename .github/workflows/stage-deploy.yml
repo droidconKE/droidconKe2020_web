@@ -14,8 +14,17 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependencies
         run: npm install
+      - name: Create .env
+        run: |
+         cp .env.example .env.production
+         sed -ri 's~^BASE_URL=~BASE_URL=${{ secrets.BASE_URL }}~' .env.production
+         sed -ri 's~^API_BASE_URL=~API_BASE_URL=${{ secrets.API_BASE_URL }}~' .env.production
+         sed -ri 's~^API_KEY=~API_KEY=${{ secrets.API_KEY }}~' .env.production
+         sed -ri 's~^GOOGLE_CLIENT_ID=~GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}~' .env.production
+
       - name: Build
         run: npm run generate
+
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
@@ -23,13 +32,12 @@ jobs:
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
-
       - name: Comment on success
         if: success() && github.event_name == 'repository_dispatch'
         uses: peter-evans/create-or-update-comment@v1.4.1
         with:
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
-          reaction: hooray
+          reactions: hooray, heart, +1
           body: |
             Successfully deployed [PR-${{ github.event.client_payload.pull_request.number }}](See https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id }}) to [staging](https://droidcon2020.web.app)
 
@@ -38,7 +46,7 @@ jobs:
         uses: peter-evans/create-or-update-comment@v1.4.1
         with:
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
-          reaction: eyes, confused
+          reactions: eyes, confused, -1
           body: |
             Failed to deploy #${{ github.event.client_payload.pull_request.number }} to staging
             See https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id }}
