@@ -17,10 +17,10 @@ jobs:
       - name: Build
         run: npm run generate
         env:
-          BASE_URL: {{ secrets.BASE_URL }}
-          API_BASE_URL: {{ secrets.API_BASE_URL }}
-          API_KEY: {{ secrets.API_KEY }}
-          GOOGLE_CLIENT_ID: {{ secrets.GOOGLE_CLIENT_ID }}
+          BASE_URL: ${{ secrets.BASE_URL }}
+          API_BASE_URL: ${{ secrets.API_BASE_URL }}
+          API_KEY: ${{ secrets.API_KEY }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
 
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
