@@ -21,18 +21,16 @@ jobs:
          sed -ri 's~^API_BASE_URL=~API_BASE_URL=${{ secrets.API_BASE_URL }}~' .env.production
          sed -ri 's~^API_KEY=~API_KEY=${{ secrets.API_KEY }}~' .env.production
          sed -ri 's~^GOOGLE_CLIENT_ID=~GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}~' .env.production
-   
-         
+
       - name: Build
         run: npm run generate
-        
+
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting:droidcon2020
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-
 
       - name: Comment on success
         if: success() && github.event_name == 'repository_dispatch'
