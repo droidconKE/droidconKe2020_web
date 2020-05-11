@@ -17,7 +17,7 @@
           <!--          X-->
         </div>
         <div class="modal-content w-full">
-          <div class="flex flex-wrap lg:flex-no-wrap justify-center">
+          <div class="flex flex-wrap lg:flex-no-wrap bg-ash-c justify-center">
             <div class="w-full w-1/2 img-log">
               <img src="/images/login.png" alt="login">
             </div>
