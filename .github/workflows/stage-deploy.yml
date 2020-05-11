@@ -17,17 +17,12 @@ jobs:
       - name: Create .env
         run: |
          cp .env.example .env.production
-         sed -ri 's~^BASE_URL=~BASE_URL=$BASE_URL~' .env.production
-         sed -ri 's~^API_BASE_URL=~API_BASE_URL=$API_BASE_URL~' .env.production
-         sed -ri 's~^API_KEY=~API_KEY=$API_KEY~' .env.production
-         sed -ri 's~^GOOGLE_CLIENT_ID=~GOOGLE_CLIENT_ID=$GOOGLE_CLIENT_ID~' .env.production
+         sed -ri 's~^BASE_URL=~BASE_URL=${{ secrets.BASE_URL }}~' .env.production
+         sed -ri 's~^API_BASE_URL=~API_BASE_URL=${{ secrets.API_BASE_URL }}~' .env.production
+         sed -ri 's~^API_KEY=~API_KEY=${{ secrets.API_KEY }}~' .env.production
+         sed -ri 's~^GOOGLE_CLIENT_ID=~GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}~' .env.production
          cat .env.production
-         
-        env:
-          BASE_URL: ${{ secrets.BASE_URL }}
-          API_BASE_URL: ${{ secrets.API_BASE_URL }}
-          API_KEY: ${{ secrets.API_KEY }}
-          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+   
          
       - name: Build
         run: npm run generate
