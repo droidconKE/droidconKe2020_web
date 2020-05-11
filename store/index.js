@@ -1,19 +1,15 @@
-const DARK_THEME = 'droid-dark'
+import { DARK_THEME } from '../services/helpers/consts'
+
 export const state = () => ({
-  darkTheme: '',
-  user: ''
+  darkTheme: ''
 })
 
 export const getters = ({
-  isDarkTheme: state => !!state.darkTheme,
-  isLoggedIn: state => !!state.user
+  isDarkTheme: state => !!state.darkTheme
 })
 export const mutations = {
   updateTheme (state) {
     state.darkTheme = this.$cookies.get(DARK_THEME) || ''
-  },
-  login (state, user) {
-    state.user = user
   }
 }
 export const actions = {
@@ -27,5 +23,6 @@ export const actions = {
   },
   async nuxtServerInit (context) {
     await context.commit('updateTheme')
+    await context.dispatch('user/getUser', { root: true })
   }
 }
