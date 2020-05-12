@@ -93,7 +93,7 @@
               <img
                 class="w-full p-0 rounded-full border-2 border-green-500"
                 :src="member.photo === null ? '/icon.png' : member.photo"
-                alt="Sunset in the mountains"
+                :alt="member.name"
               >
             </div>
             <p class="text-px-13 capitalize font-bold black mt-2">
