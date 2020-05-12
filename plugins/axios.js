@@ -15,7 +15,7 @@ export default function ({ $axios, redirect, store, app }) {
       redirect('/error')
     }
     if (code === 404) {
-      redirect('*')
+      redirect('/not-found')
     }
   })
 

@@ -16,9 +16,9 @@
             <div class="w-full px-2 md:px-10 mb-4 md:mb-10">
               <count-days />
             </div>
-            <nuxt-link to="#">
+            <a href="#" @click.prevent="$router.go(-1)">
               <span class="text-px-14-b black pr-4">Or Maybe</span> <span class="text-px-14-b purple">Try again! <i class="fa fa-refresh pl-3" /></span>
-            </nuxt-link>
+            </a>
           </div>
         </div>
       </div>

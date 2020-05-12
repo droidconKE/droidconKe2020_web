@@ -90,14 +90,23 @@ export default {
     // linkActiveClass: 'active',
     extendRoutes (routes, resolve) {
       routes.push({
-        name: 'not-found',
+        name: 'error-404',
         path: '*',
+        component: resolve(__dirname, 'pages/errors/404.vue')
+      },
+      {
+        name: 'not-found',
+        path: '/not-found',
         component: resolve(__dirname, 'pages/errors/404.vue')
       },
       {
         name: 'error-500',
         path: '/error',
         component: resolve(__dirname, 'layouts/error.vue')
+      },
+      {
+        path: '/social_login/:provider',
+        component: resolve(__dirname, 'components/pages/auth/logged.vue')
       })
     }
   }
