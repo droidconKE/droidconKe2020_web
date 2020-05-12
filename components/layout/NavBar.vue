@@ -79,7 +79,7 @@
             v-else
             class="cursor-pointer inline-flex items-center justify-between transition-all duration-500 rounded-full h-8 w-8 border bg-dark-green-c"
           >
-            <img class="rounded-full" :src="user.avatar" alt="avatar icon">
+            <img class="rounded-full" :src="user.avatar" onerror="this.onerror=null;this.src='/images/svg/maasai_male.svg';" alt="avatar icon">
           </span>
           <transition
             enter-active-class="transition duration-300 ease-out transform"

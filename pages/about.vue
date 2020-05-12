@@ -112,6 +112,10 @@
 <script>
 export default {
   name: 'About',
+  // async asyncData ({ $axios }) {
+  //   const { data } = await $axios.get(`/organizers/${process.env.ORG_SLUG}/team?type=individual`)
+  //   return { members: data.data }
+  // }
   async fetch () {
     if (this.$store.state.members.length === 0) {
       await this.$axios.get(`/organizers/${process.env.ORG_SLUG}/team?type=individual`).then((response) => {
