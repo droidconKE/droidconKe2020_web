@@ -2,7 +2,9 @@ import { DARK_THEME } from '../services/helpers/consts'
 
 export const state = () => ({
   darkTheme: '',
-  sessions: []
+  sessions: [],
+  members: [],
+  organizers: []
 })
 
 export const getters = ({
@@ -14,6 +16,12 @@ export const mutations = {
   },
   updateSessions (state, sessions) {
     state.sessions = sessions
+  },
+  updateMembers (state, members) {
+    state.members = members
+  },
+  updateOrganizers (state, organizers) {
+    state.organizers = organizers
   }
 }
 export const actions = {
