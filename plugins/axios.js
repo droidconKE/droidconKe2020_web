@@ -2,7 +2,7 @@ import { TOKEN } from '../services/helpers/consts'
 
 export default function ({ $axios, redirect, store, app }) {
   $axios.onRequest((config) => {
-    // console.log('Making request to ', config)
+    console.log('Making request to ', config)
   })
 
   $axios.onError((error) => {

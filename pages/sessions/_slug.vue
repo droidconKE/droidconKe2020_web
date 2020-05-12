@@ -22,30 +22,36 @@
               Speaker
             </h4>
           </div>
-          <div class="w-full flex items-start flex text-center">
-            <div class="w-24 h-24 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
-              <img class="w-full p-0 rounded-full border-2 border-green-500" src="/icon.png" alt="Sunset in the mountains">
-            </div>
-            <div class="w-full text-left px-2 py-1 lg:py-4">
-              <div class="text-px-13-slab-b purple">
-                Greg Fawson
-              </div>
-              <p class="text-px-13 gray">
-                COO/Chief Innovation Officer Droidcon Global
-              </p>
-              <p class="text-px-13 green-dark pt-1">
-                <a href="#" target="_blank"><i class="fa fa-twitter" /> Greg Fawson</a>
-              </p>
-            </div>
-          </div>
-          <div class="w-full">
-            <h4 class="black text-px-13-slab-b mt-2 md:mt-4">
-              Bio:
-            </h4>
-            <p class="p gray mt-2 md:mt-4 mb-4 lg:mb-16">
-              Been in the tech industry for over 20 years. Am passionate about developer communities, motivating people and building successful organizations. Proven track record in product development, business development, and nurturing mission critical strategic partner relationships. Have lived and worked in Germany for 10 years. Fluent in German and English.
-            </p>
-          </div>
+          <client-only>
+            <carousel :per-page="1" :loop="true" :autoplay="true" :autoplay-timeout="10000" :autoplay-hover-pause="true">
+              <slide v-for="(speaker, $index) in session.speakers" :key="$index" class="w-full">
+                <div class="w-full flex items-start flex text-center">
+                  <div class="w-24 h-24 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
+                    <img class="w-full p-0 rounded-full border-2 border-green-500" :src="speaker.avatar" :alt="speaker.name">
+                  </div>
+                  <div class="w-full text-left px-2 py-1 lg:py-4">
+                    <div class="text-px-13-slab-b purple">
+                      {{ speaker.name }}
+                    </div>
+                    <p class="text-px-13 gray">
+                      {{ speaker.tagline }}
+                    </p>
+                    <p class="text-px-13 green-dark pt-1">
+                      <a :href="speaker.twitter" target="_blank"><i class="fa fa-twitter" /> {{ speaker.name }}</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="w-full">
+                  <h4 v-if="speaker.biography !== null" class="black text-px-13-slab-b mt-2 md:mt-4">
+                    Bio:
+                  </h4>
+                  <p class="p gray mt-2 md:mt-4 mb-4 lg:mb-16">
+                    {{ speaker.biography }}
+                  </p>
+                </div>
+              </slide>
+            </carousel>
+          </client-only>
         </div>
         <div class="w-full flex-wrap content-start items-start lg:w-6/12 px-0 lg:px-6 flex">
           <div class="w-full flex py-4">
@@ -53,24 +59,24 @@
               Session
             </h4>
             <p class="text-px-14 gray">
-              <span class="mr-2">Level:</span> <span class="uppercase white text-px-10 button-black">#Beginner</span>
+              <span class="mr-2">Level:</span> <span class="uppercase white text-px-10 button-black">#{{ session.session_level }}</span>
             </p>
           </div>
           <div class="w-full flex items-start flex-col">
             <h4 class="black text-px-13-slab-b">
-              Keynote
+              {{ session.session_format }}
             </h4>
             <p class="text-px-14 gray mt-2">
-              Community on a Global Scale
+              {{ session.description }}
             </p>
-            <p class="text-px-13-slab-light gray ">
-              9:00AM - 9:30AM | <span class="green-dark">ROOM 1</span>
+            <p class="text-px-13-slab-light gray uppercase mt-1">
+              {{ $hour(session.start_date_time) }} - {{ $hour(session.end_date_time) }} | <span v-for="(room, $r) in session.rooms" :key="$r" class="green-dark">{{ room.title }}<span v-if="$r+1 < session.rooms.length">, </span> </span>
             </p>
             <h6 class="text-px-13-slab-b font-bold black mt-4 md:mt-10">
               Session Description
             </h6>
             <p class="p gray mt-2">
-              Been in the tech industry for over 20 years. Am passionate about developer communities, motivating people and building successful
+              {{ session.description }}
             </p>
 
             <div class="w-full justify-center md:justify-start flex mt-4 md:mt-10">
@@ -113,6 +119,17 @@
 <script>
 export default {
   name: 'Slug',
+  async fetch () {
+    const slug = this.$route.params.slug
+    await this.$axios.get(`/events/${process.env.EVENT_SLUG}/schedule/${slug}`).then((response) => {
+      this.session = response.data.data
+    })
+  },
+  data () {
+    return {
+      session: []
+    }
+  },
   methods: {
     toggleModal () {
       const body = document.querySelector('body')
@@ -138,5 +155,8 @@ export default {
   input:checked ~ .toggle__dot {
     transform: translateX(100%);
     background-color: var(--purple-color);
+  }
+  .VueCarousel , .VueCarousel-inner {
+    width: 100%
   }
 </style>

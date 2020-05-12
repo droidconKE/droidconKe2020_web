@@ -47,7 +47,9 @@ export default {
   plugins: [
     '~/plugins/axios',
     { src: '~/plugins/vue-countdown', mode: 'client' },
-    '~/plugins/vue-authenticate.client.js'
+    '~/plugins/vue-authenticate.client.js',
+    '~/plugins/vue-carousel.client.js',
+    '~/plugins/helpers.js'
   ],
   /*
   ** Nuxt.js dev-modules

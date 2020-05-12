@@ -29,7 +29,7 @@
 <script>
 import CountDays from '../../components/pages/shared/CountDays'
 export default {
-  name: '404',
+  name: 'Fourofour',
   components: { CountDays }
 }
 </script>

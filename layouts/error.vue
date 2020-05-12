@@ -33,8 +33,12 @@ export default {
   components: { CountDays },
   props: {
     error: {
-      type: Number,
-      default: 500
+      type: Object,
+      default () {
+        return {
+          statusCode: 500
+        }
+      }
     }
   }
 }

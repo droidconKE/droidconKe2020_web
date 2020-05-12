@@ -1,7 +1,8 @@
 import { DARK_THEME } from '../services/helpers/consts'
 
 export const state = () => ({
-  darkTheme: ''
+  darkTheme: '',
+  sessions: []
 })
 
 export const getters = ({
@@ -10,6 +11,9 @@ export const getters = ({
 export const mutations = {
   updateTheme (state) {
     state.darkTheme = this.$cookies.get(DARK_THEME) || ''
+  },
+  updateSessions (state, sessions) {
+    state.sessions = sessions
   }
 }
 export const actions = {

@@ -42,136 +42,72 @@
     <div class="w-full flex flex-wrap md:px-32 sm:px-10 mt-2 md:mt-4">
       <div class="w-full container mx-auto flex flex-wrap px-4 md:px-12 py-4">
         <div class="flex flex-row lg:flex-col w-full lg:w-1/12 h-auto lg:h-64 bor border-r-0 lg:border-r border-green-200 space-y-0 lg:space-y-6 space-x-6 lg:space-x-0 items-center lg:items-start justify-center lg:justify-start pb-4 lg:pb-0 sticky " style="top: 50px">
-          <div class="w-4/12 px-3 py-1 lg:w-full bg-yellow-c rounded-tl-lg rounded-bl-lg cursor-pointer">
+          <div v-for="(days, $index, $key) in schedule" :key="$key" :class="['w-4/12 px-3 py-1 lg:w-full cursor-pointer rounded-tl-lg rounded-bl-lg', currentTab === $key ? 'bg-yellow-c' : 'border border-r-0 border-green-200 bg-white-c-2' ]" @click.prevent="showTab($key)">
             <h4 class="text-px-16-slab purple">
-              06 <small class="text-px-13 black capitalize">Day 1</small>
-            </h4>
-          </div>
-          <div class="w-4/12 px-3 py-1 lg:w-full rounded-tl-lg rounded-bl-lg border border-r-0 border-green-200 cursor-pointer bg-white-c-2">
-            <h4 class="text-px-16-slab purple">
-              06 <small class="text-px-13 green-dark capitalize">Day 1</small>
-            </h4>
-          </div>
-          <div class="w-4/12 px-3 py-1 lg:w-full rounded-tl-lg rounded-bl-lg border border-r-0 border-green-200 cursor-pointer bg-white-c-2">
-            <h4 class="text-px-16-slab purple">
-              06 <small class="text-px-13 green-dark capitalize ">Day 1</small>
+              {{ $timeDay($index) }} <small :class="['text-px-13 capitalize', currentTab === $key ? 'black' : 'green-dark']">Day {{ $key+1 }}</small>
             </h4>
           </div>
         </div>
-        <div class="w-full flex-wrap flex lg:w-11/12 space-y-6 mb-2 lg:mb-10">
-          <div class="flex w-full px-0 lg:px-2">
-            <div class="w-2/12 h-20 flex items-center justify-center text-right hidden lg:grid">
-              <h3 class="text-px-14-slab purple">
-                8:00 <br>AM
-              </h3>
-            </div>
-            <div class="w-full lg:w-10/12 flex bg-white-c rounded-tr-lg rounded-br-lg">
-              <div class="h-12 w-20  lg:h-24 lg:w-36 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/arrive.png')" title="Woman holding a mug" />
-              <div class="h-auto w-full lg:h-24 shadow-sm rounded-lg px-4 py-3 flex flex-col justify-between">
-                <div class="flex flex-wrap items-start">
-                  <div class="w-10/12">
-                    <div class="text-px-14-slab black mb-2">
-                      Can coffee make you a better developer?
-                    </div>
-                    <p class="text-px-13 gray">
-                      Lorem ipsum dolor sit amet,
-                    </p>
-                  </div>
-                  <div class="w-2/12 flex items-center justify-center">
-                    <div><i class="fa fa-star-o gray" /></div>
-                  </div>
+        <div class="w-full lg:w-11/12">
+          <div v-for="(days, $index, $key) in schedule" :id="$index" :key="$key">
+            <div v-if="currentTab === $key" class="flex-wrap w-full flex space-y-6 mb-2 lg:mb-10">
+              <div v-for="(session, $ind) in days" :key="$ind" class="flex w-full px-0 lg:px-2">
+                <div class="w-2/12 h-32 flex items-center justify-center text-right hidden lg:grid">
+                  <h3 class="text-px-14-slab purple uppercase">
+                    {{ $time(session.start_date_time) }} <br> {{ $timeAm(session.start_date_time) }}
+                  </h3>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex w-full px-0 lg:px-2">
-            <div class="w-2/12 h-32 flex items-center justify-center text-right hidden lg:grid">
-              <h3 class="text-px-14-slab purple">
-                9:00 <br>AM
-              </h3>
-            </div>
-            <div class="w-full lg:w-10/12 flex bg-white-c rounded-tr-lg rounded-br-lg">
-              <nuxt-link to="/sessions/mine" class="h-20 w-20  lg:h-36 lg:w-36 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/AlexKoller.png')" title="Woman holding a mug" />
-              <div class="h-auto w-full lg:h-36 shadow-sm rounded-lg px-4 py-3 flex flex-col justify-between">
-                <div class="flex flex-wrap items-start">
-                  <nuxt-link to="/sessions/mine" class="w-10/12">
-                    <div class="text-px-14-slab black mb-2">
-                      Can coffee make you a better developer?
+                <div class="w-full lg:w-10/12 flex rounded-tr-lg rounded-br-lg">
+                  <nuxt-link v-if="!session.is_serviceSession" :to="'/sessions/' + session.slug" class="h-20 w-20  lg:h-36 lg:w-36 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden">
+                    <div v-if="session.speakers.length === 1">
+                      <img v-for="(speaker, $i) in session.speakers" :key="$i" :src="speaker.avatar" :alt="speaker.name" :title="speaker.name">
                     </div>
-                    <p class="text-px-13 gray">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque
-                    </p>
-                    <p class="text-px-12-slab gray pt-1 mt-2">
-                      9:00AM - 9:30AM | ROOM 1
-                    </p>
-                    <p class="text-px-12 green-dark pt-1">
-                      <i class="fa fa-android pr-1" /> Greg Fawson
-                    </p>
-                  </nuxt-link>
-                  <div class="w-2/12 flex items-center justify-center">
-                    <div><i class="fa fa-star gray cursor-pointer" /></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex w-full px-0 lg:px-2">
-            <div class="w-2/12 h-32 flex items-center justify-center text-right hidden lg:grid">
-              <h3 class="text-px-14-slab purple">
-                10:00 <br>AM
-              </h3>
-            </div>
-            <div class="w-full lg:w-10/12 flex bg-white-c rounded-tr-lg rounded-br-lg">
-              <nuxt-link to="/sessions/mine" class="h-20 w-20  lg:h-36 lg:w-36 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/MichaelBukachi.png')" title="Woman holding a mug" />
-              <div class="h-auto w-full lg:h-36 shadow-sm rounded-lg px-4 py-3 flex flex-col justify-between">
-                <div class="flex flex-wrap items-start">
-                  <nuxt-link to="/sessions/mine" class="w-10/12">
-                    <div class="text-px-14-slab black mb-2">
-                      Can coffee make you a better developer?
+                    <div v-else>
+                      <client-only>
+                        <carousel
+                          :items="1"
+                          :per-page="1"
+                          :autoplay="true"
+                          :nav="false"
+                          :loop="true"
+                          :pagination-enabled="true"
+                          :autoplay-timeout="2000"
+                          :mouse-drag="false"
+                        >
+                          <slide v-for="(speaker, $i) in session.speakers" :key="$i">
+                            <img :src="speaker.avatar" :alt="speaker.name" :title="speaker.name">
+                          </slide>
+                        </carousel>
+                      </client-only>
                     </div>
-                    <p class="text-px-13 gray">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque
-                    </p>
-                    <p class="text-px-12-slab gray pt-1 mt-2">
-                      10:00AM - 10:30AM | ROOM 1
-                    </p>
-                    <p class="text-px-12 green-dark pt-1">
-                      <i class="fa fa-android pr-1" /> Greg Fawson
-                    </p>
                   </nuxt-link>
-                  <div class="w-2/12 flex items-center justify-center">
-                    <div><i class="fa fa-star-o gray cursor-pointer" /></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex w-full px-0 lg:px-2">
-            <div class="w-2/12 h-32 flex items-center justify-center text-right hidden lg:grid">
-              <h3 class="text-px-14-slab purple">
-                11:00 <br>AM
-              </h3>
-            </div>
-            <div class="w-full lg:w-10/12 flex bg-white-c rounded-tr-lg rounded-br-l ">
-              <nuxt-link to="/sessions/mine" class="h-20 w-20  lg:h-36 lg:w-36 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/CarolWarugongo.png')" title="Woman holding a mug" />
-              <div class="h-auto w-full lg:h-36 shadow-sm rounded-lg px-4 py-3 flex flex-col justify-between">
-                <div class="flex flex-wrap items-start">
-                  <nuxt-link to="/sessions/mine" class="w-10/12">
-                    <div class="text-px-14-slab black mb-2">
-                      Can coffee make you a better developer?
+                  <div v-else class="h-12 w-20 lg:h-24 lg:w-36 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/arrive.png')" :title="session.title" />
+                  <div :class="['h-auto w-full shadow-sm rounded-tr-lg bg-white-c rounded-br-lg px-4 flex flex-col justify-between', session.is_serviceSession ? 'lg:h-24 py-1': 'lg:h-36 py-3']">
+                    <div class="flex flex-wrap items-start">
+                      <nuxt-link :to="'/sessions/' + session.slug" class="w-10/12">
+                        <div>
+                          <div class="text-px-14-slab black mb-2">
+                            {{ session.title }}
+                          </div>
+                          <p class="text-px-13 gray">
+                            {{ $truncateString(session.description, 100) }}
+                          </p>
+                          <div class="text-px-12-slab gray pt-1 uppercase mt-2">
+                            {{ $hour(session.start_date_time) }} - {{ $hour(session.end_date_time) }} | <span v-for="(room, $r) in session.rooms" :key="$r">{{ room.title }}<span v-if="$r+1 < session.rooms.length">, </span> </span>
+                          </div>
+                          <div v-if="!session.is_serviceSession" class="text-px-12 green-dark pt-2">
+                            <i class="fa fa-android pr-1" /> <span v-for="(speaker, $s) in session.speakers" :key="$s"><a
+                              :href="speaker.twitter"
+                            >{{ speaker.name }}</a><span v-if="$s+1 < session.speakers.length">, </span> </span>
+                          </div>
+                        </div>
+                      </nuxt-link>
+                      <div class="w-2/12 flex items-center justify-center">
+                        <div>
+                          <i class="fa fa-star gray cursor-pointer" />
+                        </div>
+                      </div>
                     </div>
-                    <p class="text-px-13 gray">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque
-                    </p>
-                    <p class="text-px-12-slab gray pt-1 mt-2">
-                      10:00AM - 10:30AM | ROOM 1
-                    </p>
-                    <p class="text-px-12 green-dark pt-1">
-                      <i class="fa fa-android pr-1" /> Greg Fawson
-                    </p>
-                  </nuxt-link>
-                  <div class="w-2/12 flex items-center justify-center">
-                    <div><i class="fa fa-star-o gray cursor-pointer" /></div>
                   </div>
                 </div>
               </div>
@@ -185,6 +121,20 @@
 <script>
 export default {
   name: 'Index',
+  async fetch () {
+    if (this.$store.state.sessions.length === 0) {
+      await this.$axios.get(`/events/${process.env.EVENT_SLUG}/schedule?grouped=true`).then((response) => {
+        this.schedule = response.data.data
+        this.$store.commit('updateSessions', response.data.data)
+      })
+    }
+  },
+  data () {
+    return {
+      schedule: this.$store.state.sessions,
+      currentTab: 0
+    }
+  },
   methods: {
     toggleModal () {
       const body = document.querySelector('body')
@@ -192,6 +142,9 @@ export default {
       modal.classList.toggle('opacity-0')
       modal.classList.toggle('pointer-events-none')
       body.classList.toggle('modal-active')
+    },
+    showTab (id) {
+      this.currentTab = id
     }
   }
 }
