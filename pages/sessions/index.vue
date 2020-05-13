@@ -10,7 +10,7 @@
           </div>
           <div class="w-1/2 px-4 md:px-0 flex-wrap flex justify-center items-center">
             <my-sessions />
-            <button class="text-px-13 black" @click="toggleModal()">
+            <button class="mr-2 text-px-13 black" @click="toggleModal()">
               Filter <i class="pl-2 fa fa-filter purple" />
             </button>
           </div>
@@ -128,6 +128,9 @@ export default {
     const vm = this
     this.$root.$on('allSessions', function () {
       vm.fetchSessions()
+    })
+    this.$root.$on('filterSessions', function () {
+      vm.toggleModal()
     })
   },
   methods: {

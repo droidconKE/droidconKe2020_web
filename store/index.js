@@ -5,7 +5,8 @@ export const state = () => ({
   sessions: [],
   members: [],
   organizers: [],
-  sessionsMine: false
+  sessionsMine: false,
+  event: []
 })
 
 export const getters = ({
@@ -38,8 +39,18 @@ export const mutations = {
       }
     })
   },
+  filterSessions (state, { levels, formats, rooms }) {
+    Object.keys(state.sessions).forEach((key) => {
+      state.sessions[key] = state.sessions[key].filter(function (e) {
+        return e.session_level.includes(levels) && e.session_format.includes(formats) && e.rooms.some(x => x.title.includes(rooms))
+      })
+    })
+  },
   updateSessionsMineStatus (state, status) {
     state.sessionsMine = status
+  },
+  updateEvent (state, event) {
+    state.event = event
   }
 }
 export const actions = {
@@ -58,5 +69,15 @@ export const actions = {
       await context.commit('user/updateUser', '')
     }
     await context.commit('updateTheme')
+    await this.$axios
+      .get('/events/' + process.env.EVENT_SLUG)
+      .then((response) => {
+        context.commit('updateEvent', response.data.data)
+      })
+      .catch((err) => {
+        if (err.response) {
+          //
+        }
+      })
   }
 }
