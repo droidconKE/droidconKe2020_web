@@ -22,6 +22,14 @@ export const mutations = {
   },
   updateOrganizers (state, organizers) {
     state.organizers = organizers
+  },
+  bookmarkSession (state, { sessionId, status }) {
+    Object.values(state.sessions).forEach((sessions) => {
+      const record = sessions.find(p => p.id === sessionId)
+      if (record) {
+        record.is_bookmarked = status
+      }
+    })
   }
 }
 export const actions = {

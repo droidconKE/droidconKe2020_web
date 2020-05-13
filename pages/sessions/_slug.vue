@@ -79,8 +79,8 @@
               {{ session.description }}
             </p>
 
-            <div class="w-full justify-center md:justify-start flex mt-4 md:mt-10">
-              <a class="button-border-g text-px-13-b black-persist mr-4 lg:mr-6" href="#">share <i class="fa fa-share" /></a>
+            <div class="w-full justify-center md:justify-start flex mt-4 md:mt-10 mb-4 lg:mb-16">
+              <a class="button-border-g text-px-13-b black-persist mr-4 lg:mr-6" href="#" @click.prevent="share">share <i class="fa fa-share" /></a>
               <button class="button-purple text-px-13-b white">
                 Session Feedback <i class="fa fa-share" />
               </button>
@@ -88,37 +88,17 @@
           </div>
         </div>
         <div class="w-full flex-wrap items-start justify-center lg:w-2/12 flex py-4">
-          <label
-            for="toogleAAA"
-            class="flex items-center cursor-pointer pr-6"
-          >
-            <!-- toggle -->
-            <div class="relative">
-              <!-- input -->
-              <input id="toogleAAA" type="checkbox" class="hidden">
-              <!-- line -->
-              <div
-                class="toggle__line w-6 h-3 bg-purple-lighter-c rounded-full shadow-inner"
-              />
-              <!-- dot -->
-              <div
-                class="toggle__dot absolute w-4 h-4 bg-black-c-inverse rounded-full shadow inset-y-0 left-0"
-              />
-            </div>
-            <!-- label -->
-            <div
-              class="pl-2 text-px-13 black"
-            >Save Session
-            </div>
-          </label>
+          <star-session :session-id="session.id" :is-bookmarked="session.is_bookmarked" />
         </div>
       </div>
     </section>
   </div>
 </template>
 <script>
+import StarSession from '../../components/pages/session/StarSession'
 export default {
   name: 'Slug',
+  components: { StarSession },
   async fetch () {
     const slug = this.$route.params.slug
     await this.$axios.get(`/events/${process.env.EVENT_SLUG}/schedule/${slug}`).then((response) => {
@@ -137,25 +117,25 @@ export default {
       modal.classList.toggle('opacity-0')
       modal.classList.toggle('pointer-events-none')
       body.classList.toggle('modal-active')
+    },
+    share () {
+      if (navigator.share) {
+        navigator.share({
+          title: this.session.title,
+          text: this.$truncateString(this.session.description, 100),
+          url: process.env.BASE_URL + this.$route.fullPath
+        })
+          .then(() => console.log('Successful share'))
+          .catch(error => console.log('Error sharing', error))
+      } else {
+        console.log('not supported')
+      }
     }
   }
 }
 </script>
 
 <style scoped>
-  .toggle__dot {
-    top: -.25rem;
-    left: -.25rem;
-    transition: all 0.3s ease-in-out;
-  }
-  .toggle__line {
-    margin-top: -2px;
-  }
-
-  input:checked ~ .toggle__dot {
-    transform: translateX(100%);
-    background-color: var(--purple-color);
-  }
   .VueCarousel , .VueCarousel-inner {
     width: 100%
   }
