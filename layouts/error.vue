@@ -8,10 +8,10 @@
               ERROR
             </p>
             <h1 class="error-font">
-              {{ error.statusCode }}
+              {{ data.statusCode }}
             </h1>
             <h5 class="title-px-21 black px-2 md:px-5 mt-4 md:mt-10 mb-4 md:mb-10">
-              it's not you, seems we have an issue, you may come back later
+              {{ data.message }}
             </h5>
             <div class="w-full px-2 md:px-10 mb-4 md:mb-10">
               <count-days />
@@ -36,9 +36,21 @@ export default {
       type: Object,
       default () {
         return {
-          statusCode: 500
+          statusCode: 500,
+          message: 'It\'s not you, seems we have an issue, you may come back later'
         }
       }
+    }
+  },
+  data () {
+    return {
+      data: this.error
+    }
+  },
+  mounted () {
+    console.log(this.$route.query.no_internet)
+    if (this.$route.query.no_internet) {
+      this.data = { statusCode: 'Offline', message: 'Seems you are offline !' }
     }
   }
 }

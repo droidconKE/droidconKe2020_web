@@ -26,14 +26,16 @@ export const actions = {
     // this.$cookies.remove(USER)
     context.commit('updateUser', '')
   },
-  getUser (context, error) {
+  getUser (context) {
     return this.$axios
       .get('/details')
       .then((response) => {
         context.commit('updateUser', response.data.user)
       })
-      .catch((_error) => {
-        context.commit('updateUser', '')
+      .catch((err) => {
+        if (err.response) {
+          context.commit('updateUser', '')
+        }
       })
   }
 }

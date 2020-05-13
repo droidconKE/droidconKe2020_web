@@ -1,21 +1,25 @@
 import { TOKEN } from '../services/helpers/consts'
 
-export default function ({ $axios, redirect, store, app }) {
+export default function ({ $axios, redirect, store, app, error }) {
   $axios.onRequest((config) => {
     // console.log('Making request to ', config)
   })
 
   $axios.onError((error) => {
-    const code = parseInt(error.response && error.response.status)
-    console.log(code)
-    if (code === 401) {
-      store.dispatch('user/logOut')
-    }
-    if (code === 500) {
-      redirect('/error')
-    }
-    if (code === 404) {
-      redirect('/not-found')
+    if (error.response) {
+      const code = parseInt(error.response && error.response.status)
+      console.log(code)
+      if (code === 401) {
+        store.dispatch('user/logOut')
+      }
+      if (code === 500) {
+        redirect('/error')
+      }
+      if (code === 404) {
+        redirect('/not-found')
+      }
+    } else {
+      redirect('/error?no_internet=true')
     }
   })
 
