@@ -50,7 +50,15 @@
         </div>
         <div class="w-full lg:w-11/12">
           <div v-for="(days, $index, $key) in schedule" :id="$index" :key="$key">
-            <div v-if="currentTab === $key" class="flex-wrap w-full flex space-y-6 mb-2 lg:mb-10">
+            <transition
+              enter-active-class="transition duration-300 ease-out transform"
+              enter-class="-translate-y-3 scale-95 opacity-0"
+              enter-to-class="translate-y-0 scale-100 opacity-100"
+              leave-active-class="transition duration-150 ease-in transform"
+              leave-class="translate-y-0 opacity-100"
+              leave-to-class="-translate-y-3 opacity-0"
+            >
+              <div v-if="currentTab === $key" class="flex-wrap w-full flex space-y-6 mb-2 lg:mb-10">
               <div v-for="(session, $ind) in days" :key="$ind" class="flex w-full px-0 lg:px-2">
                 <div class="w-2/12 h-32 flex items-center justify-center text-right hidden lg:grid">
                   <h3 class="text-px-14-slab purple uppercase">
@@ -82,7 +90,7 @@
                     </div>
                   </nuxt-link>
                   <div v-else class="h-12 w-20 lg:h-24 lg:w-36 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/arrive.png')" :title="session.title" />
-                  <div :class="['h-auto w-full shadow-sm rounded-tr-lg bg-white-c rounded-br-lg px-4 flex flex-col justify-between', session.is_serviceSession ? 'lg:h-24 py-1': 'lg:h-36 py-3']">
+                  <div :class="['h-auto w-full shadow-sm rounded-tr-lg bg-white-c rounded-br-lg px-4 flex flex-col justify-between', session.is_serviceSession ? 'lg:h-24 py-2': 'lg:h-36 py-3']">
                     <div class="flex flex-wrap items-start">
                       <nuxt-link :to="'/sessions/' + session.slug" class="w-10/12">
                         <div>
@@ -112,6 +120,7 @@
                 </div>
               </div>
             </div>
+            </transition>
           </div>
         </div>
       </div>
@@ -163,5 +172,18 @@ export default {
   input:checked ~ .toggle__dot {
     transform: translateX(100%);
     background-color: var(--purple-color);
+  }
+  .all-sessions {
+    animation: 1s appear;
+    margin: auto;
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 </style>
