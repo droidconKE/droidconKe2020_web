@@ -4,7 +4,8 @@ export const state = () => ({
   darkTheme: '',
   sessions: [],
   members: [],
-  organizers: []
+  organizers: [],
+  sessionsMine: false
 })
 
 export const getters = ({
@@ -28,8 +29,17 @@ export const mutations = {
       const record = sessions.find(p => p.id === sessionId)
       if (record) {
         record.is_bookmarked = status
+        if (state.sessionsMine) {
+          const index = sessions.findIndex(function (p) {
+            return (p.id === sessionId)
+          })
+          sessions.splice(index, 1)
+        }
       }
     })
+  },
+  updateSessionsMineStatus (state, status) {
+    state.sessionsMine = status
   }
 }
 export const actions = {

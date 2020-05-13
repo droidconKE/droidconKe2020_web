@@ -9,29 +9,7 @@
             </h2>
           </div>
           <div class="w-1/2 px-4 md:px-0 flex-wrap flex justify-center items-center">
-            <label
-              for="toogleAA"
-              class="flex items-center cursor-pointer pr-8"
-            >
-              <!-- toggle -->
-              <div class="relative">
-                <!-- input -->
-                <input id="toogleAA" type="checkbox" class="hidden">
-                <!-- line -->
-                <div
-                  class="toggle__line w-6 h-3 bg-purple-lighter-c rounded-full shadow-inner"
-                />
-                <!-- dot -->
-                <div
-                  class="toggle__dot absolute w-4 h-4 bg-black-c-inverse rounded-full shadow inset-y-0 left-0"
-                />
-              </div>
-              <!-- label -->
-              <div
-                class="pl-2 text-px-13 black"
-              >My Sessions
-              </div>
-            </label>
+            <my-sessions />
             <button class="text-px-13 black" @click="toggleModal()">
               Filter <i class="pl-2 fa fa-filter purple" />
             </button>
@@ -127,22 +105,30 @@
 </template>
 <script>
 import StarSession from '../../components/pages/session/StarSession'
+import MySessions from '../../components/pages/session/MySessions'
 export default {
   name: 'Index',
-  components: { StarSession },
+  components: { MySessions, StarSession },
   async fetch () {
     if (this.$store.state.sessions.length === 0) {
-      await this.$axios.get(`/events/${process.env.EVENT_SLUG}/schedule?grouped=true`).then((response) => {
-        this.schedule = response.data.data
-        this.$store.commit('updateSessions', response.data.data)
-      })
+      await this.fetchSessions()
     }
   },
   data () {
     return {
-      schedule: this.$store.state.sessions,
       currentTab: 0
     }
+  },
+  computed: {
+    schedule () {
+      return this.$store.state.sessions
+    }
+  },
+  mounted () {
+    const vm = this
+    this.$root.$on('allSessions', function () {
+      vm.fetchSessions()
+    })
   },
   methods: {
     toggleModal () {
@@ -154,25 +140,18 @@ export default {
     },
     showTab (id) {
       this.currentTab = id
+    },
+    fetchSessions () {
+      return this.$axios.get(`/events/${process.env.EVENT_SLUG}/schedule?grouped=true`).then((response) => {
+        // this.schedule = response.data.data
+        this.$store.commit('updateSessions', response.data.data)
+      })
     }
   }
 }
 </script>
 
 <style scoped>
-  .toggle__dot {
-    top: -.25rem;
-    left: -.25rem;
-    transition: all 0.3s ease-in-out;
-  }
-  .toggle__line {
-    margin-top: -2px;
-  }
-
-  input:checked ~ .toggle__dot {
-    transform: translateX(100%);
-    background-color: var(--purple-color);
-  }
   .all-sessions {
     animation: 1s appear;
     margin: auto;
