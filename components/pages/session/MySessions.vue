@@ -32,6 +32,13 @@ export default {
       return this.$store.state.sessionsMine
     }
   },
+  mounted () {
+    if (this.$route.query.my_sessions) {
+      if (!this.sessionsMine) {
+        this.mySessions()
+      }
+    }
+  },
   methods: {
     mySessions () {
       if (!this.sessionsMine) {

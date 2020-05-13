@@ -1,4 +1,4 @@
-import { DARK_THEME } from '../services/helpers/consts'
+import { DARK_THEME, TOKEN } from '../services/helpers/consts'
 
 export const state = () => ({
   darkTheme: '',
@@ -52,7 +52,11 @@ export const actions = {
     context.commit('updateTheme')
   },
   async nuxtServerInit (context) {
+    if (this.$cookies.get(TOKEN)) {
+      await context.dispatch('user/getUser', { root: true })
+    } else {
+      await context.commit('user/updateUser', '')
+    }
     await context.commit('updateTheme')
-    await context.dispatch('user/getUser', { root: true })
   }
 }

@@ -23,7 +23,7 @@ export default function ({ $axios, redirect, store, app, error }) {
     }
   })
 
-  const token = app.$cookies.get(TOKEN)
+  const token = app.$cookies.get(TOKEN) || store.state.user.token
   if (token) {
     $axios.setToken(token, 'Bearer')
   }
