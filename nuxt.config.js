@@ -49,7 +49,8 @@ export default {
     { src: '~/plugins/vue-countdown', mode: 'client' },
     '~/plugins/vue-authenticate.client.js',
     '~/plugins/vue-carousel.client.js',
-    '~/plugins/helpers.js'
+    '~/plugins/helpers.js',
+    '~/plugins/vue-toaster.client.js'
   ],
   /*
   ** Nuxt.js dev-modules

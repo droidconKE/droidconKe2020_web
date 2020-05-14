@@ -22,6 +22,7 @@
     "moment": "^2.25.3",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0",
+    "v-toaster": "^1.0.3",
     "vue": "^2.6.11",
     "vue-authenticate": "^1.4.1",
     "vue-axios": "^2.1.5",

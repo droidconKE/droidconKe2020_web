@@ -18,8 +18,8 @@
       <div class="w-full container mx-auto flex flex-wrap px-4 md:px-12 py-0 md:py-3">
         <div class="w-full flex-wrap lg:w-4/12 flex border-r-0 lg:border-r border-green-200 pr-0 lg:pr-4">
           <div class="w-full py-4">
-            <h4 class="text-px-16-slab purple">
-              Speaker
+            <h4 v-if="!$fetchState.pending" class="text-px-16-slab purple">
+              Speaker{{ session.speakers.length > 1 ? 's' : '' }}
             </h4>
           </div>
           <client-only>

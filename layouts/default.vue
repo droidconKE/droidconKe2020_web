@@ -23,6 +23,12 @@ import Feedback from '../components/pages/shared/Feedback'
 import FilterModal from '../components/pages/session/Filter'
 export default {
   components: { FilterModal, Feedback, LoginModal, NavBar, FootBar },
+  mounted () {
+    const vm = this
+    this.$root.$on('feedbackSent', function () {
+      vm.toggleModal()
+    })
+  },
   methods: {
     toggleModal () {
       const body = document.querySelector('body')

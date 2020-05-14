@@ -33,7 +33,10 @@
                   <p class="text-px-13 black mt-4">
                     Kindly leave your honest feedback to help us make it even better. Cheers : )
                   </p>
-                  <textarea id="feed-message" rows="4" class="appearance-none block w-full bg-white text-gray-700 rounded py-1 px-1 leading-tight mt-4" />
+                  <textarea id="feed-message" v-model="form.feedback" rows="4" :class="['appearance-none block w-full bg-white text-gray-700 rounded py-1 px-1 leading-tight mt-4', errors.feedback ? 'border border-red-500' : '']" />
+                  <p v-if="errors.feedback" class="text-red-500 text-xs italic">
+                    {{ errors.feedback[0] }}.
+                  </p>
                   <div class="flex-wrap items-center mt-4 flex w-full">
                     <div>
                       <p class="text-px-13 black mr-6">
@@ -43,9 +46,12 @@
                     <client-only>
                       <star-rating v-model="form.rating" :show-rating="false" :star-size="25" :glow="2" />
                     </client-only>
+                    <p v-if="errors.rating" class="text-red-500 text-xs italic">
+                      {{ errors.rating[0] }}
+                    </p>
                   </div>
-                  <button class="button-purple text-px-13 white mt-4 mb-4 md:mb-0">
-                    Submit Feedback <i class="fa fa-share" />
+                  <button class="button-purple text-px-13 white mt-4 mb-4 md:mb-0" @click="sendFeedback">
+                    {{ button }} <i class="fa fa-share" />
                   </button>
                 </div>
               </div>
@@ -65,8 +71,29 @@ export default {
   data () {
     return {
       form: {
-        rating: 0
-      }
+        rating: 1,
+        feedback: null
+      },
+      errors: [],
+      button: 'Submit Feedback'
+    }
+  },
+  methods: {
+    sendFeedback () {
+      this.errors = []
+      this.button = 'Submitting Feedback ...'
+      this.$axios.post(`/events/${process.env.EVENT_SLUG}/feedback`, this.$data.form)
+        .then((response) => {
+          this.$toaster.success(response.data.message)
+          this.$root.$emit('feedbackSent')
+          this.button = 'Submit Feedback'
+        })
+        .catch((error) => {
+          if (error.response.status === 422) {
+            this.errors = error.response.data.errors
+            this.button = 'Submit Feedback'
+          }
+        })
     }
   }
 }
