@@ -45,8 +45,6 @@ export default {
   name: 'LoginModal',
   components: { Login },
   mounted () {
-    const vm = this
-
     const overlay = document.querySelectorAll('.modal-overlay')
     for (let i = 0; i < overlay.length; i++) {
       overlay[i].addEventListener('click', this.toggleModal)
@@ -57,18 +55,19 @@ export default {
       closemodal[i].addEventListener('click', this.toggleModal)
     }
 
-    document.onkeydown = function (evt) {
-      evt = evt || window.event
-      let isEscape = false
-      if ('key' in evt) {
-        isEscape = evt.key === 'Escape' || evt.key === 'Esc'
-      } else {
-        isEscape = evt.keyCode === 27
-      }
-      if (isEscape && document.body.classList.contains('modal-active')) {
-        vm.toggleModal()
-      }
-    }
+    // const vm = this
+    // document.onkeydown = function (evt) {
+    //   evt = evt || window.event
+    //   let isEscape = false
+    //   if ('key' in evt) {
+    //     isEscape = evt.key === 'Escape' || evt.key === 'Esc'
+    //   } else {
+    //     isEscape = evt.keyCode === 27
+    //   }
+    //   if (isEscape && document.body.classList.contains('modal-active')) {
+    //     vm.toggleModal()
+    //   }
+    // }
   },
   created () {
     const vm = this

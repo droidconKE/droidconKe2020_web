@@ -13,6 +13,7 @@
     <login-modal />
     <feedback />
     <filter-modal />
+    <notification-prompt />
   </div>
 </template>
 <script>
@@ -21,8 +22,9 @@ import FootBar from '../components/layout/FootBar'
 import LoginModal from '../components/pages/shared/LoginModal'
 import Feedback from '../components/pages/shared/Feedback'
 import FilterModal from '../components/pages/session/Filter'
+import NotificationPrompt from '../components/pages/shared/NotificationsPrompt'
 export default {
-  components: { FilterModal, Feedback, LoginModal, NavBar, FootBar },
+  components: { NotificationPrompt, FilterModal, Feedback, LoginModal, NavBar, FootBar },
   mounted () {
     const vm = this
     this.$root.$on('feedbackSent', function () {
