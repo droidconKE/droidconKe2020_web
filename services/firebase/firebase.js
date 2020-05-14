@@ -1,5 +1,4 @@
-import * as firebase from 'firebase'
-import 'firebase/app'
+import firebase from 'firebase/app'
 import 'firebase/messaging'
 
 const config = {

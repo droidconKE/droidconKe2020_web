@@ -87,13 +87,13 @@ export default {
   },
   computed: {
     sessionFormats () {
-      return this.$store.state.event.cfs.cfs_settings.session_formats
+      return this.$store.state.event !== undefined ? this.$store.state.event.cfs.cfs_settings.session_formats : []
     },
     sessionLevels () {
-      return this.$store.state.event.cfs.cfs_settings.session_levels
+      return this.$store.state.event !== undefined ? this.$store.state.event.cfs.cfs_settings.session_levels : []
     },
     sessionRooms () {
-      return this.$store.state.event.rooms
+      return this.$store.state.event !== undefined ? this.$store.state.event.rooms : []
     }
   },
   methods: {
