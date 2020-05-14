@@ -31,7 +31,6 @@ export default {
       vm.toggleModal()
     })
     this.$bus.$on('loggedInn', function () {
-      console.log('me 3')
       vm.$toaster.warning('Kindly login to proceed with action')
       // vm.$root.$emit('test1')
     })
