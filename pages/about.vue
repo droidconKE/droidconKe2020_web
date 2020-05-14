@@ -5,7 +5,7 @@
         <div class="w-full lg:w-5/12 flex items-center">
           <div class="w-full bg-no-repeat bg-center" style="background-image: url(/images/circ.svg)">
             <div class="w-full mt-2 flex items-center justify-center">
-              <img class="h-20 w-20 lg:mt-4 mt-4 lg:mb-8" src="/icon.png" alt="droid">
+              <img class="h-20 w-20 lg:mt-4 mt-4 mb-8 lg:mb-8" src="/icon.png" alt="droid">
             </div>
             <div class="w-full flex flex-wrap text-left">
               <h2 class="title-px-36 black">
@@ -87,9 +87,9 @@
         </div>
       </div>
       <div class="w-full px-0 md:px-24 mr-auto mb-4 md:mb-0 pb-10 lg:pb-16">
-        <div class="w-full flex flex-wrap items-center grid md:grid-cols-6 grid-cols-3 gap-8">
-          <a v-for="(member, $index) in members" :key="$index" :href="member.link" class="text-center" target="_blank">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
+        <div class="w-full flex flex-wrap grid md:grid-cols-6 grid-cols-3 gap-2 lg:gap-8">
+          <a v-for="(member, $index) in members" :key="$index" :href="member.link" class="text-center flex justify-center flex-wrap" target="_blank">
+            <div class="w-24 h-24 md:w-32 md:h-32 p-2 md:p-4 flex justify-center bg-green-c-2 rounded">
               <img
                 class="w-full p-0 rounded-full border-2 border-green-500"
                 :src="member.photo === null ? '/icon.png' : member.photo"

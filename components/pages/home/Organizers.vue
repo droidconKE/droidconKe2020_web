@@ -13,7 +13,7 @@
           </div>
         </div>
         <div class="w-full md:w-6/12 mr-auto  pt-0 sm:mt-10 md:pt-0 justify-end">
-          <div class="w-full flex md:p-10 sm:p-0  grid md:grid-cols-4 grid-cols-3 gap-8">
+          <div class="w-full flex md:p-10 sm:p-0  grid md:grid-cols-4 grid-cols-3 gap-4 lg:gap-8">
             <div v-for="(org, $index) in organizers" :key="$index" class="w-24 h-24 p-3 flex-none rounded border border-green-200 bg-white-c">
               <img class="w-16 p-0" :src="org.photo === null ? '/icon.png' : org.photo" :alt="org.name">
             </div>
