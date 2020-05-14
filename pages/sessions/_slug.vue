@@ -81,7 +81,7 @@
 
             <div class="w-full justify-center md:justify-start flex mt-4 md:mt-10 mb-4 lg:mb-16">
               <a class="button-border-g text-px-13-b black-persist mr-4 lg:mr-6" href="#" @click.prevent="share">share <i class="fa fa-share" /></a>
-              <button class="button-purple text-px-13-b white">
+              <button class="button-purple text-px-13-b white" @click="toggleModal">
                 Session Feedback <i class="fa fa-share" />
               </button>
             </div>
@@ -92,13 +92,15 @@
         </div>
       </div>
     </section>
+    <session-feedback />
   </div>
 </template>
 <script>
 import StarSession from '../../components/pages/session/StarSession'
+import SessionFeedback from '../../components/pages/session/SessionFeedback'
 export default {
   name: 'Slug',
-  components: { StarSession },
+  components: { SessionFeedback, StarSession },
   async fetch () {
     const slug = this.$route.params.slug
     await this.$axios.get(`/events/${process.env.EVENT_SLUG}/schedule/${slug}`).then((response) => {
@@ -109,6 +111,12 @@ export default {
     return {
       session: []
     }
+  },
+  mounted () {
+    const vm = this
+    this.$root.$on('sessionFeedbackSent', function () {
+      vm.toggleModal()
+    })
   },
   methods: {
     toggleModal () {
