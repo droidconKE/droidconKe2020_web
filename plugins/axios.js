@@ -1,6 +1,6 @@
 import { TOKEN } from '../services/helpers/consts'
 
-export default function ({ $axios, redirect, store, app, error }) {
+export default function ({ $axios, redirect, store, app }) {
   $axios.onRequest((config) => {
     // console.log('Making request to ', config)
   })
@@ -11,6 +11,7 @@ export default function ({ $axios, redirect, store, app, error }) {
       console.log(code)
       if (code === 401) {
         store.dispatch('user/logOut')
+        app.$bus.$emit('loggedInn')
       }
       if (code === 500) {
         redirect('/error')

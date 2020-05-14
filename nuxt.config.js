@@ -50,7 +50,8 @@ export default {
     '~/plugins/vue-authenticate.client.js',
     '~/plugins/vue-carousel.client.js',
     '~/plugins/helpers.js',
-    '~/plugins/vue-toaster.client.js'
+    '~/plugins/vue-toaster.client.js',
+    '~/plugins/eventBus.js'
   ],
   /*
   ** Nuxt.js dev-modules

@@ -164,9 +164,10 @@ export default {
     }
   },
   // mounted () {
-  //   document.getElementById('nav-toggle').onclick = function () {
-  //     document.getElementById('nav-content').classList.toggle('hidden')
-  //   }
+  //   const vm = this
+  //   this.$root.$on('test1', function () {
+  //     vm.toggleModal()
+  //   })
   // },
   methods: {
     toggleNav () {
