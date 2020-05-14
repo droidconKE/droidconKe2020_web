@@ -87,7 +87,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full flex-wrap items-start justify-center lg:w-2/12 flex py-4">
+        <div class="w-full flex-wrap items-start justify-center lg:w-2/12 flex py-4 mb-10 lg:mb-0">
           <star-session :session-id="session.id" :is-bookmarked="session.is_bookmarked" />
         </div>
       </div>
