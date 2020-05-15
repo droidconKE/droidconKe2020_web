@@ -22,7 +22,7 @@
               Speaker{{ session.speakers.length > 1 ? 's' : '' }}
             </h4>
           </div>
-          <client-only>
+          <client-only v-if="!$fetchState.pending">
             <carousel :per-page="1" :loop="true" :autoplay="true" :autoplay-timeout="10000" :autoplay-hover-pause="true">
               <slide v-for="(speaker, $index) in session.speakers" :key="$index" class="w-full">
                 <div class="w-full flex items-start flex text-center">
@@ -52,17 +52,18 @@
               </slide>
             </carousel>
           </client-only>
+          <speaker-skeleton v-else />
         </div>
         <div class="w-full flex-wrap content-start items-start lg:w-6/12 px-0 lg:px-6 flex">
           <div class="w-full flex py-4">
             <h4 class="text-px-16-slab purple mr-0 md:mr-10">
               Session
             </h4>
-            <p class="text-px-14 gray">
+            <p v-if="!$fetchState.pending" class="text-px-14 gray">
               <span class="mr-2">Level:</span> <span class="uppercase white text-px-10 button-black">#{{ session.session_level }}</span>
             </p>
           </div>
-          <div class="w-full flex items-start flex-col">
+          <div v-if="!$fetchState.pending" class="w-full flex items-start flex-col">
             <h4 class="black text-px-13-slab-b">
               {{ session.session_format }}
             </h4>
@@ -86,8 +87,9 @@
               </button>
             </div>
           </div>
+          <session-skeleton v-else />
         </div>
-        <div class="w-full flex-wrap items-start justify-center lg:w-2/12 flex py-4 mb-10 lg:mb-0">
+        <div v-if="!$fetchState.pending" class="w-full flex-wrap items-start justify-center lg:w-2/12 flex py-4 mb-10 lg:mb-0">
           <star-session v-if="!session.is_serviceSession" :session-id="session.id" :is-bookmarked="session.is_bookmarked" :session-slug="session.slug" />
         </div>
       </div>
@@ -98,9 +100,11 @@
 <script>
 import StarSession from '../../components/pages/session/StarSession'
 import SessionFeedback from '../../components/pages/session/SessionFeedback'
+import SpeakerSkeleton from '../../components/pages/session/SpeakerSkeleton'
+import SessionSkeleton from '../../components/pages/session/SessionSkeleton'
 export default {
   name: 'Slug',
-  components: { SessionFeedback, StarSession },
+  components: { SessionSkeleton, SpeakerSkeleton, SessionFeedback, StarSession },
   async fetch () {
     const slug = this.$route.params.slug
     await this.$axios.get(`/apis/events/${process.env.EVENT_SLUG}/schedule/${slug}`).then((response) => {

@@ -354,3 +354,11 @@
     max-width: 160em!important;
   }
 }
+@keyframes pulse-bg {
+  0% { background-color: var(--color-skeleton) }
+  50% { background-color: var(--color-skeleton-light) }
+  100% { background-color: var(--color-skeleton) }
+}
+.skeleton {
+  animation: pulse-bg 1s infinite;
+}
