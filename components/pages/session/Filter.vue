@@ -87,13 +87,22 @@ export default {
   },
   computed: {
     sessionFormats () {
-      return this.$store.state.event !== undefined ? this.$store.state.event.cfs.cfs_settings.session_formats : []
+      if (this.$store.state.event !== undefined) {
+        return this.$store.state.event.length > 0 ? this.$store.state.event.cfs.cfs_settings.session_formats : []
+      }
+      return []
     },
     sessionLevels () {
-      return this.$store.state.event !== undefined ? this.$store.state.event.cfs.cfs_settings.session_levels : []
+      if (this.$store.state.event !== undefined) {
+        return this.$store.state.event.length > 0 ? this.$store.state.event.cfs.cfs_settings.session_levels : []
+      }
+      return []
     },
     sessionRooms () {
-      return this.$store.state.event !== undefined ? this.$store.state.event.rooms : []
+      if (this.$store.state.event !== undefined) {
+        return this.$store.state.event.length > 0 ? this.$store.state.event.rooms : []
+      }
+      return []
     }
   },
   methods: {

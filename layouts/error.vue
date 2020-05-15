@@ -50,7 +50,7 @@ export default {
   mounted () {
     console.log(this.$route.query.no_internet)
     if (this.$route.query.no_internet) {
-      this.data = { statusCode: 'Offline', message: 'Seems you are offline !' }
+      this.data = { statusCode: 'Offline', message: 'Seems you are offline Or our servers might be asleep !' }
     }
   }
 }
