@@ -83,7 +83,7 @@ export default {
       const slug = this.$route.params.slug
       this.errors = []
       this.button = 'Submitting Feedback ...'
-      this.$axios.post(`/events/${process.env.EVENT_SLUG}/feedback/sessions/${slug}`, this.$data.form)
+      this.$axios.post(`/apis/events/${process.env.EVENT_SLUG}/feedback/sessions/${slug}`, this.$data.form)
         .then((response) => {
           this.$toaster.success(response.data.message)
           this.$root.$emit('sessionFeedbackSent')

@@ -29,6 +29,7 @@ export default function ({ $axios, redirect, store, app }) {
     $axios.setToken(token, 'Bearer')
   }
 
-  $axios.setBaseURL(process.env.API_BASE_URL)
+  // ! using a proxy, this is not needed in this case
+  // $axios.setBaseURL(process.env.API_BASE_URL)
   $axios.setHeader('Api-Authorization-Key', process.env.API_KEY)
 }

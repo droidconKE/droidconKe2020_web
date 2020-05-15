@@ -42,7 +42,7 @@ export default {
   methods: {
     mySessions () {
       if (!this.sessionsMine) {
-        this.$axios.get(`/events/${process.env.EVENT_SLUG}/bookmarked_schedule?grouped=true`).then((response) => {
+        this.$axios.get(`/apis/events/${process.env.EVENT_SLUG}/bookmarked_schedule?grouped=true`).then((response) => {
           this.$store.commit('updateSessions', response.data.data)
           this.$store.commit('updateSessionsMineStatus', true)
         })

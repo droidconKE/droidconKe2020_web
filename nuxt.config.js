@@ -71,13 +71,25 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     ['@nuxtjs/dotenv', { filename: '.env.' + process.env.NODE_ENV }],
-    'cookie-universal-nuxt'
+    'cookie-universal-nuxt',
+    '@nuxtjs/proxy'
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api2/': {
+      target: 'https://iid.googleapis.com',
+      pathRewrite: { '^/api2/': '' }
+    },
+    '/apis/': {
+      target: 'https://droidcon-api.appslab.tech/v1',
+      pathRewrite: { '^/apis/': '' }
+    }
   },
   /*
   ** Build configuration

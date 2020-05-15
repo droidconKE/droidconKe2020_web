@@ -118,7 +118,7 @@ export default {
   // }
   async fetch () {
     if (this.$store.state.members.length === 0) {
-      await this.$axios.get(`/organizers/${process.env.ORG_SLUG}/team?type=individual`).then((response) => {
+      await this.$axios.get(`/apis/organizers/${process.env.ORG_SLUG}/team?type=individual`).then((response) => {
         this.members = response.data.data
         this.$store.commit('updateMembers', response.data.data)
       })

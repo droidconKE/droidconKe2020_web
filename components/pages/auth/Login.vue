@@ -16,6 +16,8 @@ export default {
               .dispatch('user/loginUser', response.data).then((_e) => {
                 vm.$root.$emit('loggedIn')
                 localStorage.removeItem('vue-authenticate.vueauth_token')
+              }).then(() => {
+                window.location.reload()
               })
           })
       })

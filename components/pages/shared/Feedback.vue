@@ -82,7 +82,7 @@ export default {
     sendFeedback () {
       this.errors = []
       this.button = 'Submitting Feedback ...'
-      this.$axios.post(`/events/${process.env.EVENT_SLUG}/feedback`, this.$data.form)
+      this.$axios.post(`/apis/events/${process.env.EVENT_SLUG}/feedback`, this.$data.form)
         .then((response) => {
           this.$toaster.success(response.data.message)
           this.$root.$emit('feedbackSent')

@@ -6,7 +6,7 @@ export default {
   name: 'Logout',
   methods: {
     logout () {
-      this.$axios.post('/logout', { }).then((response) => {
+      this.$axios.post('/apis/logout', { }).then((response) => {
         this.$store.dispatch('user/logOut')
       })
     }

@@ -108,7 +108,7 @@ export default {
         'Content-Type': 'application/json'
       }
       const topic = process.env.MESSAGING_TOPIC
-      this.$axios.post('https://iid.googleapis.com/iid/v1/' + token + '/rel/topics/' + topic, null, { headers })
+      this.$axios.post('/api2/iid/v1/' + token + '/rel/topics/' + topic, null, { headers })
         .then((_response) => {
           console.log('Subscribed to "' + topic + '"')
         }).catch((err) => {

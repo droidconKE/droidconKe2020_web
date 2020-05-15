@@ -89,7 +89,7 @@
                           </div>
                         </nuxt-link>
                         <div class="w-2/12 flex items-center justify-center">
-                          <star-session :session-id="session.id" :is-bookmarked="session.is_bookmarked" />
+                          <star-session v-if="!session.is_serviceSession" :session-id="session.id" :is-bookmarked="session.is_bookmarked" :session-slug="session.slug" />
                         </div>
                       </div>
                     </div>
@@ -145,7 +145,7 @@ export default {
       this.currentTab = id
     },
     fetchSessions () {
-      return this.$axios.get(`/events/${process.env.EVENT_SLUG}/schedule?grouped=true`).then((response) => {
+      return this.$axios.get(`/apis/events/${process.env.EVENT_SLUG}/schedule?grouped=true`).then((response) => {
         // this.schedule = response.data.data
         this.$store.commit('updateSessions', response.data.data)
       })

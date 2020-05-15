@@ -28,7 +28,7 @@ export const actions = {
   },
   getUser (context) {
     return this.$axios
-      .get('/details')
+      .get('/apis/details')
       .then((response) => {
         context.commit('updateUser', response.data.user)
       })

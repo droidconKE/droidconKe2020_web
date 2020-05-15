@@ -29,7 +29,7 @@ export default {
   name: 'Organizers',
   async fetch () {
     if (this.$store.state.organizers.length === 0) {
-      await this.$axios.get(`/organizers/${process.env.ORG_SLUG}/team?type=company`).then((response) => {
+      await this.$axios.get(`/apis/organizers/${process.env.ORG_SLUG}/team?type=company`).then((response) => {
         this.organizers = response.data.data
         this.$store.commit('updateOrganizers', response.data.data)
       })

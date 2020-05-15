@@ -91,3 +91,4 @@ sw.*
 /.env.production
 /.env.development
 /.firebase/
+/report.20200515.144434.9753.0.001.json

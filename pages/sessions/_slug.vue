@@ -79,7 +79,7 @@
               {{ session.description }}
             </p>
 
-            <div class="w-full justify-center md:justify-start flex mt-4 md:mt-10 mb-4 lg:mb-16">
+            <div v-if="!session.is_serviceSession" class="w-full justify-center md:justify-start flex mt-4 md:mt-10 mb-4 lg:mb-16">
               <a class="button-border-g text-px-13-b black-persist mr-4 lg:mr-6" href="#" @click.prevent="share">share <i class="fa fa-share" /></a>
               <button class="button-purple text-px-13-b white" @click="toggleModal">
                 Session Feedback <i class="fa fa-share" />
@@ -88,7 +88,7 @@
           </div>
         </div>
         <div class="w-full flex-wrap items-start justify-center lg:w-2/12 flex py-4 mb-10 lg:mb-0">
-          <star-session :session-id="session.id" :is-bookmarked="session.is_bookmarked" />
+          <star-session v-if="!session.is_serviceSession" :session-id="session.id" :is-bookmarked="session.is_bookmarked" :session-slug="session.slug" />
         </div>
       </div>
     </section>
@@ -103,7 +103,7 @@ export default {
   components: { SessionFeedback, StarSession },
   async fetch () {
     const slug = this.$route.params.slug
-    await this.$axios.get(`/events/${process.env.EVENT_SLUG}/schedule/${slug}`).then((response) => {
+    await this.$axios.get(`/apis/events/${process.env.EVENT_SLUG}/schedule/${slug}`).then((response) => {
       this.session = response.data.data
     })
   },

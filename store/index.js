@@ -70,7 +70,7 @@ export const actions = {
     }
     await context.commit('updateTheme')
     await this.$axios
-      .get('/events/' + process.env.EVENT_SLUG)
+      .get('/apis/events/' + process.env.EVENT_SLUG)
       .then((response) => {
         context.commit('updateEvent', response.data.data)
       })

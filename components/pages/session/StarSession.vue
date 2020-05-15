@@ -31,12 +31,17 @@
 </template>
 
 <script>
+import firebase from '~/services/firebase/firebase'
 export default {
   name: 'StarSession',
   props: {
     sessionId: {
       type: Number,
       default: 0
+    },
+    sessionSlug: {
+      type: String,
+      default: ''
     },
     isBookmarked: {
       type: Boolean,
@@ -55,12 +60,52 @@ export default {
   },
   methods: {
     bookmark () {
-      this.$axios.post(`events/${process.env.EVENT_SLUG}/bookmark_schedule/${this.sessionId}`)
+      this.$axios.post(`/apis/events/${process.env.EVENT_SLUG}/bookmark_schedule/${this.sessionId}`)
         .then((response) => {
+          console.log(this.isBookmarked)
+          this.isBookmarked ? this.notification(this.sessionSlug, 'unsubscribed') : this.notification(this.sessionSlug, 'subscribed')
+
           this.$store.commit('bookmarkSession', {
             sessionId: this.sessionId,
             status: !this.isBookmarked
           })
+        })
+    },
+    notification (topic, type) {
+      const messaging = firebase.messaging()
+      messaging.getToken().then((token) => {
+        type === 'subscribed'
+          ? this.setTokenToTopic(token, topic)
+          : this.removeTokenToTopic(token, topic)
+      })
+    },
+    setTokenToTopic (token, topic) {
+      const headers = {
+        Authorization: 'key=' + process.env.FIREBASE_SERVER_KEY,
+        'Content-Type': 'application/json'
+      }
+
+      this.$axios.$post('/api2/iid/v1/' + token + '/rel/topics/' + topic, null, { headers })
+        .then((_response) => {
+          console.log('Subscribed to "' + topic + '"')
+        }).catch((err) => {
+          console.log('Unable to subscribe ', err)
+        })
+    },
+    removeTokenToTopic (token, topic) {
+      const headers = {
+        Authorization: 'key=' + process.env.FIREBASE_SERVER_KEY,
+        'Content-Type': 'application/json'
+      }
+
+      this.$axios.$post('/api2/iid/v1:batchRemove', {
+        to: '/topics/' + topic,
+        registration_tokens: [token]
+      }, { headers })
+        .then((_response) => {
+          console.log('Subscribed to "' + topic + '"')
+        }).catch((err) => {
+          console.log('Unable to subscribe ', err)
         })
     }
   }
