@@ -10,20 +10,16 @@
     <div class="w-full flex-wrap flex lg:w-11/12 space-y-6 mb-2 lg:mb-10">
       <div v-for="(i, $i) in 5" :key="$i" class="flex w-full px-0 lg:px-2">
         <div class="w-2/12 h-20 flex items-center justify-center text-right hidden lg:grid">
-          <h3 class="text-px-14-slab w-12 h-6 bg-gray-300 purple">
-          </h3>
+          <h3 class="text-px-14-slab w-12 h-6 bg-gray-300 purple" />
         </div>
         <div class="w-full lg:w-10/12 flex bg-white-c rounded-tr-lg rounded-br-lg">
           <div class="h-12 w-20  lg:h-24 lg:w-36 flex-none skeleton bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('https://via.placeholder.com/150/E2E8F0?text=droidconKe')" title="Woman holding a mug" />
           <div class="h-auto w-full lg:h-24 shadow-sm rounded-lg px-4 py-3 flex flex-col justify-between">
             <div class="flex flex-wrap items-start">
               <div class="w-10/12">
-                <div class="text-px-14-slab black mb-2 skeleton bg-gray-300 w-56 h-4">
-                </div>
-                <p class="text-px-13 gray bg-gray-300 w-48 h-4 skeleton">
-                </p>
-                <p class="text-px-13 gray bg-gray-300 w-64 h-4 mt-3 skeleton">
-                </p>
+                <div class="text-px-14-slab black mb-2 skeleton bg-gray-300 w-56 h-4" />
+                <p class="text-px-13 gray bg-gray-300 w-48 h-4 skeleton" />
+                <p class="text-px-13 gray bg-gray-300 w-64 h-4 mt-3 skeleton" />
               </div>
               <div class="w-2/12 flex items-center justify-center">
                 <div><i class="fa fa-star-o text-gray-500" /></div>

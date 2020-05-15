@@ -84,8 +84,8 @@
                               </div>
                               <div v-if="!session.is_serviceSession" class="text-px-12 green-dark pt-2">
                                 <i class="fa fa-android pr-1" /> <span v-for="(speaker, $s) in session.speakers" :key="$s"><a
-                                :href="speaker.twitter"
-                              >{{ speaker.name }}</a><span v-if="$s+1 < session.speakers.length">, </span> </span>
+                                  :href="speaker.twitter"
+                                >{{ speaker.name }}</a><span v-if="$s+1 < session.speakers.length">, </span> </span>
                               </div>
                             </div>
                           </nuxt-link>
