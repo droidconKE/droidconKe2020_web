@@ -1,4 +1,9 @@
+import fs from 'fs'
+import path from 'path'
 
+const env = process.env.NODE_ENV
+const envPath = path.resolve(process.cwd(), `.env.${env}`)
+const defaultEnvPath = path.resolve(process.cwd(), '.env')
 export default {
   mode: 'universal',
   /*
@@ -70,7 +75,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    ['@nuxtjs/dotenv', { filename: '.env.' + process.env.NODE_ENV }],
+    ['@nuxtjs/dotenv', { filename: fs.existsSync(envPath) ? `.env.${env}` : '.env' }],
     'cookie-universal-nuxt',
     '@nuxtjs/proxy'
   ],
