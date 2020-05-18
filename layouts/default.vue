@@ -67,7 +67,7 @@ export default {
       body.classList.toggle('modal-active')
     },
     reload () {
-      // window.location.reload()
+      window.location.reload()
     }
   }
 }
