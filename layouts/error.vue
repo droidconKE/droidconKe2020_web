@@ -30,6 +30,7 @@
 import CountDays from '../components/pages/shared/CountDays'
 export default {
   name: 'Error',
+  layout: 'errorLayout',
   components: { CountDays },
   props: {
     error: {

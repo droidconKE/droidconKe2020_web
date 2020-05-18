@@ -62,9 +62,15 @@ export const actions = {
     this.$cookies.remove(DARK_THEME)
     context.commit('updateTheme')
   },
-  async nuxtServerInit (context) {
+  async nuxtServerInit (context, { app, query, route, error }) {
+    // error('Error on [nuxtServerInit] action.')
     if (this.$cookies.get(TOKEN)) {
-      await context.dispatch('user/getUser', { root: true })
+      await this.$axios
+        .get('/apis/details').then((response) => {
+          context.commit('user/updateUser', response.data.user)
+        }).catch((_err) => {
+          error('Error on [nuxtServerInit] action.')
+        })
     } else {
       await context.commit('user/updateUser', '')
     }
@@ -73,11 +79,6 @@ export const actions = {
       .get('/apis/events/' + process.env.EVENT_SLUG)
       .then((response) => {
         context.commit('updateEvent', response.data.data)
-      })
-      .catch((err) => {
-        if (err.response) {
-          //
-        }
       })
   }
 }

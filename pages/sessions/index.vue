@@ -71,24 +71,32 @@
                       <div v-else class="h-12 w-20 lg:h-24 lg:w-36 flex-none bg-cover rounded-tl rounded-bl text-center overflow-hidden" style="background-image: url('/images/speakers/arrive.png')" :title="session.title" />
                       <div :class="['h-auto w-full shadow-sm rounded-tr-lg bg-white-c rounded-br-lg px-4 flex flex-col justify-between', session.is_serviceSession ? 'lg:h-24 py-2': 'lg:h-36 py-3']">
                         <div class="flex flex-wrap items-start">
-                          <nuxt-link :to="'/sessions/' + session.slug" class="w-10/12">
-                            <div>
+                          <div class="w-10/12">
+                            <nuxt-link v-if="!session.is_serviceSession" :to="'/sessions/' + session.slug">
                               <div class="text-px-14-slab black mb-2">
                                 {{ session.title }}
                               </div>
-                              <p class="text-px-13 gray">
+                              <div class="text-px-13 gray">
                                 {{ $truncateString(session.description, 100) }}
-                              </p>
-                              <div class="text-px-12-slab gray pt-1 uppercase mt-2">
-                                {{ $hour(session.start_date_time) }} - {{ $hour(session.end_date_time) }} | <span v-for="(room, $r) in session.rooms" :key="$r">{{ room.title }}<span v-if="$r+1 < session.rooms.length">, </span> </span>
                               </div>
-                              <div v-if="!session.is_serviceSession" class="text-px-12 green-dark pt-2">
-                                <i class="fa fa-android pr-1" /> <span v-for="(speaker, $s) in session.speakers" :key="$s"><a
-                                  :href="speaker.twitter"
-                                >{{ speaker.name }}</a><span v-if="$s+1 < session.speakers.length">, </span> </span>
+                            </nuxt-link>
+                            <div v-else>
+                              <div class="text-px-14-slab black mb-2">
+                                {{ session.title }}
+                              </div>
+                              <div class="text-px-13 gray">
+                                {{ $truncateString(session.description, 100) }}
                               </div>
                             </div>
-                          </nuxt-link>
+                            <div class="text-px-12-slab gray pt-1 uppercase mt-2">
+                              {{ $hour(session.start_date_time) }} - {{ $hour(session.end_date_time) }} | <span v-for="(room, $r) in session.rooms" :key="$r">{{ room.title }}<span v-if="$r+1 < session.rooms.length">, </span> </span>
+                            </div>
+                            <div v-if="!session.is_serviceSession" class="text-px-12 green-dark pt-4">
+                              <i class="fa fa-android pr-1" /> <span v-for="(speaker, $s) in session.speakers" :key="$s"><a
+                                :href="speaker.twitter"
+                              >{{ speaker.name }}</a><span v-if="$s+1 < session.speakers.length">, </span> </span>
+                            </div>
+                          </div>
                           <div class="w-2/12 flex items-center justify-center">
                             <star-session v-if="!session.is_serviceSession" :session-id="session.id" :is-bookmarked="session.is_bookmarked" :session-slug="session.slug" />
                           </div>

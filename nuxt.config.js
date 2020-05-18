@@ -125,5 +125,67 @@ export default {
         component: resolve(__dirname, 'components/pages/auth/logged.vue')
       })
     }
+  },
+  pwa: {
+    workbox: {
+      cacheNames: {
+        prefix: 'dr',
+        precache: 'precache',
+        runtime: 'runtime'
+      },
+      config: {
+        debug: true
+      },
+      offlineAssets: [
+        '/images/sponsor-graph.svg',
+        '/favicon.ico',
+        '/images/NUMBERS.svg',
+        '/images/sponsor-graph.svg'
+      ],
+      runtimeCaching: [
+        {
+          urlPattern: '\\.(png|svg|jpg|jpeg)$',
+          handler: 'cacheFirst',
+          method: 'GET',
+          strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        },
+        {
+          urlPattern: 'https://fonts.googleapis.com/.*',
+          handler: 'cacheFirst',
+          method: 'GET',
+          strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        },
+        {
+          urlPattern: 'https://via.placeholder.com/*',
+          handler: 'cacheFirst',
+          method: 'GET',
+          strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        },
+        {
+          urlPattern: 'https://sessionize.com/image*',
+          handler: 'cacheFirst',
+          method: 'GET',
+          strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        },
+        {
+          urlPattern: 'https://lh3.googleusercontent.com/*',
+          handler: 'cacheFirst',
+          method: 'GET',
+          strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        },
+        {
+          urlPattern: `${process.env.API_BASE_URL}/*`,
+          handler: 'staleWhileRevalidate',
+          method: 'GET',
+          strategyOptions: {
+            cacheableResponse: { statuses: [0, 200, 201] },
+            cacheExpiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 7 // 7 days
+            }
+          }
+        }
+      ]
+    }
   }
 }
