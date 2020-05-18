@@ -134,7 +134,7 @@ export default {
         runtime: 'runtime'
       },
       config: {
-        debug: true
+        debug: false
       },
       offlineAssets: [
         '/images/sponsor-graph.svg',
@@ -143,12 +143,6 @@ export default {
         '/images/sponsor-graph.svg'
       ],
       runtimeCaching: [
-        {
-          urlPattern: '\\.(png|svg|jpg|jpeg)$',
-          handler: 'cacheFirst',
-          method: 'GET',
-          strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
-        },
         {
           urlPattern: 'https://fonts.googleapis.com/.*',
           handler: 'cacheFirst',

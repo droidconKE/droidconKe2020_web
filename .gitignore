@@ -92,3 +92,7 @@ sw.*
 /.env.development
 /.firebase/
 /report.*
+/functions/node_modules/
+/functions/nuxt/
+/public/*
+/functions/nuxt.config.js
