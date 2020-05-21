@@ -90,7 +90,8 @@
                   Session Feedback <i class="fa fa-share" />
                 </button>
               </div>
-              <div v-if="!webShare" class="w-full flex mt-4 justify-between border rounded-lg p-4 shadow" @click="webShare= true">
+              <transition name="fade">
+                <div v-if="!webShare" class="w-full flex mt-4 justify-between border rounded-lg p-4 shadow" @click="webShare= true">
                 <ShareNetwork
                   v-for="network in networks"
                   :key="network.key"
@@ -107,6 +108,7 @@
                   <span>{{ network.name }}</span>
                 </ShareNetwork>
               </div>
+              </transition>
             </div>
           </div>
           <session-skeleton v-else />
@@ -198,5 +200,11 @@ export default {
 <style scoped>
   .VueCarousel , .VueCarousel-inner {
     width: 100%
+  }
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
   }
 </style>
