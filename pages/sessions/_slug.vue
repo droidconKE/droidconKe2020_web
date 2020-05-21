@@ -167,7 +167,6 @@ export default {
     share () {
       if (navigator.share) {
         navigator.share({
-          files: [this.session.session_image],
           title: this.session.title,
           text: this.$truncateString(this.session.description, 100),
           url: process.env.BASE_URL + this.$route.fullPath
