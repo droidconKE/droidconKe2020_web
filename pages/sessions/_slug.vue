@@ -192,8 +192,8 @@ export default {
         { hid: 'twitter:url', name: 'twitter:url', content: process.env.BASE_URL + this.$route.fullPath },
         { hid: 'og:title', property: 'og:title', content: this.session.title },
         { hid: 'twitter:title', name: 'twitter:title', content: this.session.title },
-        { hid: 'og:image', property: 'og:image', content: this.session.session_image !== null ? this.session.session_image : '/icon.png' },
-        { hid: 'twitter:image', name: 'twitter:image', content: this.session.session_image !== null ? this.session.session_image : '/icon.png' }
+        { hid: 'og:image', property: 'og:image', content: this.session.session_image !== null ? this.session.session_image : '/images/img.png' },
+        { hid: 'twitter:image', name: 'twitter:image', content: this.session.session_image !== null ? this.session.session_image : '/images/img.png' }
       ]
     }
   }
