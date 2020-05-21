@@ -59,8 +59,8 @@
             <h4 class="text-px-16-slab purple mr-0 md:mr-10">
               Session
             </h4>
-            <p v-if="!$fetchState.pending" class="text-px-14 gray">
-              <span class="mr-2">Level:</span> <span class="uppercase white text-px-10 button-black">#{{ session.session_level }}</span>
+            <p v-if="!$fetchState.pending" class="text-px-14 gray w-full">
+              <span class="mr-2 ml-4 lg:ml-0">Level:</span> <span class="uppercase white text-px-10 button-black">#{{ session.session_level }}</span>
             </p>
           </div>
           <div v-if="!$fetchState.pending" class="w-full flex items-start flex-col">
@@ -68,15 +68,16 @@
               <img class="h-48" :src="session.session_image" alt="session image">
             </div>
             <h4 class="black text-px-13-slab-b mt-4">
-              {{ session.title }}
+              {{ session.session_format }}
             </h4>
-            <p class="text-px-14 gray mt-2">
-              {{ session.description }}
+            <p class="text-px-14 gray mt-2 font-bold">
+              {{ session.title }}
             </p>
             <p class="text-px-13-slab-light gray uppercase mt-1">
-              {{ $hour(session.start_date_time) }} - {{ $hour(session.end_date_time) }} | <span v-for="(room, $r) in session.rooms" :key="$r" class="green-dark">{{ room.title }}<span v-if="$r+1 < session.rooms.length">, </span>  </span> | <span :style="{ color: session.backgroundColor }">{{ session.session_format }}</span>
+              {{ $hour(session.start_date_time) }} - {{ $hour(session.end_date_time) }} | <span v-for="(room, $r) in session.rooms" :key="$r" class="green-dark">{{ room.title }}<span v-if="$r+1 < session.rooms.length">, </span>  </span>
+              <!--              | <span :style="{ color: session.backgroundColor }">{{ session.session_format }}</span>-->
             </p>
-            <h6 class="text-px-13-slab-b font-bold black mt-4 md:mt-10">
+            <h6 class="text-px-13-slab-b font-bold black mt-4 md:mt-10 w-full">
               Session Description
             </h6>
             <p class="p gray mt-2">
@@ -92,22 +93,22 @@
               </div>
               <transition name="fade">
                 <div v-if="!webShare" class="w-full flex mt-4 justify-between border rounded-lg p-4 shadow" @click="webShare= true">
-                <ShareNetwork
-                  v-for="network in networks"
-                  :key="network.key"
-                  :network="network.network"
-                  class="text-px-14-slab cursor-pointer"
-                  :url="sharing.url"
-                  :title="session.title"
-                  :description="$truncateString(session.description, 100)"
-                  :quote="$truncateString(session.description, 100)"
-                  :hashtags="sharing.hashtags"
-                  :twitter-user="sharing.twitterUser"
-                >
-                  <i :style="{color: network.color}" :class="network.icon" />
-                  <span>{{ network.name }}</span>
-                </ShareNetwork>
-              </div>
+                  <ShareNetwork
+                    v-for="network in networks"
+                    :key="network.key"
+                    :network="network.network"
+                    class="text-px-14-slab cursor-pointer"
+                    :url="sharing.url"
+                    :title="session.title"
+                    :description="$truncateString(session.description, 100)"
+                    :quote="$truncateString(session.description, 100)"
+                    :hashtags="sharing.hashtags"
+                    :twitter-user="sharing.twitterUser"
+                  >
+                    <i :style="{color: network.color}" :class="network.icon" />
+                    <span>{{ network.name }}</span>
+                  </ShareNetwork>
+                </div>
               </transition>
             </div>
           </div>
@@ -189,6 +190,8 @@ export default {
         { hid: 'og:description', name: 'description', content: this.$truncateString(this.session.description, 100) },
         { hid: 'og:url', property: 'og:url', content: process.env.BASE_URL + this.$route.fullPath },
         { hid: 'twitter:url', name: 'twitter:url', content: process.env.BASE_URL + this.$route.fullPath },
+        { hid: 'og:title', property: 'og:title', content: this.session.title },
+        { hid: 'twitter:title', name: 'twitter:title', content: this.session.title },
         { hid: 'og:image', property: 'og:image', content: this.session.session_image !== null ? this.session.session_image : '/icon.png' },
         { hid: 'twitter:image', name: 'twitter:image', content: this.session.session_image !== null ? this.session.session_image : '/icon.png' }
       ]

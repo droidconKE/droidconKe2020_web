@@ -18,6 +18,8 @@ export default {
       { hid: 'description', name: 'description', content: 'Droidcon is a global conference focused on the engineering of Android applications. Droidcon provides a forum for developers to network with other developers, share techniques, announce apps and products, and to learn and teach.' },
       { hid: 'keywords', name: 'keywords', content: 'Android, Event,  Conference, Meetup, droidCon, Kenya, KE, droidConKE, droidconke, Android254, Kotlin, Flutter, iOS' },
       { hid: 'og:description', name: 'description', content: 'Droidcon is a global conference focused on the engineering of Android applications. Droidcon provides a forum for developers to network with other developers, share techniques, announce apps and products, and to learn and teach.' },
+      { hid: 'og:title', property: 'og:title', content: 'The Largest Android Developers\' Conference in Africa' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'The Largest Android Developers\' Conference in Africa' },
       { hid: 'og:url', property: 'og:url', content: 'https://droidcon.co.ke' },
       { hid: 'twitter:url', name: 'twitter:url', content: 'https://droidcon.co.ke' },
       { name: 'twitter:card', content: 'summary_large_image' },
