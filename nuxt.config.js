@@ -77,7 +77,8 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     ['@nuxtjs/dotenv', { filename: fs.existsSync(envPath) ? `.env.${env}` : '.env' }],
     'cookie-universal-nuxt',
-    '@nuxtjs/proxy'
+    '@nuxtjs/proxy',
+    'vue-social-sharing/nuxt'
   ],
   /*
   ** Axios module configuration

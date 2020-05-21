@@ -15,7 +15,7 @@
       </div>
     </section>
     <section class="w-full md:px-32 sm:px-10">
-      <div class="w-full container mx-auto flex flex-wrap px-4 md:px-12 py-0 md:py-3">
+      <div class="w-full container mx-auto flex flex-wrap items-start px-4 md:px-12 py-0 md:py-3">
         <div class="w-full flex-wrap lg:w-4/12 flex border-r-0 lg:border-r border-green-200 pr-0 lg:pr-4">
           <div class="w-full py-4">
             <h4 v-if="!$fetchState.pending" class="text-px-16-slab purple">
@@ -64,7 +64,10 @@
             </p>
           </div>
           <div v-if="!$fetchState.pending" class="w-full flex items-start flex-col">
-            <h4 class="black text-px-13-slab-b">
+            <div v-if="session.session_image !== null" class="rounded-lg">
+              <img class="h-48" :src="session.session_image" alt="session image">
+            </div>
+            <h4 class="black text-px-13-slab-b mt-4">
               {{ session.session_format }}
             </h4>
             <p class="text-px-14 gray mt-2">
@@ -80,11 +83,30 @@
               {{ session.description }}
             </p>
 
-            <div v-if="!session.is_serviceSession" class="w-full justify-center md:justify-start flex mt-4 md:mt-10 mb-4 lg:mb-16">
-              <a class="button-border-g text-px-13-b black-persist mr-4 lg:mr-6" href="#" @click.prevent="share">share <i class="fa fa-share" /></a>
-              <button class="button-purple text-px-13-b white" @click="toggleModal">
-                Session Feedback <i class="fa fa-share" />
-              </button>
+            <div v-if="!session.is_serviceSession" class="w-full justify-center md:justify-start flex flex-col mt-4 md:mt-10 mb-4 lg:mb-16">
+              <div class="w-full flex">
+                <a class="button-border-g text-px-13-b black-persist mr-4 lg:mr-6" href="#" @click.prevent="share">share <i class="fa fa-share" /></a>
+                <button class="button-purple text-px-13-b white" @click="toggleModal">
+                  Session Feedback <i class="fa fa-share" />
+                </button>
+              </div>
+              <div v-if="!webShare" @click="webShare= true" class="w-full flex mt-4 justify-between border rounded-lg p-4 shadow">
+                <ShareNetwork
+                  v-for="network in networks"
+                  :key="network.key"
+                  :network="network.network"
+                  class="text-px-14-slab cursor-pointer"
+                  :url="sharing.url"
+                  :title="session.title"
+                  :description="$truncateString(session.description, 100)"
+                  :quote="$truncateString(session.description, 100)"
+                  :hashtags="sharing.hashtags"
+                  :twitter-user="sharing.twitterUser"
+                >
+                  <i :style="{color: network.color}" :class="network.icon" />
+                  <span>{{ network.name }}</span>
+                </ShareNetwork>
+              </div>
             </div>
           </div>
           <session-skeleton v-else />
@@ -113,7 +135,19 @@ export default {
   },
   data () {
     return {
-      session: []
+      session: [],
+      sharing: {
+        url: process.env.BASE_URL + this.$route.fullPath,
+        hashtags: 'droidcon,droidconke',
+        twitterUser: 'droidconke'
+      },
+      networks: [
+        { network: 'linkedin', name: 'LinkedIn', icon: 'fa fa-linkedin', color: '#007bb5' },
+        { network: 'telegram', name: 'Telegram', icon: 'fa fa-telegram', color: '#0088cc' },
+        { network: 'twitter', name: 'Twitter', icon: 'fa fa-twitter', color: '#1da1f2' },
+        { network: 'whatsapp', name: 'Whatsapp', icon: 'fa fa-whatsapp', color: '#25d366' }
+      ],
+      webShare: true
     }
   },
   mounted () {
@@ -133,6 +167,7 @@ export default {
     share () {
       if (navigator.share) {
         navigator.share({
+          files: [this.session.session_image],
           title: this.session.title,
           text: this.$truncateString(this.session.description, 100),
           url: process.env.BASE_URL + this.$route.fullPath
@@ -140,6 +175,7 @@ export default {
           .then(() => console.log('Successful share'))
           .catch(error => console.log('Error sharing', error))
       } else {
+        this.webShare = false
         console.log('not supported')
       }
     }
