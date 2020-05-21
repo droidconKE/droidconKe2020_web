@@ -57,7 +57,7 @@
         <div class="w-full flex-wrap content-start items-start lg:w-6/12 px-0 lg:px-6 flex">
           <div class="w-full flex py-4">
             <h4 class="text-px-16-slab purple mr-0 md:mr-10">
-              Session {{$route.fullPath}}
+              Session
             </h4>
             <p v-if="!$fetchState.pending" class="text-px-14 gray">
               <span class="mr-2">Level:</span> <span class="uppercase white text-px-10 button-black">#{{ session.session_level }}</span>
@@ -68,13 +68,13 @@
               <img class="h-48" :src="session.session_image" alt="session image">
             </div>
             <h4 class="black text-px-13-slab-b mt-4">
-              {{ session.session_format }}
+              {{ session.title }}
             </h4>
             <p class="text-px-14 gray mt-2">
               {{ session.description }}
             </p>
             <p class="text-px-13-slab-light gray uppercase mt-1">
-              {{ $hour(session.start_date_time) }} - {{ $hour(session.end_date_time) }} | <span v-for="(room, $r) in session.rooms" :key="$r" class="green-dark">{{ room.title }}<span v-if="$r+1 < session.rooms.length">, </span> </span>
+              {{ $hour(session.start_date_time) }} - {{ $hour(session.end_date_time) }} | <span v-for="(room, $r) in session.rooms" :key="$r" class="green-dark">{{ room.title }}<span v-if="$r+1 < session.rooms.length">, </span>  </span> | <span :style="{ color: session.backgroundColor }">{{ session.session_format }}</span>
             </p>
             <h6 class="text-px-13-slab-b font-bold black mt-4 md:mt-10">
               Session Description
@@ -182,6 +182,7 @@ export default {
   },
   head () {
     return {
+      title: this.session.title,
       meta: [
         { hid: 'description', name: 'description', content: this.$truncateString(this.session.description, 100) },
         { hid: 'og:description', name: 'description', content: this.$truncateString(this.session.description, 100) },
