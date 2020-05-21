@@ -18,14 +18,15 @@ export default {
       { hid: 'description', name: 'description', content: 'Droidcon is a global conference focused on the engineering of Android applications. Droidcon provides a forum for developers to network with other developers, share techniques, announce apps and products, and to learn and teach.' },
       { hid: 'keywords', name: 'keywords', content: 'Android, Event,  Conference, Meetup, droidCon, Kenya, KE, droidConKE, droidconke, Android254, Kotlin, Flutter, iOS' },
       { hid: 'og:description', name: 'description', content: 'Droidcon is a global conference focused on the engineering of Android applications. Droidcon provides a forum for developers to network with other developers, share techniques, announce apps and products, and to learn and teach.' },
-      { property: 'og:url', content: 'https://droidcon.co.ke' },
-      { name: 'twitter:url', content: 'https://droidcon.co.ke' },
-      { name: 'canonical', content: 'https://droidcon.co.ke' },
+      { hid: 'og:url', property: 'og:url', content: 'https://droidcon.co.ke' },
+      { hid: 'twitter:url', name: 'twitter:url', content: 'https://droidcon.co.ke' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@droidconke' },
       { name: 'twitter:creator', content: '@droidconke' },
-      { name: 'og:image', content: '/icon.png' },
-      { hid: 'theme-color', name: 'theme-color', content: '#864F96' }
+      { hid: 'og:image', property: 'og:image', content: '/icon.png' },
+      { hid: 'twitter:image', name: 'twitter:image', content: '/icon.png' },
+      { hid: 'theme-color', name: 'theme-color', content: '#864F96' },
+      { name: 'canonical', content: 'https://droidcon.co.ke' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

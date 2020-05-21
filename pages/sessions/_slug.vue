@@ -57,7 +57,7 @@
         <div class="w-full flex-wrap content-start items-start lg:w-6/12 px-0 lg:px-6 flex">
           <div class="w-full flex py-4">
             <h4 class="text-px-16-slab purple mr-0 md:mr-10">
-              Session
+              Session {{$route.fullPath}}
             </h4>
             <p v-if="!$fetchState.pending" class="text-px-14 gray">
               <span class="mr-2">Level:</span> <span class="uppercase white text-px-10 button-black">#{{ session.session_level }}</span>
@@ -90,7 +90,7 @@
                   Session Feedback <i class="fa fa-share" />
                 </button>
               </div>
-              <div v-if="!webShare" @click="webShare= true" class="w-full flex mt-4 justify-between border rounded-lg p-4 shadow">
+              <div v-if="!webShare" class="w-full flex mt-4 justify-between border rounded-lg p-4 shadow" @click="webShare= true">
                 <ShareNetwork
                   v-for="network in networks"
                   :key="network.key"
@@ -178,6 +178,18 @@ export default {
         this.webShare = false
         console.log('not supported')
       }
+    }
+  },
+  head () {
+    return {
+      meta: [
+        { hid: 'description', name: 'description', content: this.$truncateString(this.session.description, 100) },
+        { hid: 'og:description', name: 'description', content: this.$truncateString(this.session.description, 100) },
+        { hid: 'og:url', property: 'og:url', content: process.env.BASE_URL + this.$route.fullPath },
+        { hid: 'twitter:url', name: 'twitter:url', content: process.env.BASE_URL + this.$route.fullPath },
+        { hid: 'og:image', property: 'og:image', content: this.session.session_image !== null ? this.session.session_image : '/icon.png' },
+        { hid: 'twitter:image', name: 'twitter:image', content: this.session.session_image !== null ? this.session.session_image : '/icon.png' }
+      ]
     }
   }
 }
