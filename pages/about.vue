@@ -3,9 +3,9 @@
     <section class="w-full container mx-auto">
       <div class="w-full flex flex-wrap px-4 h-auto lg:h-screen pt-16 md:px-32">
         <div class="w-full lg:w-5/12 flex items-center">
-          <div class="w-full bg-no-repeat bg-center" style="background-image: url(/images/circ.svg)">
-            <div class="w-full mt-2 flex items-center justify-center">
-              <img class="h-20 w-20 lg:mt-4 mt-4 mb-8 lg:mb-8" src="/icon.png" alt="droid">
+          <div class="w-full bg-no-repeat bg-center">
+            <div class="w-full mt-2 flex items-start justify-start px-16 -mb-16">
+              <img class="w-32 lg:mt-4 mt-4 mb-8 lg:mb-8" src="/images/about.png" alt="droid about">
             </div>
             <div class="w-full flex flex-wrap text-left">
               <h2 class="title-px-36 black">

@@ -3,7 +3,7 @@ import path from 'path'
 
 const env = process.env.NODE_ENV
 const envPath = path.resolve(process.cwd(), `.env.${env}`)
-const defaultEnvPath = path.resolve(process.cwd(), '.env')
+// const _defaultEnvPath = path.resolve(process.cwd(), '.env')
 export default {
   mode: 'universal',
   /*
