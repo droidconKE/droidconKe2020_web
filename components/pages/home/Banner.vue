@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full header relative pt-0 flex lg:h-screen md:px-20 sm:px-10 sm:p-5">
+  <section class="w-full header relative mt-14 md:mt-0 flex lg:h-screen md:px-20 sm:px-10 sm:p-5">
     <div class="container items-stretch mx-auto px-4 flex flex-wrap bg-right lg:bg-50 bg-no-repeat" style="background-image: url(/images/landing.png)">
       <div class="w-full lg:w-7/12 mt-16 md:mt-24">
         <div class="w-full text-left mt-0 content-start">

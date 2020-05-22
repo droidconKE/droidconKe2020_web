@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="w-full mt-14 ">
+    <section class="w-full mt-15 md:mt-14">
       <div class="bg-green-c w-full">
         <div class="w-full flex flex-wrap md:px-32 sm:px-10">
           <div class="container mx-auto">
@@ -16,7 +16,7 @@
     </section>
     <section class="w-full md:px-32 sm:px-10">
       <div class="w-full container mx-auto flex flex-wrap items-start px-4 md:px-12 py-0 md:py-3">
-        <div class="w-full flex-wrap lg:w-4/12 flex border-r-0 lg:border-r border-green-200 pr-0 lg:pr-4">
+        <div class="w-full flex-wrap lg:w-4/12 flex border-r-0 lg:border-r border-green-200 pr-0 lg:pr-4 mb-6 md:mb-0">
           <div class="w-full py-4">
             <h4 v-if="!$fetchState.pending" class="text-px-16-slab purple">
               Speaker{{ session.speakers.length > 1 ? 's' : '' }}

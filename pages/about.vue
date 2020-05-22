@@ -38,7 +38,7 @@
       <div class="mx-auto container px-4 md:py-12">
         <div class="flex flex-wrap mb-10">
           <div class="w-full flex flex-wrap justify-center mt-4 md:mt-0 py-2 pb-12">
-            <h4 class="title-px-21 purple font-bold">
+            <h4 class="title-px-21 purple font-bold pt-6 md:pt-0">
               Largest Android Focused Developer conference in Africa.
             </h4>
           </div>
@@ -81,13 +81,13 @@
     <section v-if="members.length > 0" class="w-full container mx-auto h-auto md:px-32 px-4">
       <div class="flex flex-wrap md:py-16">
         <div class="w-full text-center mb-2 md:mb-0 mt-4 md:mt-0 items-center justify-center">
-          <h3 class="title-px-36 purple">
+          <h3 class="title-px-36 purple pt-6 md:pt-0">
             Organizing team
           </h3>
         </div>
       </div>
       <div class="w-full px-0 md:px-24 mr-auto mb-4 md:mb-0 pb-10 lg:pb-16">
-        <div class="w-full flex flex-wrap grid md:grid-cols-6 grid-cols-3 gap-2 lg:gap-8">
+        <div class="w-full flex flex-wrap grid md:grid-cols-6 grid-cols-3 gap-2 lg:gap-8 mb-10 md:mb-0">
           <a v-for="(member, $index) in members" :key="$index" :href="member.link" class="text-center flex justify-center flex-wrap" target="_blank">
             <div class="w-24 h-24 md:w-32 md:h-32 p-2 md:p-4 flex justify-center bg-green-c-2 rounded">
               <img

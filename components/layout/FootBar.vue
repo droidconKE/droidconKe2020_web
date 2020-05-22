@@ -5,13 +5,13 @@
       <div class="md:mt-10 container mx-auto px-4 md:py-12">
         <div class="items-center flex flex-wrap mb-10">
           <div class="w-full md:w-7/12 ml-auto px-2 md:px-8 mt-4 md:mt-0">
-            <div class="text-center md:text-left">
-              <h3 class="title-px-36 black">
+            <div class="text-left">
+              <h3 class="title-px-36 black pt-6 md:pt-0">
                 EVENT INFO
               </h3>
             </div>
           </div>
-          <div class="w-full flex md:w-5/12 items-start mt-10 md:mt-0 justify-center md:justify-end px-2 md:px-8">
+          <div class="w-full flex md:w-5/12 items-start mt-10 md:mt-0 justify-start md:justify-end px-2 md:px-8">
             <div class="mt-0">
               <a class="button-yellow black-persist text-px-13-b" style="transition:all .15s ease" href="http://bit.ly/droidconKE20" target="_blank">Get Your Ticket</a>
             </div>
@@ -19,7 +19,7 @@
         </div>
         <div class="flex flex-wrap">
           <div class="w-full px-4">
-            <div class="flex flex-wrap items-top mb-6 text-center md:text-left">
+            <div class="flex flex-wrap items-top mb-6 text-left">
               <div class="w-full md:w-4/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 ml-auto">
                 <span class="text-px-16-slab purple">Venue</span>
                 <ul class="list-unstyled mt-3">

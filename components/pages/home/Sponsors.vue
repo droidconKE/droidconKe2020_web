@@ -4,7 +4,7 @@
       <div class="items-center flex flex-wrap">
         <div class="w-full md:w-6/12 justify-start sm:pr-6">
           <div class="md:pr-12 text-left">
-            <h3 class="title-px-36 white">
+            <h3 class="title-px-36 white pt-6 md:pt-0">
               SPONSOR DROIDCONKE
             </h3>
             <h6 class="text-px-13 gray-light mt-4">

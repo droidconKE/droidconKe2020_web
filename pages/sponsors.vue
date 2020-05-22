@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full mt-14 mb-0">
+  <div class="w-full mt-15 md:mt-14 mb-0">
     <section class="w-full bg-black-c md:px-32 sm:px-10">
       <div class="md:mt-10 container mx-auto px-4 md:py-16">
         <div class="items-start flex flex-wrap mb-0">
@@ -14,7 +14,7 @@
             </div>
           </div>
           <div class="w-full flex md:w-5/12 mt-10 md:mt-0 justify-center md:justify-end px-2 md:px-8">
-            <div class="mt-0 mb-4 md:mb-0">
+            <div class="mt-0 mb-10 md:mb-0">
               <a class="button-border-p purple text-px-13-b" style="transition:all .15s ease" href="mailto:frank@droidcon.co.ke?Subject=Sponsor droidconKe" target="_blank">sponsor droidconke</a>
             </div>
           </div>
@@ -24,7 +24,7 @@
     <section class="w-full container mx-auto md:px-32 sm:px-10">
       <div class="flex flex-wrap md:pt-16">
         <div class="w-full text-center mb-2 md:mb-0 mt-4 md:mt-0 items-center justify-center">
-          <h3 class="title-px-36 black">
+          <h3 class="title-px-36 black pt-6 md:pt-0">
             Why Sponsor droidconke
           </h3>
         </div>
@@ -54,12 +54,12 @@
         <div class="items-center flex flex-wrap mt-4 md:mt-10 mb-0">
           <div class="w-full md:w-4/12 ml-auto px-2 md:px-8 mt-4 md:mt-0">
             <div class="text-center md:text-left">
-              <h3 class="title-px-26 black w-full mt-4 md:mt-0">
+              <h3 class="title-px-26 black w-full mt-6 md:mt-0">
                 value BUILT built IN EVERY PACKAGE
               </h3>
             </div>
           </div>
-          <div class="w-full flex flex-wrap md:w-8/12 mt-10 mb-4 md:mb-0 justify-center md:mt-0 px-2 md:px-10">
+          <div class="w-full flex flex-wrap md:w-8/12 mt-10 mb-10 md:mb-0 justify-center md:mt-0 px-2 md:px-10">
             <div class="w-full flex justify-center grid grid-cols-3 ">
               <div class="justify-center flex items-center px-3 py-5 text-center bg-yellow-c">
                 <p class="text-px-14-b uppercase purple">
@@ -99,7 +99,7 @@
     <section class="w-full bg-green-c md:px-32 sm:px-10">
       <div class="flex flex-wrap md:pt-16">
         <div class="w-full text-center mb-2 md:mb-0 mt-4 md:mt-0 items-center justify-center">
-          <h3 class="title-px-36 black">
+          <h3 class="title-px-36 black pt-6 md:pt-0">
             VARIOUS SPONSORSHIP LEVELS
           </h3>
           <p class="mt-4 text-px-18 gray px-2 lg:px-0">
@@ -109,7 +109,7 @@
       </div>
       <div class="mx-auto container px-4 md:py-10">
         <div class="items-center flex flex-wrap mb-0">
-          <div class="w-full px-2 md:px-8 mt-4 mb-4 lg:mb-0 md:mt-0">
+          <div class="w-full px-2 md:px-8 mt-4 mb-10 lg:mb-0 md:mt-0">
             <img v-if="!$store.getters.isDarkTheme" src="/images/sponsor-graph.svg" alt="sponsor-graph">
             <img v-else src="/images/sponsor-dark.svg" alt="sponsor-graph dark">
           </div>
@@ -120,7 +120,7 @@
       <div class="mx-auto container px-4 md:py-16">
         <div class="flex flex-wrap">
           <div class="w-full text-center mb-2 md:mb-0 mt-4 md:mt-0 items-center justify-center">
-            <h3 class="text-px-18 white">
+            <h3 class="text-px-18 white pt-6 md:pt-0">
               To Sponsor Droidcoke2020 Contacts us at
             </h3>
             <p class="text-px-10 green mt-6">
@@ -129,15 +129,15 @@
           </div>
         </div>
         <div class="items-center flex flex-wrap mb-0 mt-4">
-          <div class="w-2/12 md:w-4/12 ml-auto px-2 md:px-8 mb-4 md:mb-0">
+          <div class="w-2/12 md:w-4/12 ml-auto px-2 md:px-8 mb-10 md:mb-0">
             <div class="text-left">
               <h4 class="text-px-18 white md:mt-0 underline-green-light" />
             </div>
           </div>
-          <div class="w-8/12 flex md:w-4/12 mb-4 md:mb-0 justify-center px-2">
+          <div class="w-8/12 flex md:w-4/12 mb-10 md:mb-0 justify-center px-2">
             <a class="button-border-p purple text-px-13-b" style="transition:all .15s ease" href="mailto:frank@droidcon.co.ke?Subject=Sponsor droidconKe" target="_blank">Sponsor droidconKE</a>
           </div>
-          <div class="w-2/12 md:w-4/12 ml-auto px-2 md:px-8 mb-4 md:mb-0">
+          <div class="w-2/12 md:w-4/12 ml-auto px-2 md:px-8 mb-10 md:mb-0">
             <div class="text-left">
               <h4 class="text-px-18 white  underline-green-light" />
             </div>
