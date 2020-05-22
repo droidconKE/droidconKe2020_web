@@ -96,7 +96,7 @@
                 :alt="member.name"
               >
             </div>
-            <p class="text-px-13 capitalize font-bold black mt-2">
+            <p class="text-px-13 capitalize font-bold black mt-2 w-full">
               {{ member.name }}
             </p>
             <p class="text-px-12 gray">

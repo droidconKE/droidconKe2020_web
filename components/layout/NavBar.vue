@@ -242,7 +242,7 @@ export default {
 
     .logg {
       text-align: left;
-      font-size: 9px;
+      font-size: 10px;
       line-height: 13px;
       font-weight: normal;
       letter-spacing: 0px;
