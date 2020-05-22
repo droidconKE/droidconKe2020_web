@@ -185,7 +185,7 @@ export default {
   .nav-side {
     top: 52px;
     @media screen and (max-width: 360px) {
-      top:45px;
+      top:60px;
     }
   }
 </style>
