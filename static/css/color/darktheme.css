@@ -19,4 +19,6 @@
   --green-bg-color-2: #68DEA44D;
   --green-dark-color: #68DEA4;
   --modal-blur: blur(20px);
+  --color-skeleton: #000000;
+  --color-skeleton-light: #101010;
 }

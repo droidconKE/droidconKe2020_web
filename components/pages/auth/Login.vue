@@ -10,12 +10,14 @@ export default {
       const vm = this
       this.$auth.authenticate(provider).then(function (response) {
         // console.log(response)
-        vm.$axios.post('/social_login/google', { access_token: response.access_token })
+        vm.$axios.post('/apis/social_login/google', { access_token: response.access_token })
           .then((response) => {
             vm.$store
               .dispatch('user/loginUser', response.data).then((_e) => {
                 vm.$root.$emit('loggedIn')
                 localStorage.removeItem('vue-authenticate.vueauth_token')
+              }).then(() => {
+                window.location.reload()
               })
           })
       })

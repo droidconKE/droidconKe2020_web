@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex  items-center justify-between flex-wrap nav-bg p-2 md:px-5 fixed w-full z-10 top-0">
+  <nav class="flex  items-center justify-between flex-wrap nav-bg px-2 py-4 md:py-2 md:px-5 fixed w-full z-10 top-0">
     <div class="flex items-center flex-shrink-0 text-white mr-6 lg:pl-24">
       <n-link class="text-white no-underline hover:text-white hover:no-underline" to="/">
         <img v-if="!$store.getters.isDarkTheme" class="w-32" src="/images/website.png" alt="logo">
@@ -66,21 +66,22 @@
         <div
           v-else
           class="px-4 md:px-0 relative inine-block"
-          @click="toggleDropDown"
           @keydown.enter="isVisible = !isVisible"
         >
-          <span
-            v-if="user.avatar === null"
-            class="cursor-pointer inline-flex items-center justify-between p-1 transition-all duration-500 rounded-full h-8 w-8 border bg-dark-green-c"
-          >
-            <img src="/images/svg/maasai_male.svg" alt="icon">
-          </span>
-          <span
-            v-else
-            class="cursor-pointer inline-flex items-center justify-between transition-all duration-500 rounded-full h-8 w-8 border bg-dark-green-c"
-          >
-            <img class="rounded-full" :src="user.avatar" alt="avatar icon">
-          </span>
+          <div @click="toggleDropDown">
+            <span
+              v-if="user.avatar === null"
+              class="cursor-pointer inline-flex items-center justify-between p-1 transition-all duration-500 rounded-full h-8 w-8 border bg-dark-green-c"
+            >
+              <img src="/images/svg/maasai_male.svg" alt="icon">
+            </span>
+            <span
+              v-else
+              class="cursor-pointer inline-flex items-center justify-between transition-all duration-500 rounded-full h-8 w-8 border bg-dark-green-c"
+            >
+              <img class="rounded-full" :src="user.avatar" onerror="this.onerror=null;this.src='/images/svg/maasai_male.svg';" alt="avatar icon">
+            </span>
+          </div>
           <transition
             enter-active-class="transition duration-300 ease-out transform"
             enter-class="-translate-y-3 scale-95 opacity-0"
@@ -116,7 +117,7 @@
                   <hr class="border-t mx-2 border-bg-black-1">
                 </li>
                 <li>
-                  <a href="#" class="px-4 py-3 block session-link hover:bg-gray-800 no-underline hover:no-underline"><i
+                  <a href="#" class="px-4 py-3 block session-link hover:bg-gray-800 no-underline hover:no-underline" @click.prevent="mySessions"><i
                     class="fa fa-star mr-2"
                   /> My Sessions</a>
                 </li>
@@ -163,9 +164,10 @@ export default {
     }
   },
   // mounted () {
-  //   document.getElementById('nav-toggle').onclick = function () {
-  //     document.getElementById('nav-content').classList.toggle('hidden')
-  //   }
+  //   const vm = this
+  //   this.$root.$on('test1', function () {
+  //     vm.toggleModal()
+  //   })
   // },
   methods: {
     toggleNav () {
@@ -180,6 +182,9 @@ export default {
       modal.classList.toggle('opacity-0')
       modal.classList.toggle('pointer-events-none')
       body.classList.toggle('modal-active')
+    },
+    mySessions () {
+      this.$store.$router.push('/sessions?my_sessions=true')
     }
   }
 }
@@ -237,7 +242,7 @@ export default {
 
     .logg {
       text-align: left;
-      font-size: 9px;
+      font-size: 10px;
       line-height: 13px;
       font-weight: normal;
       letter-spacing: 0px;

@@ -9,7 +9,7 @@
       />
 
       <div
-        class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto"
+        class="modal-container bg-white w-11/12 md:max-w-xl mx-auto rounded shadow-lg z-50 overflow-y-auto"
       >
         <div
           class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50"
@@ -17,15 +17,15 @@
           <!--          X-->
         </div>
         <div class="modal-content w-full">
-          <div class="flex flex-wrap lg:flex-no-wrap justify-center">
-            <div class="w-full w-1/2 img-log">
+          <div class="flex flex-wrap lg:flex-no-wrap bg-ash-c justify-center">
+            <div class="w-full w-1/2 img-log hidden md:grid">
               <img src="/images/login.png" alt="login">
             </div>
             <div class="w-full m-1/2 bg-ash-c mb-24 lg:mb-0 justify-center">
               <p class="text-px-10 p-4 modal-close float-right cursor-pointer uppercase gray">
                 Cancel
               </p>
-              <div class="w-full h-32 items-center flex flex-col px-4 lg:px-8 py-6">
+              <div class="w-full h-32 items-center flex flex-col px-4 lg:px-8 py-10 md:py-6">
                 <p class="text-px-13 green-dark">
                   <i class="fa fa-lock mb-4" /> Sign In
                 </p>
@@ -45,8 +45,6 @@ export default {
   name: 'LoginModal',
   components: { Login },
   mounted () {
-    const vm = this
-
     const overlay = document.querySelectorAll('.modal-overlay')
     for (let i = 0; i < overlay.length; i++) {
       overlay[i].addEventListener('click', this.toggleModal)
@@ -57,18 +55,19 @@ export default {
       closemodal[i].addEventListener('click', this.toggleModal)
     }
 
-    document.onkeydown = function (evt) {
-      evt = evt || window.event
-      let isEscape = false
-      if ('key' in evt) {
-        isEscape = evt.key === 'Escape' || evt.key === 'Esc'
-      } else {
-        isEscape = evt.keyCode === 27
-      }
-      if (isEscape && document.body.classList.contains('modal-active')) {
-        vm.toggleModal()
-      }
-    }
+    // const vm = this
+    // document.onkeydown = function (evt) {
+    //   evt = evt || window.event
+    //   let isEscape = false
+    //   if ('key' in evt) {
+    //     isEscape = evt.key === 'Escape' || evt.key === 'Esc'
+    //   } else {
+    //     isEscape = evt.keyCode === 27
+    //   }
+    //   if (isEscape && document.body.classList.contains('modal-active')) {
+    //     vm.toggleModal()
+    //   }
+    // }
   },
   created () {
     const vm = this

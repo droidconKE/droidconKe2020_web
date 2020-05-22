@@ -1,4 +1,9 @@
+import fs from 'fs'
+import path from 'path'
 
+const env = process.env.NODE_ENV
+const envPath = path.resolve(process.cwd(), `.env.${env}`)
+// const _defaultEnvPath = path.resolve(process.cwd(), '.env')
 export default {
   mode: 'universal',
   /*
@@ -12,15 +17,19 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Droidcon is a global conference focused on the engineering of Android applications. Droidcon provides a forum for developers to network with other developers, share techniques, announce apps and products, and to learn and teach.' },
       { hid: 'keywords', name: 'keywords', content: 'Android, Event,  Conference, Meetup, droidCon, Kenya, KE, droidConKE, droidconke, Android254, Kotlin, Flutter, iOS' },
-      { hid: 'og:description', name: 'description', content: 'Droidcon is a global conference focused on the engineering of Android applications. Droidcon provides a forum for developers to network with other developers, share techniques, announce apps and products, and to learn and teach.' },
-      { property: 'og:url', content: 'https://droidcon.co.ke' },
-      { name: 'twitter:url', content: 'https://droidcon.co.ke' },
-      { name: 'canonical', content: 'https://droidcon.co.ke' },
+      { hid: 'og:description', property: 'description', content: 'Droidcon is a global conference focused on the engineering of Android applications. Droidcon provides a forum for developers to network with other developers, share techniques, announce apps and products, and to learn and teach.' },
+      { hid: 'og:title', property: 'og:title', content: 'The Largest Android Developers\' Conference in Africa' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'The Largest Android Developers\' Conference in Africa' },
+      { hid: 'og:url', property: 'og:url', content: 'https://droidcon.co.ke' },
+      { hid: 'twitter:url', name: 'twitter:url', content: 'https://droidcon.co.ke' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@droidconke' },
       { name: 'twitter:creator', content: '@droidconke' },
-      { name: 'og:image', content: '/icon.png' },
-      { hid: 'theme-color', name: 'theme-color', content: '#864F96' }
+      { property: 'og:site_name', content: 'droidconKe' },
+      { hid: 'og:image', property: 'og:image', content: '/images/img.png' },
+      { hid: 'twitter:image', name: 'twitter:image', content: '/images/img.png' },
+      { hid: 'theme-color', name: 'theme-color', content: '#864F96' },
+      { name: 'canonical', content: 'https://droidcon.co.ke' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -34,7 +43,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#68DEA4' },
+  loading: { color: '#864F96' },
   /*
   ** Global CSS
   */
@@ -47,7 +56,11 @@ export default {
   plugins: [
     '~/plugins/axios',
     { src: '~/plugins/vue-countdown', mode: 'client' },
-    '~/plugins/vue-authenticate.client.js'
+    '~/plugins/vue-authenticate.client.js',
+    '~/plugins/vue-carousel.client.js',
+    '~/plugins/helpers.js',
+    '~/plugins/vue-toaster.client.js',
+    '~/plugins/eventBus.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -66,14 +79,27 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    ['@nuxtjs/dotenv', { filename: '.env.' + process.env.NODE_ENV }],
-    'cookie-universal-nuxt'
+    ['@nuxtjs/dotenv', { filename: fs.existsSync(envPath) ? `.env.${env}` : '.env' }],
+    'cookie-universal-nuxt',
+    '@nuxtjs/proxy',
+    'vue-social-sharing/nuxt'
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api2/': {
+      target: 'https://iid.googleapis.com',
+      pathRewrite: { '^/api2/': '' }
+    },
+    '/apis/': {
+      target: 'https://droidcon-api.appslab.tech/v1',
+      pathRewrite: { '^/apis/': '' }
+    }
   },
   /*
   ** Build configuration
@@ -83,6 +109,13 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    },
+    terser: {
+      terserOptions: {
+        compress: {
+          drop_console: true
+        }
+      }
     }
   },
   router: {
@@ -90,15 +123,80 @@ export default {
     // linkActiveClass: 'active',
     extendRoutes (routes, resolve) {
       routes.push({
-        name: 'not-found',
+        name: 'error-404',
         path: '*',
+        component: resolve(__dirname, 'pages/errors/404.vue')
+      },
+      {
+        name: 'not-found',
+        path: '/not-found',
         component: resolve(__dirname, 'pages/errors/404.vue')
       },
       {
         name: 'error-500',
         path: '/error',
         component: resolve(__dirname, 'layouts/error.vue')
+      },
+      {
+        path: '/social_login/:provider',
+        component: resolve(__dirname, 'components/pages/auth/logged.vue')
       })
+    }
+  },
+  pwa: {
+    workbox: {
+      cacheNames: {
+        prefix: 'dr',
+        precache: 'precache',
+        runtime: 'runtime'
+      },
+      config: {
+        debug: false
+      },
+      offlineAssets: [
+        '/images/sponsor-graph.svg',
+        '/favicon.ico',
+        '/images/NUMBERS.svg',
+        '/images/sponsor-graph.svg'
+      ],
+      runtimeCaching: [
+        {
+          urlPattern: 'https://fonts.googleapis.com/.*',
+          handler: 'cacheFirst',
+          method: 'GET',
+          strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        },
+        {
+          urlPattern: 'https://via.placeholder.com/*',
+          handler: 'cacheFirst',
+          method: 'GET',
+          strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        },
+        {
+          urlPattern: 'https://sessionize.com/image*',
+          handler: 'cacheFirst',
+          method: 'GET',
+          strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        },
+        {
+          urlPattern: 'https://lh3.googleusercontent.com/*',
+          handler: 'cacheFirst',
+          method: 'GET',
+          strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        },
+        {
+          urlPattern: `${process.env.API_BASE_URL}/*`,
+          handler: 'staleWhileRevalidate',
+          method: 'GET',
+          strategyOptions: {
+            cacheableResponse: { statuses: [0, 200, 201] },
+            cacheExpiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 7 // 7 days
+            }
+          }
+        }
+      ]
     }
   }
 }

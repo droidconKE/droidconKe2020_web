@@ -3,9 +3,9 @@
     <section class="w-full container mx-auto">
       <div class="w-full flex flex-wrap px-4 h-auto lg:h-screen pt-16 md:px-32">
         <div class="w-full lg:w-5/12 flex items-center">
-          <div class="w-full bg-no-repeat bg-center" style="background-image: url(/images/circ.svg)">
-            <div class="w-full mt-2 flex items-center justify-center">
-              <img class="h-20 w-20 lg:mt-4 mt-4 lg:mb-8" src="/icon.png" alt="droid">
+          <div class="w-full bg-no-repeat bg-center">
+            <div class="w-full mt-2 flex items-start justify-start px-16 -mb-16">
+              <img class="w-32 lg:mt-4 mt-4 mb-8 lg:mb-8" src="/images/about.png" alt="droid about">
             </div>
             <div class="w-full flex flex-wrap text-left">
               <h2 class="title-px-36 black">
@@ -38,13 +38,13 @@
       <div class="mx-auto container px-4 md:py-12">
         <div class="flex flex-wrap mb-10">
           <div class="w-full flex flex-wrap justify-center mt-4 md:mt-0 py-2 pb-12">
-            <h4 class="title-px-21 purple font-bold">
+            <h4 class="title-px-21 purple font-bold pt-6 md:pt-0">
               Largest Android Focused Developer conference in Africa.
             </h4>
           </div>
           <div class="w-full md:w-6/12 ml-auto px-2 md:px-8">
             <div class="text-left pr-0 md:pr-10">
-              <h3 class="title-px-36 black underline-green">
+              <h3 class="title-px-36 black underline-green mt-4 md:mt-0">
                 droidcon
               </h3>
               <p class="mt-2 md:mt-4 mb-4 md:mb-0 p gray">
@@ -61,7 +61,7 @@
           </div>
           <div class="w-full flex md:w-6/12 items-start px-2 md:px-8">
             <div class="text-left pr-0 md:pr-10">
-              <h3 class="title-px-36 black underline-green-light">
+              <h3 class="title-px-36 black underline-green-light mt-4 md:mt-0">
                 PAST DROIDCONKE
               </h3>
               <p class="mt-2 md:mt-4 mb-4 md:mb-0 p gray">
@@ -78,211 +78,31 @@
         </div>
       </div>
     </section>
-    <section class="w-full container mx-auto h-auto md:px-32 px-4">
+    <section v-if="members.length > 0" class="w-full container mx-auto h-auto md:px-32 px-4">
       <div class="flex flex-wrap md:py-16">
         <div class="w-full text-center mb-2 md:mb-0 mt-4 md:mt-0 items-center justify-center">
-          <h3 class="title-px-36 purple">
+          <h3 class="title-px-36 purple pt-10 md:pt-0">
             Organizing team
           </h3>
         </div>
       </div>
       <div class="w-full px-0 md:px-24 mr-auto mb-4 md:mb-0 pb-10 lg:pb-16">
-        <div class="w-full flex flex-wrap items-center grid md:grid-cols-6 grid-cols-3 gap-8">
-          <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
+        <div class="w-full flex flex-wrap grid md:grid-cols-6 grid-cols-3 gap-2 lg:gap-8 mb-14 md:mb-0">
+          <a v-for="(member, $index) in members" :key="$index" :href="member.link" class="text-center flex justify-center flex-wrap" target="_blank">
+            <div class="w-24 h-24 md:w-32 md:h-32 p-2 md:p-4 flex justify-center bg-green-c-2 rounded">
               <img
                 class="w-full p-0 rounded-full border-2 border-green-500"
-                src="/icon.png"
-                alt="Sunset in the mountains"
+                :src="member.photo === null ? '/icon.png' : member.photo"
+                :alt="member.name"
               >
             </div>
-            <p class="text-px-14-b capitalize font-bold black mt-2">
-              Frank Tamre Msee
+            <p class="text-px-13 capitalize font-bold black mt-2 w-full">
+              {{ member.name }}
             </p>
-            <p class="text-px-13 gray">
-              Main man
+            <p class="text-px-12 gray">
+              {{ member.tagline }}
             </p>
-          </div>
-          <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
-              <img
-                class="w-full p-0 rounded-full border-2 border-green-500"
-                src="/images/speakers/MichaelBukachi.png"
-                alt="Sunset in the mountains"
-              >
-            </div>
-            <p class="text-px-14-b capitalize font-bold black mt-2">
-              Frank Tamre Msee
-            </p>
-            <p class="text-px-13 gray">
-              Main man
-            </p>
-          </div>
-          <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
-              <img
-                class="w-full p-0 rounded-full border-2 border-green-500"
-                src="/icon.png"
-                alt="Sunset in the mountains"
-              >
-            </div>
-            <p class="text-px-14-b capitalize font-bold black mt-2">
-              Frank Tamre Msee
-            </p>
-            <p class="text-px-13 gray">
-              Main man
-            </p>
-          </div>
-          <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
-              <img
-                class="w-full p-0 rounded-full border-2 border-green-500"
-                src="/icon.png"
-                alt="Sunset in the mountains"
-              >
-            </div>
-            <p class="text-px-14-b capitalize font-bold black mt-2">
-              Frank Tamre Msee
-            </p>
-            <p class="text-px-13 gray">
-              Main man
-            </p>
-          </div>
-          <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
-              <img
-                class="w-full p-0 rounded-full border-2 border-green-500"
-                src="/icon.png"
-                alt="Sunset in the mountains"
-              >
-            </div>
-            <p class="text-px-14-b capitalize font-bold black mt-2">
-              Frank Tamre Msee
-            </p>
-            <p class="text-px-13 gray">
-              Main man
-            </p>
-          </div>
-          <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
-              <img
-                class="w-full p-0 rounded-full border-2 border-green-500"
-                src="/images/speakers/MichaelBukachi.png"
-                alt="Sunset in the mountains"
-              >
-            </div>
-            <p class="text-px-14-b capitalize font-bold black mt-2">
-              Frank Tamre Msee
-            </p>
-            <p class="text-px-13 gray">
-              Main man
-            </p>
-          </div>
-          <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
-              <img
-                class="w-full p-0 rounded-full border-2 border-green-500"
-                src="/icon.png"
-                alt="Sunset in the mountains"
-              >
-            </div>
-            <p class="text-px-14-b capitalize font-bold black mt-2">
-              Frank Tamre Msee
-            </p>
-            <p class="text-px-13 gray">
-              Main man
-            </p>
-          </div>
-          <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
-              <img
-                class="w-full p-0 rounded-full border-2 border-green-500"
-                src="/icon.png"
-                alt="Sunset in the mountains"
-              >
-            </div>
-            <p class="text-px-14-b capitalize font-bold black mt-2">
-              Frank Tamre Msee
-            </p>
-            <p class="text-px-13 gray">
-              Main man
-            </p>
-          </div>
-          <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
-              <img
-                class="w-full p-0 rounded-full border-2 border-green-500"
-                src="/images/speakers/CarolWarugongo.png"
-                alt="Sunset in the mountains"
-              >
-            </div>
-            <p class="text-px-14-b capitalize font-bold black mt-2">
-              Frank Tamre Msee
-            </p>
-            <p class="text-px-13 gray">
-              Main man
-            </p>
-          </div>
-          <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
-              <img
-                class="w-full p-0 rounded-full border-2 border-green-500"
-                src="/icon.png"
-                alt="Sunset in the mountains"
-              >
-            </div>
-            <p class="text-px-14-b capitalize font-bold black mt-2">
-              Frank Tamre Msee
-            </p>
-            <p class="text-px-13 gray">
-              Main man
-            </p>
-          </div>
-          <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
-              <img
-                class="w-full p-0 rounded-full border-2 border-green-500"
-                src="/icon.png"
-                alt="Sunset in the mountains"
-              >
-            </div>
-            <p class="text-px-14-b capitalize font-bold black mt-2">
-              Frank Tamre Msee
-            </p>
-            <p class="text-px-13 gray">
-              Main man
-            </p>
-          </div>
-          <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
-              <img
-                class="w-full p-0 rounded-full border-2 border-green-500"
-                src="/images/speakers/CarolWarugongo.png"
-                alt="Sunset in the mountains"
-              >
-            </div>
-            <p class="text-px-14-b capitalize font-bold black mt-2">
-              Frank Tamre Msee
-            </p>
-            <p class="text-px-13 gray">
-              Main man
-            </p>
-          </div>
-          <div class="text-center">
-            <div class="w-20 h-20 md:w-32 md:h-32 p-2 md:p-4 flex-none bg-green-c-2 rounded">
-              <img
-                class="w-full p-0 rounded-full border-2 border-green-500"
-                src="/images/speakers/MichaelBukachi.png"
-                alt="Sunset in the mountains"
-              >
-            </div>
-            <p class="text-px-14-b capitalize font-bold black mt-2">
-              Frank Tamre Msee
-            </p>
-            <p class="text-px-13 gray">
-              Main man
-            </p>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -290,7 +110,26 @@
 </template>
 
 <script>
-
+export default {
+  name: 'About',
+  // async asyncData ({ $axios }) {
+  //   const { data } = await $axios.get(`/organizers/${process.env.ORG_SLUG}/team?type=individual`)
+  //   return { members: data.data }
+  // }
+  async fetch () {
+    if (this.$store.state.members.length === 0) {
+      await this.$axios.get(`/apis/organizers/${process.env.ORG_SLUG}/team?type=individual`).then((response) => {
+        this.members = response.data.data
+        this.$store.commit('updateMembers', response.data.data)
+      })
+    }
+  },
+  data () {
+    return {
+      members: this.$store.state.members
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

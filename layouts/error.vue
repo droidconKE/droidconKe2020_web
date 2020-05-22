@@ -3,22 +3,22 @@
     <div class="md:px-32 container mx-auto sm:px-10 all-page flex">
       <div class="w-full flex flex-wrap px-4 md:px-12 py-0 md:py-3 items-center justify-end">
         <div class="content-center w-full lg:w-1/2 flex">
-          <div class=" text-center">
+          <div class="w-full text-center">
             <p class="text-px-13-slab black uppercase font-bold">
               ERROR
             </p>
             <h1 class="error-font">
-              {{ error.statusCode }}
+              {{ data.statusCode }}
             </h1>
             <h5 class="title-px-21 black px-2 md:px-5 mt-4 md:mt-10 mb-4 md:mb-10">
-              it's not you, seems we have an issue, you may come back later
+              {{ data.message }}
             </h5>
-            <div class="w-full px-2 md:px-10 mb-4 md:mb-10">
+            <div class="w-full px-0 md:px-10 mb-4 md:mb-10">
               <count-days />
             </div>
-            <nuxt-link to="#">
+            <a href="#" @click.prevent="$router.go(-1)">
               <span class="text-px-14-b black pr-4">Or Maybe</span> <span class="text-px-14-b purple">Try again! <i class="fa fa-refresh pl-3" /></span>
-            </nuxt-link>
+            </a>
           </div>
         </div>
       </div>
@@ -30,11 +30,28 @@
 import CountDays from '../components/pages/shared/CountDays'
 export default {
   name: 'Error',
+  layout: 'errorLayout',
   components: { CountDays },
   props: {
     error: {
-      type: Number,
-      default: 500
+      type: Object,
+      default () {
+        return {
+          statusCode: 500,
+          message: 'It\'s not you, seems we have an issue, you may come back later'
+        }
+      }
+    }
+  },
+  data () {
+    return {
+      data: this.error
+    }
+  },
+  mounted () {
+    // console.log(this.$route.query.no_internet)
+    if (this.$route.query.no_internet) {
+      this.data = { statusCode: 'Offline', message: 'Seems you are offline Or our servers might be asleep !' }
     }
   }
 }

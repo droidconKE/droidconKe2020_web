@@ -25,15 +25,5 @@ export const actions = {
     this.$cookies.remove(TOKEN)
     // this.$cookies.remove(USER)
     context.commit('updateUser', '')
-  },
-  getUser (context, error) {
-    return this.$axios
-      .get('/details')
-      .then((response) => {
-        context.commit('updateUser', response.data.user)
-      })
-      .catch((_error) => {
-        context.commit('updateUser', '')
-      })
   }
 }

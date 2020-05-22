@@ -4,7 +4,7 @@
       <countdown :time="time" :interval="100" tag="div">
         <template slot-scope="props">
           <div class="w-full flex grid-cols-4 gap-8">
-            <div class="w-full px-6">
+            <div class="w-full px-3 md:px-6">
               <span class="title-px-10-slab green-dark">Days</span>
               <p>{{ props.days }}</p>
             </div>
