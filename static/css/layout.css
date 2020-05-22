@@ -338,21 +338,30 @@
 }
 
 @media (min-width: 85.375em) {
-  .container {
-    max-width: 85.375em!important;
-  }
+  /*.container {*/
+  /*  max-width: 85.375em!important;*/
+  /*}*/
   .sponsor-img {
     width: 600px!important;
   }
+  .lg\:bg-50 {
+    background-size: 60%;
+  }
 }
 @media (min-width: 120em) {
-  .container {
-    max-width: 120em!important;
+  /*.container {*/
+  /*  max-width: 120em!important;*/
+  /*}*/
+  .lg\:bg-50 {
+    background-size: 65%;
   }
 }
 @media (min-width: 160em) {
-  .container {
-    max-width: 160em!important;
+  /*.container {*/
+  /*  max-width: 160em!important;*/
+  /*}*/
+  .lg\:bg-50 {
+    background-size: 70%;
   }
 }
 @keyframes pulse-bg {
