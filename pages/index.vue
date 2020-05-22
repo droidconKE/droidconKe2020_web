@@ -6,7 +6,7 @@
         <div class="items-center flex flex-wrap mt-4 md:mt-10">
           <div class="w-full md:w-8/12 ml-auto sm:px-6 md:px-12 md:px-4">
             <div class="md:pr-12 text-left">
-              <h3 class="title-px-36 mb-4 md:mb-10 black pt-6 md:pt-0">
+              <h3 class="title-px-36 mb-4 md:mb-10 black pt-10 md:pt-0">
                 WELCOME TO <br> droidconKe 2020
               </h3>
               <h6 class="text-px-18 green-dark">
@@ -22,7 +22,7 @@
               </div>
             </div>
           </div>
-          <div class="w-full md:w-4/12 mr-auto p-4 md:p-10 mt-10 md:mt-0 mb-10 md:mb-0 sm:pt-0 justify-end content-center items-center">
+          <div class="w-full md:w-4/12 mr-auto p-8 md:p-10 mt-10 md:mt-0 mb-10 md:mb-0 sm:pt-0 justify-end content-center items-center">
             <img v-if="!$store.getters.isDarkTheme" alt="oporo image" class="max-w-full" src="/images/oporo.svg">
             <img v-else alt="oporo image" class="max-w-full" src="/images/oporo-dark.svg">
           </div>

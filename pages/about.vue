@@ -44,7 +44,7 @@
           </div>
           <div class="w-full md:w-6/12 ml-auto px-2 md:px-8">
             <div class="text-left pr-0 md:pr-10">
-              <h3 class="title-px-36 black underline-green">
+              <h3 class="title-px-36 black underline-green mt-4 md:mt-0">
                 droidcon
               </h3>
               <p class="mt-2 md:mt-4 mb-4 md:mb-0 p gray">
@@ -61,7 +61,7 @@
           </div>
           <div class="w-full flex md:w-6/12 items-start px-2 md:px-8">
             <div class="text-left pr-0 md:pr-10">
-              <h3 class="title-px-36 black underline-green-light">
+              <h3 class="title-px-36 black underline-green-light mt-4 md:mt-0">
                 PAST DROIDCONKE
               </h3>
               <p class="mt-2 md:mt-4 mb-4 md:mb-0 p gray">
@@ -81,13 +81,13 @@
     <section v-if="members.length > 0" class="w-full container mx-auto h-auto md:px-32 px-4">
       <div class="flex flex-wrap md:py-16">
         <div class="w-full text-center mb-2 md:mb-0 mt-4 md:mt-0 items-center justify-center">
-          <h3 class="title-px-36 purple pt-6 md:pt-0">
+          <h3 class="title-px-36 purple pt-10 md:pt-0">
             Organizing team
           </h3>
         </div>
       </div>
       <div class="w-full px-0 md:px-24 mr-auto mb-4 md:mb-0 pb-10 lg:pb-16">
-        <div class="w-full flex flex-wrap grid md:grid-cols-6 grid-cols-3 gap-2 lg:gap-8 mb-10 md:mb-0">
+        <div class="w-full flex flex-wrap grid md:grid-cols-6 grid-cols-3 gap-2 lg:gap-8 mb-14 md:mb-0">
           <a v-for="(member, $index) in members" :key="$index" :href="member.link" class="text-center flex justify-center flex-wrap" target="_blank">
             <div class="w-24 h-24 md:w-32 md:h-32 p-2 md:p-4 flex justify-center bg-green-c-2 rounded">
               <img

@@ -4,7 +4,7 @@
       <div class="bg-green-c w-full">
         <div class="w-full flex flex-wrap md:px-32 sm:px-10">
           <div class="container mx-auto">
-            <div class="w-1/2 px-4 md:px-12 py-4">
+            <div class="w-full px-4 md:px-12 py-4">
               <h2 class="text-px-16-slab purple">
                 Session details
               </h2>
@@ -18,7 +18,7 @@
       <div class="w-full container mx-auto flex flex-wrap items-start px-4 md:px-12 py-0 md:py-3">
         <div class="w-full flex-wrap lg:w-4/12 flex border-r-0 lg:border-r border-green-200 pr-0 lg:pr-4 mb-6 md:mb-0">
           <div class="w-full py-4">
-            <h4 v-if="!$fetchState.pending" class="text-px-16-slab purple">
+            <h4 v-if="!$fetchState.pending" class="w-full text-px-16-slab purple">
               Speaker{{ session.speakers.length > 1 ? 's' : '' }}
             </h4>
           </div>
@@ -114,7 +114,7 @@
           </div>
           <session-skeleton v-else />
         </div>
-        <div v-if="!$fetchState.pending" class="w-full flex-wrap items-start justify-center lg:w-2/12 flex py-4 mb-10 lg:mb-0">
+        <div v-if="!$fetchState.pending" class="w-full flex-wrap items-start justify-center lg:w-2/12 flex py-4 mb-16 lg:mb-0">
           <star-session v-if="!session.is_serviceSession" :session-id="session.id" :is-bookmarked="session.is_bookmarked" :session-slug="session.slug" />
         </div>
       </div>

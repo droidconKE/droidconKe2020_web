@@ -4,7 +4,7 @@
       <div class="items-center flex flex-wrap">
         <div class="w-full md:w-6/12 ml-auto md:px-12 md:px-4">
           <div class="md:pr-12 text-left">
-            <h3 class="title-px-36 black pt-6 md:pt-0">
+            <h3 class="title-px-36 black pt-10 md:pt-0">
               droidconKe IS ORGANIZED BY;
             </h3>
             <h6 class="text-16 mt-4 gray">

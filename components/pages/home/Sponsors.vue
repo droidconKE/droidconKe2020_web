@@ -4,7 +4,7 @@
       <div class="items-center flex flex-wrap">
         <div class="w-full md:w-6/12 justify-start sm:pr-6">
           <div class="md:pr-12 text-left">
-            <h3 class="title-px-36 white pt-6 md:pt-0">
+            <h3 class="title-px-36 white pt-10 md:pt-0">
               SPONSOR DROIDCONKE
             </h3>
             <h6 class="text-px-13 gray-light mt-4">
@@ -17,7 +17,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full md:w-6/12 md:p-20 md:mr-12 mb-10 md:mb-0 justify-end md:absolute md:right-0">
+        <div class="w-full md:w-6/12 md:p-20 md:mr-12 mb-14 md:mb-0 justify-end md:absolute md:right-0">
           <img alt="sponsors img" class="w-full sponsor-img" src="/images/sponsor.png">
         </div>
       </div>

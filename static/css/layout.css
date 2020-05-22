@@ -189,12 +189,26 @@
 }
 
 .text-px-14-b {
-  font-size: 15px;
-  line-height: 17px;
+  font-size: 12px;
   font-family: var(--font-family);
   font-weight: normal;
   letter-spacing: 0px;
 }
+.text-px-14-sponsor {
+  font-size: 15px;
+  font-family: var(--font-family);
+  font-weight: normal;
+  letter-spacing: 0px;
+}
+@media screen and (max-width: 360px) {
+  .text-px-14-sponsor {
+    font-size: 11px;
+    font-family: var(--font-family);
+    font-weight: normal;
+    letter-spacing: 0px;
+  }
+}
+
 .text-px-14-slab {
   font-size: 15px;
   font-family: var(--font-slab);
