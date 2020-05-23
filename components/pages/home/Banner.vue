@@ -1,7 +1,7 @@
 <template>
   <section class="w-full header relative mt-14 md:mt-0 flex lg:h-screen md:px-20 px-0 sm:px-10 sm:p-5">
     <div class="container items-stretch mx-auto flex flex-wrap bg-right lg:bg-50 bg-no-repeat" style="background-image: url(/images/landing.png)">
-      <div class="overlay">
+      <div class="overlay w-full">
         <div class="w-full flex items-stretch flex-wrap px-4 md:px-0">
           <div class="w-full lg:w-7/12 mt-16 md:mt-24">
             <div class="w-full text-left mt-0 content-start">
