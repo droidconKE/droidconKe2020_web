@@ -3,7 +3,7 @@
     <div class="container items-stretch mx-auto flex flex-wrap bg-right lg:bg-50 bg-no-repeat" style="background-image: url(/images/landing.png)">
       <div class="overlay w-full">
         <div class="w-full flex items-stretch flex-wrap px-4 md:px-0">
-          <div class="w-full lg:w-7/12 mt-16 md:mt-24">
+          <div class="w-full lg:w-7/12 mt-16 md:mt-24 xxxl:mt-40">
             <div class="w-full text-left mt-0 content-start">
               <div class="w-full pt-0 md:pt-5">
                 <h1 class="title-large">
@@ -21,14 +21,14 @@
               </div>
             </div>
           </div>
-          <div class="w-full flex flex-wrap lg:w-5/12 mt-10 md:mt-20 lg:h-full pr-0 lg:pr-10 lg:justify-end">
+          <div class="w-full flex flex-wrap lg:w-5/12 mt-10 md:mt-20 xxxl:mt-32 lg:h-full pr-0 lg:pr-10 lg:justify-end">
             <div class="flex-none">
               <a class="button-border-g black-persist text-px-13-b mr-0 md:mr-6" target="_blank" href="https://sessionize.com/droidconke/">Submit a talk</a>
               <nuxt-link class="button-border-p purple text-px-13-b" to="/sponsors">
                 Sponsor droidconKE
               </nuxt-link>
             </div>
-            <div class="lg:absolute mb-10 md:mb-3 flex mt-10 lg:mt-0 lg:bottom-0 lg:right-0 lg:mr-40">
+            <div class="lg:absolute mb-10 lg:mb-3 flex mt-10 lg:mt-0 lg:bottom-0 lg:right-0 lg:mr-40">
               <count-days />
             </div>
           </div>
@@ -48,7 +48,7 @@ export default {
 
 <style lang="scss" scoped>
   .overlay {
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 480px) {
       background: rgba(58,30,84,0.3);
     }
   }

@@ -7,7 +7,7 @@
         </h3>
       </div>
       <div class="w-full flex flex-wrap mb-16 md:mb-0">
-        <div class="w-6/12 md:w-2/12 mt-10 md:mt-0">
+        <div class="w-6/12 md:w-4/12 lg:w-2/12 mt-10 md:mt-4 lg:mt-0">
           <img class="w-full bg-yellow-c py-10 px-14 md:px-16 md:py-8 panel-img" src="/images/events/community.svg" alt="Sunset in the mountains">
           <div class="text-left">
             <h6 class="text-px-16-b black">
@@ -15,7 +15,7 @@
             </h6>
           </div>
         </div>
-        <div class=" w-6/12 md:w-2/12 mt-10 md:mt-0">
+        <div class=" w-6/12 md:w-4/12 lg:w-2/12 mt-10 md:mt-4 lg:mt-0">
           <img class="w-full bg-dark-green-c py-10 px-14 md:px-16 md:py-8 panel-img" src="/images/events/work.svg" alt="Sunset in the mountains">
           <div class="text-left">
             <h6 class="text-px-16-b black">
@@ -23,7 +23,7 @@
             </h6>
           </div>
         </div>
-        <div class=" w-6/12 md:w-2/12 mt-10 md:mt-0">
+        <div class=" w-6/12 md:w-4/12 lg:w-2/12 mt-10 md:mt-4 lg:mt-0">
           <img class="w-full bg-purple-c py-10 px-14 md:px-16 md:py-8 panel-img" src="/images/events/interviews.svg" alt="Sunset in the mountains">
           <div class="text-left">
             <h6 class="text-px-16-b black">
@@ -31,7 +31,7 @@
             </h6>
           </div>
         </div>
-        <div class=" w-6/12 md:w-2/12 mt-10 md:mt-0">
+        <div class=" w-6/12 md:w-4/12 lg:w-2/12 mt-10 md:mt-4 lg:mt-0">
           <img class="w-full bg-yellow-c py-10 px-14 md:px-16 md:py-8 panel-img" src="/images/events/panels.svg" alt="Sunset in the mountains">
           <div class="text-left">
             <h6 class="text-px-16-b black">
@@ -39,7 +39,7 @@
             </h6>
           </div>
         </div>
-        <div class=" w-6/12 md:w-2/12 mt-10 md:mt-0">
+        <div class=" w-6/12 md:w-4/12 lg:w-2/12 mt-10 md:mt-4 lg:mt-0">
           <img class="w-full bg-dark-green-c py-10 px-14 md:px-16 md:py-8 panel-img" src="/images/events/bash.svg" alt="Sunset in the mountains">
           <div class="text-left">
             <h6 class="text-px-16-b black">
@@ -47,7 +47,7 @@
             </h6>
           </div>
         </div>
-        <div class=" w-6/12 md:w-2/12 mt-10 md:mt-0">
+        <div class=" w-6/12 md:w-4/12 lg:w-2/12 mt-10 md:mt-4 lg:mt-0">
           <img class="w-full bg-purple-c py-10 px-14 md:px-16 md:py-8 panel-img" src="/images/events/hack.svg" alt="Sunset in the mountains">
           <div class="text-left">
             <h6 class="text-px-16-b black">

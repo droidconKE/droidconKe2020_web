@@ -157,7 +157,8 @@ export default {
         '/images/sponsor-graph.svg',
         '/favicon.ico',
         '/images/NUMBERS.svg',
-        '/images/sponsor-graph.svg'
+        '/images/sponsor-graph.svg',
+        '/images/cookies.png'
       ],
       runtimeCaching: [
         {

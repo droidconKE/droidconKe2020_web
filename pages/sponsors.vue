@@ -31,7 +31,7 @@
       </div>
       <div class="mx-auto px-4 md:py-16">
         <div class="items-center flex flex-wrap mb-4 md:mb-10">
-          <div class="w-full md:w-4/12 ml-auto px-2 md:px-8 mt-4 md:mt-0">
+          <div class="w-full lg:w-4/12 ml-auto px-2 md:px-8 mt-4 md:mt-0">
             <div class="text-center md:text-left">
               <h3 class="title-px-26 black w-full mt-4 md:mt-0 underline-green-light">
                 ATTENDEE PROFILE
@@ -41,7 +41,7 @@
               </p>
             </div>
           </div>
-          <div class="w-full flex flex-wrap md:w-8/12 mt-10 mb-4 md:mb-0 justify-center md:mt-0 px-2 md:px-8">
+          <div class="w-full flex flex-wrap lg:w-8/12 mt-10 mb-4 md:mb-0 justify-center lg:mt-0 md:mt-4 px-2 md:px-8">
             <div class="w-full px-0 lg:px-10">
               <img v-if="!$store.getters.isDarkTheme" src="/images/NUMBERS.svg" alt="count imgs">
               <img v-else src="/images/NUMBERS-dark.svg" alt="count imgs dark">
@@ -52,14 +52,14 @@
           <hr>
         </div>
         <div class="items-center flex flex-wrap mt-4 md:mt-10 mb-0">
-          <div class="w-full md:w-4/12 ml-auto px-2 md:px-8 mt-4 md:mt-0">
+          <div class="w-full lg:w-4/12 ml-auto px-2 md:px-8 mt-4 md:mt-0">
             <div class="text-center md:text-left">
               <h3 class="title-px-26 black w-full mt-6 md:mt-0">
                 value BUILT built IN EVERY PACKAGE
               </h3>
             </div>
           </div>
-          <div class="w-full flex flex-wrap md:w-8/12 mt-10 mb-14 md:mb-0 justify-center md:mt-0 px-2 md:px-10">
+          <div class="w-full flex flex-wrap lg:w-8/12 mt-10  md:mt-4 lg:mt-0 mb-14 md:mb-4 justify-center px-2 md:px-10">
             <div class="w-full flex justify-center grid grid-cols-3 ">
               <div class="justify-center flex items-center px-3 py-5 text-center bg-yellow-c">
                 <p class="text-px-14-sponsor uppercase purple">

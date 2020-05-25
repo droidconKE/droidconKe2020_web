@@ -18,7 +18,13 @@ module.exports = {
         15: '3.8rem'
       },
       spacing: {
-        36: '9rem'
+        36: '9rem',
+        128: '32rem'
+      },
+      screens: {
+        xxl: '1366px'
+        // xxxl: '1920px',
+        // xlsc: '2560px'
       }
     }
   },

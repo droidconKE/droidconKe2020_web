@@ -2,7 +2,7 @@
   <section class="w-full bg-black-c">
     <div class="container mt-20 md:mt-24 mb-20 mx-auto md:px-32 px-4 md:py-20 py-4">
       <div class="items-center flex flex-wrap">
-        <div class="w-full md:w-6/12 justify-start sm:pr-6">
+        <div class="w-full lg:w-6/12 justify-start sm:pr-6">
           <div class="md:pr-12 text-left">
             <h3 class="title-px-36 white pt-10 md:pt-0">
               SPONSOR DROIDCONKE
@@ -17,7 +17,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full md:w-6/12 md:p-20 md:mr-12 mb-14 md:mb-0 justify-end md:absolute md:right-0">
+        <div class="w-full lg:w-6/12 lg:p-20 mt-0 md:mt-6 lg:mt-0 lg:mr-12 mb-14 lg:mb-0 justify-end lg:absolute lg:right-0">
           <img alt="sponsors img" class="w-full sponsor-img" src="/images/sponsor.png">
         </div>
       </div>

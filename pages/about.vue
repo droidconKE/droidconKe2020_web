@@ -1,8 +1,8 @@
 <template>
   <div class="w-full flex items-center flex-wrap">
     <section class="w-full container mx-auto">
-      <div class="w-full flex flex-wrap px-4 h-auto lg:h-screen pt-16 md:px-32">
-        <div class="w-full lg:w-5/12 flex items-center">
+      <div class="w-full flex flex-wrap px-4 h-auto lg:h-screen xxxl:h-128 pt-16 md:px-32">
+        <div class="w-full lg:w-4/12 xxxl:w-4/12 flex items-center">
           <div class="w-full bg-no-repeat bg-center">
             <div class="w-full mt-2 flex items-start justify-start px-16 -mb-16">
               <img class="w-32 lg:mt-4 mt-4 mb-8 lg:mb-8" src="/images/about.png" alt="droid about">
@@ -27,7 +27,7 @@
           </div>
         </div>
         <div
-          class="w-full lg:w-7/12 h-64 lg:h-auto mt-2 lg:mt-10 flex items-center justify-end bg-no-repeat bg-cover"
+          class="w-full lg:w-8/12 xxxl:w-8/12 h-64 lg:h-auto mt-2 lg:mt-20 md:mt-10 xxl:mt-24 flex items-center justify-end bg-no-repeat bg-cover"
           style="background-image: url(/images/org.png)"
         >
           <!--          <img src="/images/org.png" class="object-contain" alt="organizers">-->
@@ -78,7 +78,7 @@
         </div>
       </div>
     </section>
-    <section v-if="members.length > 0" class="w-full container mx-auto h-auto md:px-32 px-4">
+    <section v-if="members.length > 0" class="w-full container mx-auto h-auto lg:px-32 xxxl:px-2 px-4">
       <div class="flex flex-wrap md:py-16">
         <div class="w-full text-center mb-2 md:mb-0 mt-4 md:mt-0 items-center justify-center">
           <h3 class="title-px-36 purple pt-10 md:pt-0">
@@ -86,8 +86,8 @@
           </h3>
         </div>
       </div>
-      <div class="w-full px-0 md:px-24 mr-auto mb-4 md:mb-0 pb-10 lg:pb-16">
-        <div class="w-full flex flex-wrap grid md:grid-cols-6 grid-cols-3 gap-2 lg:gap-8 mb-14 md:mb-0">
+      <div class="w-full px-0 lg:px-20 mr-auto mb-4 md:mb-0 pb-10 lg:pb-16">
+        <div class="w-full flex flex-wrap grid lg:grid-cols-6 grid-cols-3 gap-2 lg:gap-5 mb-14 md:mb-0">
           <a v-for="(member, $index) in members" :key="$index" :href="member.link" class="text-center flex justify-center flex-wrap" target="_blank">
             <div class="w-24 h-24 md:w-32 md:h-32 p-2 md:p-4 flex justify-center bg-green-c-2 rounded">
               <img
