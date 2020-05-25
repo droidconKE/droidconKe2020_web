@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex  items-center justify-between flex-wrap nav-bg px-2 py-4 md:py-2 md:px-5 fixed w-full z-10 top-0">
+  <nav class="flex  items-center justify-between flex-wrap nav-bg px-2 py-4 md:py-2 md:px-5 fixed w-full z-30 top-0">
     <div class="flex items-center flex-shrink-0 text-white mr-6 lg:pl-24">
       <n-link class="text-white no-underline hover:text-white hover:no-underline" to="/">
         <img v-if="!$store.getters.isDarkTheme" class="w-32" src="/images/website.png" alt="logo">
@@ -26,22 +26,22 @@
     >
       <div class="w-8/12 flex-grow lg:flex">
         <ul class="list-reset lg:flex justify-end  flex-1 items-center">
-          <li class="mr-3 black">
+          <li class="mr-3 py-2 lg:py-0">
             <n-link class="inline-block py-2 px-4 text-px-13 no-underline black nav-link" to="/">
               <i class="fa fa-home" /> Home
             </n-link>
           </li>
-          <li class="mr-3">
+          <li class="mr-3 py-2 lg:py-0">
             <n-link class="py-2 px-4 inline-block text-px-13 black no-underline nav-link" to="/sessions">
               <i class="fa fa-bell" /> Sessions
             </n-link>
           </li>
-          <li class="mr-3">
+          <li class="mr-3 py-2 lg:py-0">
             <n-link class="py-2 px-4 inline-block no-underline black text-px-13 nav-link " to="/about">
               <i class="fa fa-star" /> About
             </n-link>
           </li>
-          <li class="mr-3">
+          <li class="mr-3 py-2 lg:py-0">
             <n-link class="inline-block no-underline  py-2 px-4 black text-px-13 nav-link" to="/sponsors">
               <i class="fa fa-star" /> Sponsors
             </n-link>

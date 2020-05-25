@@ -19,7 +19,7 @@
     </div>
     <div class="w-full flex flex-wrap md:px-32 sm:px-10 mt-2 md:mt-4">
       <div v-if="!$fetchState.pending" class="w-full container mx-auto flex flex-wrap px-4 md:px-12 py-4">
-        <div class="flex flex-row lg:flex-col w-full lg:w-1/12 h-auto lg:h-64 bor border-r-0 lg:border-r border-green-200 space-y-0 lg:space-y-6 space-x-6 lg:space-x-0 items-center lg:items-start justify-center lg:justify-start py-2 lg:py-0 sticky nav-bg nav-side z-30">
+        <div class="flex flex-row lg:flex-col w-full lg:w-1/12 h-auto lg:h-64 bor border-r-0 lg:border-r border-green-200 space-y-0 lg:space-y-6 space-x-6 lg:space-x-0 items-center lg:items-start justify-center lg:justify-start py-2 lg:py-0 sticky nav-bg nav-side z-20">
           <div v-for="(days, $index, $key) in schedule" :key="$key" :class="['w-4/12 px-3 py-1 lg:w-full cursor-pointer rounded-tl-lg rounded-bl-lg rounded-r-lg lg:rounded-r-none', currentTab === $key ? 'bg-yellow-c' : 'border border-r-1 lg:border-r-0 border-green-200 bg-white-c-2' ]" @click.prevent="showTab($key)">
             <h4 class="text-px-16-slab purple">
               {{ $timeDay($index) }} <small :class="['text-px-13 capitalize', currentTab === $key ? 'black' : 'green-dark']">Day {{ $key+1 }}</small>

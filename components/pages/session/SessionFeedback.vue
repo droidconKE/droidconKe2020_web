@@ -18,7 +18,7 @@
         </div>
         <div class="modal-content w-full">
           <div class="flex flex-wrap lg:flex-no-wrap bg-ash-c justify-center">
-            <div class="w-full w-1/2 img-log">
+            <div class="w-full w-1/2 img-log hidden md:grid">
               <img src="/images/feedback.png" alt="login">
             </div>
             <div class="w-full m-1/2 bg-ash-c mb-24 lg:mb-0 justify-start">
