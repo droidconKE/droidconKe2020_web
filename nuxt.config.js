@@ -6,6 +6,7 @@ const envPath = path.resolve(process.cwd(), `.env.${env}`)
 // const _defaultEnvPath = path.resolve(process.cwd(), '.env')
 export default {
   mode: 'universal',
+  ssr: true,
   /*
   ** Headers of the page
   */
