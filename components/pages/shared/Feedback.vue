@@ -64,10 +64,11 @@
 </template>
 
 <script>
-import StarRating from 'vue-star-rating'
 export default {
   name: 'Feedback',
-  components: { StarRating },
+  components: {
+    StarRating: () => process.client ? import('vue-star-rating') : null
+  },
   data () {
     return {
       form: {
