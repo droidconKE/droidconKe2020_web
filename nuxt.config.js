@@ -97,7 +97,7 @@ export default {
       pathRewrite: { '^/api2/': '' }
     },
     '/apis/': {
-      target: 'https://droidcon-api.appslab.tech/v1',
+      target: 'https://api.droidcon.co.ke/v1',
       pathRewrite: { '^/apis/': '' }
     }
   },
