@@ -91,9 +91,9 @@ export default {
   }
   @media (max-width: 400px) {
     #images-wrapper {
-      -moz-column-count:    1;
-      -webkit-column-count: 1;
-      column-count:        1;
+      -moz-column-count:    2;
+      -webkit-column-count: 2;
+      column-count:        2;
     }
   }
 </style>

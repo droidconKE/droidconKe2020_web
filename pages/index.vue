@@ -7,13 +7,13 @@
           <div class="w-full md:w-8/12 ml-auto sm:px-6 md:px-12 md:px-4">
             <div class="md:pr-12 text-left">
               <h3 class="title-px-36 mb-4 md:mb-10 black pt-10 md:pt-0">
-                WELCOME TO <br> droidconKe 2020
+                WELCOME TO <br> droidconKe 2021
               </h3>
               <h6 class="text-px-18 green-dark">
                 The Largest Android Focused Developer Conference in Africa
               </h6>
               <p class="mt-4 p">
-                This 3rd edition of droidconKE will include several tech communities from the East African Region and continental members. It will give participants an excellent chance to learn about the local Android development ecosystem, opportunities and services as well as meet the engineers and companies who work on them.
+                This 4th edition of droidconKE will include several tech communities from the East African Region and continental members. It will give participants an excellent chance to learn about the local Android development ecosystem, opportunities and services as well as meet the engineers and companies who work on them.
               </p>
               <div class="mt-5">
                 <nuxt-link class="text-px-13-slab black" to="/about">

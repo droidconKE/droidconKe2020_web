@@ -11,7 +11,7 @@
               PROMOTE YOUR BRAND | DEMONSTRATE THOUGHT LEADERSHIP | MEET & ENGAGE WITH DEVELOPERS.
             </h6>
             <div class="mt-5 md:mt-12 mb-10 md:mb-0">
-              <nuxt-link class="button-border-p purple text-px-13-b" to="/sponsors">
+              <nuxt-link class="button-border-p purple text-px-13-b px-10 py-3 md:px-5 md:py-1" to="/sponsors">
                 sponsor droidconke
               </nuxt-link>
             </div>

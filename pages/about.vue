@@ -68,7 +68,7 @@
                 We held the first ever DroidconKE in October 2018. We had over 240 people from various parts of the
                 world in attendance. Quality speakers from Kenya, Germany, South Africa and Nigeria graced the event.
                 <br><br>
-                In this 3rd edition of droidconKE, will include several tech communities from the East African Region
+                In this 4th edition of droidconKE, will include several tech communities from the East African Region
                 and continental members and will give participants an excellent chance to learn about the local Android
                 development ecosystem, opportunities and services as well as meet the engineers and companies who work
                 on them.

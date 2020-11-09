@@ -13,7 +13,7 @@
           </div>
           <div class="w-full flex md:w-5/12 items-start mt-10 md:mt-0 justify-start md:justify-end px-2 md:px-8">
             <div class="mt-0">
-              <a class="button-yellow black-persist text-px-13-b" style="transition:all .15s ease" href="http://bit.ly/droidconKE20" target="_blank">Get Your Ticket</a>
+              <a class="button-yellow black-persist text-px-13-b px-10 py-3 md:px-5 md:py-1" style="transition:all .15s ease" href="http://bit.ly/droidconKE20" target="_blank">Get Your Ticket</a>
             </div>
           </div>
         </div>
@@ -57,13 +57,13 @@
       <div class="flex flex-wrap items-center md:justify-between justify-center">
         <div class="w-full md:w-4/12 px-4 mx-auto text-center">
           <div class="mt-0 w-full">
-            <a href="https://www.twitter.com/creativetim" target="_blank">
+            <a href="https://twitter.com/droidconke" target="_blank">
               <i class="fa fa-twitter  black font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center" />
             </a>
-            <a href="https://www.facebook.com/creativetim" target="_blank">
+            <a href="https://www.instagram.com/droidconke/" target="_blank">
               <i class="fa fa-instagram black font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center" />
             </a>
-            <a href="https://www.dribbble.com/creativetim" target="_blank">
+            <a href="https://www.youtube.com/channel/UCNumwOLkQjVgNmYdG8-qHVg" target="_blank">
               <i class="fa fa-youtube-play black font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center" />
             </a>
           </div>

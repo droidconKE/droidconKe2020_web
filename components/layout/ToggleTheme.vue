@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-block p-4 absolute top-0 right-0 mt-3 lg:mt-1  mr-12 md:mr-12 lg:mr-0">
+  <div class="inline-block p-4 absolute top-0 right-0 mt-3 lg:mt-2  mr-12 md:mr-12 lg:mr-0">
     <label
       for="toogleA"
       class="flex items-center cursor-pointer"
