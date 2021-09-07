@@ -11,7 +11,8 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest",
-    "stage": "firebase deploy --only hosting:droidcon2020"
+    "stage": "firebase deploy --only hosting:droidcon2020",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@chenfengyuan/vue-countdown": "^1.1.5",
@@ -45,5 +46,8 @@
     "node-sass": "^4.14.0",
     "sass-loader": "^8.0.2",
     "vue-jest": "^4.0.0-0"
+  },
+  "engines": {
+    "node": "14.16.0"
   }
 }
