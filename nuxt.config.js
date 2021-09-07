@@ -95,11 +95,13 @@ export default {
   proxy: {
     '/api2/': {
       target: 'https://iid.googleapis.com',
-      pathRewrite: { '^/api2/': '' }
+      pathRewrite: { '^/api2/': '' },
+      secure: !process.env.ENV === 'development'
     },
     '/apis/': {
-      target: 'https://api.droidcon.co.ke/v1',
-      pathRewrite: { '^/apis/': '' }
+      target: 'https://api.droidcon.test/v1',
+      pathRewrite: { '^/apis/': '' },
+      secure: !process.env.ENV === 'development'
     }
   },
   /*
