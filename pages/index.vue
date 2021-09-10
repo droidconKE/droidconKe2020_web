@@ -7,7 +7,7 @@
           <div class="w-full md:w-8/12 ml-auto sm:px-6 md:px-12 md:px-4">
             <div class="md:pr-12 text-left">
               <h3 class="title-px-36 mb-4 md:mb-10 black pt-10 md:pt-0">
-                WELCOME TO <br> droidconKe 2021
+                WELCOME TO <br> droidconKe 2022
               </h3>
               <h6 class="text-px-18 green-dark">
                 The Largest Android Focused Developer Conference in Africa
