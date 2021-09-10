@@ -80,7 +80,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    ['@nuxtjs/dotenv', { filename: fs.existsSync(envPath) ? `.env.${env}` : '.env' }],
+    ['@nuxtjs/dotenv', { filename: fs.existsSync(envPath) ? `.env.${env}` : '.env', systemvars: true }],
     'cookie-universal-nuxt',
     '@nuxtjs/proxy',
     'vue-social-sharing/nuxt'
@@ -99,7 +99,7 @@ export default {
       secure: !process.env.ENV === 'development'
     },
     '/apis/': {
-      target: 'https://api.droidcon.test/v1',
+      target: 'https://droidcon-erp.herokuapp.com/api/v1',
       pathRewrite: { '^/apis/': '' },
       secure: !process.env.ENV === 'development'
     }
@@ -201,5 +201,35 @@ export default {
         }
       ]
     }
+  },
+  env: {
+    BASE_URL: process.env.BASE_URL,
+    API_BASE_URL: process.env.API_BASE_URL,
+    ORG_SLUG: process.env.ORG_SLUG,
+    EVENT_SLUG: process.env.EVENT_SLUG,
+    MESSAGING_TOPIC: process.env.MESSAGING_TOPIC,
+    API_KEY: process.env.API_KEY,
+    GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
+    FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
+    FIREBASE_MESSAGE_ID: process.env.FIREBASE_MESSAGE_ID,
+    FIREBASE_PUBLIC_KEY: process.env.FIREBASE_PUBLIC_KEY,
+    FIREBASE_SERVER_KEY: process.env.FIREBASE_SERVER_KEY,
+    FIREBASE_APP_ID: process.env.FIREBASE_APP_ID
   }
+  // publicRuntimeConfig: {
+  //   baseUrl: process.env.BASE_URL,
+  //   apiBaseUrl: process.env.API_BASE_URL,
+  //   orgSlug: process.env.ORG_SLUG,
+  //   eventSlug: process.env.EVENT_SLUG,
+  //   messagingId: process.env.MESSAGING_TOPIC
+  // },
+  // privateRuntimeConfig: {
+  //   apiKey: process.env.API_KEY,
+  //   googleClientId: process.env.GOOGLE_CLIENT_ID,
+  //   firebaseApiKey: process.env.FIREBASE_API_KEY,
+  //   firebaseMessageId: process.env.FIREBASE_MESSAGE_ID,
+  //   firebasePublicKey: process.env.FIREBASE_PUBLIC_KEY,
+  //   firebaseServerKey: process.env.FIREBASE_SERVER_KEY,
+  //   firebaseAppId: process.env.FIREBASE_APP_ID
+  // }
 }
