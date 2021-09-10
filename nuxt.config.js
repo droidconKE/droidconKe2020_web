@@ -99,7 +99,7 @@ export default {
       secure: !process.env.ENV === 'development'
     },
     '/apis/': {
-      target: 'https://api.droidcon.test/v1',
+      target: 'https://droidcon-erp.herokuapp.com/api/v1',
       pathRewrite: { '^/apis/': '' },
       secure: !process.env.ENV === 'development'
     }
