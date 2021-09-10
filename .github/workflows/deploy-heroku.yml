@@ -13,5 +13,5 @@ jobs:
       - name: Deploy to Heroku
         env:
           HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
-          HEROKU_APP_NAME: "manuel-alx-backend"
+          HEROKU_APP_NAME: "droidcon-web"
         run: git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git staging:master
