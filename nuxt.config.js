@@ -80,7 +80,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    ['@nuxtjs/dotenv', { filename: fs.existsSync(envPath) ? `.env.${env}` : '.env' }],
+    ['@nuxtjs/dotenv', { filename: fs.existsSync(envPath) ? `.env.${env}` : '.env', systemvars: true }],
     'cookie-universal-nuxt',
     '@nuxtjs/proxy',
     'vue-social-sharing/nuxt'
@@ -202,4 +202,20 @@ export default {
       ]
     }
   }
+  // publicRuntimeConfig: {
+  //   baseUrl: process.env.BASE_URL,
+  //   apiBaseUrl: process.env.API_BASE_URL,
+  //   orgSlug: process.env.ORG_SLUG,
+  //   eventSlug: process.env.EVENT_SLUG,
+  //   messagingId: process.env.MESSAGING_TOPIC
+  // },
+  // privateRuntimeConfig: {
+  //   apiKey: process.env.API_KEY,
+  //   googleClientId: process.env.GOOGLE_CLIENT_ID,
+  //   firebaseApiKey: process.env.FIREBASE_API_KEY,
+  //   firebaseMessageId: process.env.FIREBASE_MESSAGE_ID,
+  //   firebasePublicKey: process.env.FIREBASE_PUBLIC_KEY,
+  //   firebaseServerKey: process.env.FIREBASE_SERVER_KEY,
+  //   firebaseAppId: process.env.FIREBASE_APP_ID
+  // }
 }
