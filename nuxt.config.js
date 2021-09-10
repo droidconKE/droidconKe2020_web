@@ -202,20 +202,20 @@ export default {
       ]
     }
   },
-  env: {
-    BASE_URL: process.env.BASE_URL,
-    API_BASE_URL: process.env.API_BASE_URL,
-    ORG_SLUG: process.env.ORG_SLUG,
-    EVENT_SLUG: process.env.EVENT_SLUG,
-    MESSAGING_TOPIC: process.env.MESSAGING_TOPIC,
-    API_KEY: process.env.API_KEY,
-    GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
-    FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
-    FIREBASE_MESSAGE_ID: process.env.FIREBASE_MESSAGE_ID,
-    FIREBASE_PUBLIC_KEY: process.env.FIREBASE_PUBLIC_KEY,
-    FIREBASE_SERVER_KEY: process.env.FIREBASE_SERVER_KEY,
-    FIREBASE_APP_ID: process.env.FIREBASE_APP_ID
-  }
+  // env: {
+  //   BASE_URL: process.env.BASE_URL,
+  //   API_BASE_URL: process.env.API_BASE_URL,
+  //   ORG_SLUG: process.env.ORG_SLUG,
+  //   EVENT_SLUG: process.env.EVENT_SLUG,
+  //   MESSAGING_TOPIC: process.env.MESSAGING_TOPIC,
+  //   API_KEY: process.env.API_KEY,
+  //   GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
+  //   FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
+  //   FIREBASE_MESSAGE_ID: process.env.FIREBASE_MESSAGE_ID,
+  //   FIREBASE_PUBLIC_KEY: process.env.FIREBASE_PUBLIC_KEY,
+  //   FIREBASE_SERVER_KEY: process.env.FIREBASE_SERVER_KEY,
+  //   FIREBASE_APP_ID: process.env.FIREBASE_APP_ID
+  // }
   // publicRuntimeConfig: {
   //   baseUrl: process.env.BASE_URL,
   //   apiBaseUrl: process.env.API_BASE_URL,
