@@ -1,7 +1,7 @@
 <template>
   <div class="w-full flex items-center flex-wrap">
     <section class="w-full container mx-auto">
-      <div class="w-full flex flex-wrap px-4 h-auto lg:h-screen pt-16 md:px-32">
+      <div class="w-full flex flex-wrap px-4 h-auto lg:h-auto pt-16 md:px-32 py-8 lg:py-20">
         <div class="w-full lg:w-5/12 flex items-center">
           <div class="w-full bg-no-repeat bg-center">
             <div class="w-full mt-2 flex items-start justify-start px-16 -mb-16">
