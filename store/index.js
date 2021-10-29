@@ -10,11 +10,15 @@ export const state = () => ({
 })
 
 export const getters = ({
-  isDarkTheme: state => !!state.darkTheme
+  isDarkTheme: state => state.darkTheme === 'dark',
+  isSetTheme: state => !!state.darkTheme
 })
 export const mutations = {
   updateTheme (state) {
     state.darkTheme = this.$cookies.get(DARK_THEME) || ''
+  },
+  updateThemeTemp (state, status) {
+    state.darkTheme = status
   },
   updateSessions (state, sessions) {
     state.sessions = sessions
@@ -59,7 +63,8 @@ export const actions = {
     context.commit('updateTheme')
   },
   deactivateDark (context) {
-    this.$cookies.remove(DARK_THEME)
+    // this.$cookies.remove(DARK_THEME)
+    this.$cookies.set(DARK_THEME, 'light', { maxAge: 60 * 60 * 24 * 1000, path: '/' })
     context.commit('updateTheme')
   },
   async nuxtServerInit (context, { app, query, route, error }) {

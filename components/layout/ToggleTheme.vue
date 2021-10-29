@@ -26,8 +26,30 @@
 </template>
 
 <script>
+/* eslint-disable nuxt/no-globals-in-created */
 export default {
   name: 'ToggleTheme',
+  created () {
+    if (process.client) {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !this.$store.getters.isSetTheme) {
+        this._addDarkTheme()
+        this.$store.commit('updateThemeTemp', 'dark')
+      }
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        // console.log(`changed to ${e.matches ? 'dark' : 'light'} mode`)
+        if (e.matches) {
+          this._addDarkTheme()
+          this.$store.dispatch('activateDark')
+          // this.$store.commit('updateThemeTemp', 'dark')
+        } else {
+          this._removeDarkTheme()
+          this.$store.dispatch('deactivateDark')
+          // this.$store.commit('updateThemeTemp', 'light')
+        }
+      })
+    }
+  },
   methods: {
     _addDarkTheme () {
       const darkThemeLinkEl = document.createElement('link')
