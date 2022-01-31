@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueAxios from 'vue-axios'
-import VueAuthenticate from 'vue-authenticate'
+import VueAuth from 'vue-authenticate'
 import axios from 'axios'
 
 Vue.use(VueAxios, axios)
-Vue.use(VueAuthenticate, {
+Vue.use(VueAuth, {
   baseUrl: process.env.API_BASE_URL,
   providers: {
     google: {
