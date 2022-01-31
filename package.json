@@ -46,7 +46,7 @@
     "jest": "^24.1.0",
     "node-sass": "^4.14.0",
     "sass-loader": "^8.0.2",
-    "vue-jest": "^4.0.0-0"
+    "vue-jest": "^4.0.1"
   },
   "engines": {
     "node": "14.16.0",
