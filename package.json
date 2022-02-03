@@ -27,7 +27,7 @@
     "nuxt": "^2.0.0",
     "v-toaster": "^1.0.3",
     "vue": "^2.6.14",
-    "vue-authenticate": "^1.4.1",
+    "vue-authenticate": "^1.5.0",
     "vue-axios": "^2.1.5",
     "vue-carousel": "^0.18.0",
     "vue-social-sharing": "^3.0.8",
