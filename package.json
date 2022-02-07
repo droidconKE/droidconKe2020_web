@@ -30,7 +30,7 @@
     "vue-authenticate": "^1.5.0",
     "vue-axios": "^3.4.0",
     "vue-carousel": "^0.18.0",
-    "vue-social-sharing": "^3.0.8",
+    "vue-social-sharing": "^3.0.9",
     "vue-star-rating": "^1.6.1"
   },
   "devDependencies": {
