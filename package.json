@@ -19,7 +19,7 @@
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/proxy": "^2.1.0",
-    "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/pwa": "^3.3.5",
     "cookie-universal-nuxt": "^2.1.5",
     "firebase": "^7.14.3",
     "moment": "^2.25.3",
