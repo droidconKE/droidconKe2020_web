@@ -43,7 +43,7 @@
     "babel-jest": "^27.4.6",
     "eslint": "^7.22.0",
     "eslint-plugin-nuxt": ">=3.1.0",
-    "jest": "^27.4.7",
+    "jest": "^27.5.1",
     "node-sass": "^7.0.1",
     "sass-loader": "^12.6.0",
     "vue-jest": "^4.0.1"
