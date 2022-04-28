@@ -10,7 +10,7 @@
                   droidconKe 2022
                 </h1>
                 <h4 class="title-px-26 purple mt-2 lg:-mt-12">
-                  10TH TO 12TH NOVEMBER
+                  16TH TO 18TH NOVEMBER
                 </h4>
                 <p class="mt-4 md:mt-16 title-px-21 black ">
                   LARGEST FOCUSED ANDROID <br> DEVELOPER CONFERENCE IN AFRICA
