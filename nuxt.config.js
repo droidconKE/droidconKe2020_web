@@ -37,8 +37,7 @@ export default {
       { rel: 'stylesheet', href: '/css/layout.css' },
       { rel: 'stylesheet', href: '/css/color/light.css', id: 'light-theme-css' },
       { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', id: 'font-awesome-css' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,400,300,700,900', id: 'roboto-font' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,latin-ext', id: 'roboto-slab-font' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat%3A100%2C300%2C500%2C700%2C900&display=swap&ver=6.0', id: 'montserrat-font' },
     ]
   },
   /*

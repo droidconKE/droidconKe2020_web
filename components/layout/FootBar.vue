@@ -69,7 +69,7 @@
           </div>
           <div class="py-4">
             <p class="text-px-12 gray">
-              Copyright © 2020. All rights reserved
+              Copyright © {{new Date().getFullYear()}}. All rights reserved
             </p>
           </div>
         </div>

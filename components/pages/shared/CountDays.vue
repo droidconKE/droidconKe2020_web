@@ -32,7 +32,7 @@ export default {
   name: 'CountDays',
   data () {
     const now = new Date()
-    const d = new Date('2022-11-10')
+    const d = new Date('2022-11-16')
 
     return {
       time: d - now
