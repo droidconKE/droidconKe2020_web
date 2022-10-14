@@ -16,6 +16,7 @@ export default ({ app }, inject) => {
     return moment(value).format('h:mm a')
   })
   inject('truncateString', (str, num) => {
+    if(!str) return ''
     if (str.length <= num) {
       return str
     }
