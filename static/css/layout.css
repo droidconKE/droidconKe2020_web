@@ -1,7 +1,7 @@
 @import 'toaster.css';
 :root {
-  --font-family: 'Roboto', sans-serif;
-  --font-slab: "Roboto Slab", sans-serif;
+  --font-family: 'Montserrat', sans-serif;
+  --font-slab: "Montserrat", sans-serif;
 }
 
 .active {
