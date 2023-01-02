@@ -24,7 +24,7 @@
     "firebase": "~7.14.3",
     "moment": "^2.25.3",
     "normalize.css": "^8.0.1",
-    "nuxt": "~2.15.8",
+    "nuxt": "~3.0.0",
     "v-toaster": "^1.0.3",
     "vue": "^2.6.11",
     "vue-authenticate": "^1.4.1",
@@ -45,7 +45,7 @@
     "eslint-plugin-nuxt": ">=0.4.2",
     "jest": "^24.1.0",
     "node-sass": "~4.14.0",
-    "sass-loader": "~8.0.2",
+    "sass-loader": "~13.2.0",
     "vue-jest": "^4.0.0-0"
   },
   "engines": {
